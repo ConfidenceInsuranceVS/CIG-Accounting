@@ -333,7 +333,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\efControls\efControls.csproj">
+    <ProjectReference Include="..\efControls\efControls.csproj">
       <Project>{283db850-f059-4523-b0c8-33993a661c48}</Project>
       <Name>efControls</Name>
     </ProjectReference>

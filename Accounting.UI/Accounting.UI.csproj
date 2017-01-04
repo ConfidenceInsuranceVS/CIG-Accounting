@@ -1004,10 +1004,6 @@
     <Folder Include="Forms\Excluded\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\efControls\efControls.csproj">
-      <Project>{283db850-f059-4523-b0c8-33993a661c48}</Project>
-      <Name>efControls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Accounting.BO\Accounting.BO.csproj">
       <Project>{7fcdf5cb-ce15-4fd9-beba-55e067494309}</Project>
       <Name>Accounting.BO</Name>
@@ -1015,6 +1011,10 @@
     <ProjectReference Include="..\Accounting.DO\Accounting.DO.csproj">
       <Project>{df557220-f9c2-4217-ac72-d9807bf6d47d}</Project>
       <Name>Accounting.DO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\efControls\efControls.csproj">
+      <Project>{283db850-f059-4523-b0c8-33993a661c48}</Project>
+      <Name>efControls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Accounting.SecurityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="ntext" />
+          <Property Name="FirstLocalCurrencyid" Type="int" />
+          <Property Name="SecondLocalCurrencyid" Type="int" />
+          <Property Name="RegisterNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="FiscalNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="HasSubCompanies" Type="bit" />
+          <Property Name="isVisible" Type="bit" />
+          <Property Name="DatabaseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountLength" Type="int" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="40" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Forms">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Panel" Type="nvarchar" MaxLength="40" />
+          <Property Name="FormGroup" Type="nvarchar" MaxLength="40" />
+          <Property Name="FormName" Type="nvarchar" MaxLength="40" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="GroupRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="FormID" Type="int" />
+          <Property Name="Allowed" Type="bit" />
+          <Property Name="CanAdd" Type="bit" />
+          <Property Name="CanEdit" Type="bit" />
+          <Property Name="CanDelete" Type="bit" />
+          <Property Name="CanPrint" Type="bit" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="SubCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="isDefault" Type="bit" />
+          <Property Name="CompanyID" Type="int" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="FormID" Type="int" />
+          <Property Name="Allowed" Type="bit" />
+          <Property Name="CanAdd" Type="bit" />
+          <Property Name="CanEdit" Type="bit" />
+          <Property Name="CanDelete" Type="bit" />
+          <Property Name="CanPrint" Type="bit" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="LevelID" Type="int" />
+          <Property Name="isBlocked" Type="bit" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="LastLogin" Type="smalldatetime" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <Association Name="FK_GroupRoles_Forms">
+          <End Role="Forms" Type="Self.Forms" Multiplicity="0..1" />
+          <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Forms">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRoles">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRoles_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRoles">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCompany_Companies">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SubCompany" Type="Self.SubCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Forms">
+          <End Role="Forms" Type="Self.Forms" Multiplicity="0..1" />
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Forms">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Departments">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="DepartmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AccountingSecurityModelStoreContainer">
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Forms" EntityType="Self.Forms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupRoles" EntityType="Self.GroupRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubCompany" EntityType="Self.SubCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GroupRoles_Forms" Association="Self.FK_GroupRoles_Forms">
+            <End Role="Forms" EntitySet="Forms" />
+            <End Role="GroupRoles" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRoles_Groups" Association="Self.FK_GroupRoles_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupRoles" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCompany_Companies" Association="Self.FK_SubCompany_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="SubCompany" EntitySet="SubCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Forms" Association="Self.FK_UserRoles_Forms">
+            <End Role="Forms" EntitySet="Forms" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Departments" Association="Self.FK_Users_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Groups" Association="Self.FK_Users_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SecurityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SecurityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companies" EntityType="SecurityModel.Company" />
+          <EntitySet Name="Departments" EntityType="SecurityModel.Department" />
+          <EntitySet Name="Forms" EntityType="SecurityModel.Form" />
+          <EntitySet Name="GroupRoles" EntityType="SecurityModel.GroupRole" />
+          <EntitySet Name="Groups" EntityType="SecurityModel.Group" />
+          <EntitySet Name="UserRoles" EntityType="SecurityModel.UserRole" />
+          <EntitySet Name="Users" EntityType="SecurityModel.User" />
+          <AssociationSet Name="FK_Users_Departments" Association="SecurityModel.FK_Users_Departments">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRoles_Forms" Association="SecurityModel.FK_GroupRoles_Forms">
+            <End Role="Form" EntitySet="Forms" />
+            <End Role="GroupRole" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Forms" Association="SecurityModel.FK_UserRoles_Forms">
+            <End Role="Form" EntitySet="Forms" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRoles_Groups" Association="SecurityModel.FK_GroupRoles_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="GroupRole" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Groups" Association="SecurityModel.FK_Users_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users" Association="SecurityModel.FK_UserRoles_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <EntitySet Name="SubCompanies" EntityType="SecurityModel.SubCompany" />
+          <AssociationSet Name="FK_SubCompany_Companies" Association="SecurityModel.FK_SubCompany_Companies">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="SubCompany" EntitySet="SubCompanies" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstLocalCurrencyid" Type="Int32" />
+          <Property Name="SecondLocalCurrencyid" Type="Int32" />
+          <Property Name="RegisterNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FiscalNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HasSubCompanies" Type="Boolean" />
+          <Property Name="isVisible" Type="Boolean" />
+          <Property Name="DatabaseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AccountLength" Type="Int32" />
+          <NavigationProperty Name="SubCompanies" Relationship="SecurityModel.FK_SubCompany_Companies" FromRole="Company" ToRole="SubCompany" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Users" Relationship="SecurityModel.FK_Users_Departments" FromRole="Department" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Form">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Panel" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="FormGroup" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="FormName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="GroupRoles" Relationship="SecurityModel.FK_GroupRoles_Forms" FromRole="Form" ToRole="GroupRole" />
+          <NavigationProperty Name="UserRoles" Relationship="SecurityModel.FK_UserRoles_Forms" FromRole="Form" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="GroupRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="FormID" Type="Int32" />
+          <Property Name="Allowed" Type="Boolean" />
+          <Property Name="CanAdd" Type="Boolean" />
+          <Property Name="CanEdit" Type="Boolean" />
+          <Property Name="CanDelete" Type="Boolean" />
+          <Property Name="CanPrint" Type="Boolean" />
+          <NavigationProperty Name="Form" Relationship="SecurityModel.FK_GroupRoles_Forms" FromRole="GroupRole" ToRole="Form" />
+          <NavigationProperty Name="Group" Relationship="SecurityModel.FK_GroupRoles_Groups" FromRole="GroupRole" ToRole="Group" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="GroupRoles" Relationship="SecurityModel.FK_GroupRoles_Groups" FromRole="Group" ToRole="GroupRole" />
+          <NavigationProperty Name="Users" Relationship="SecurityModel.FK_Users_Groups" FromRole="Group" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="FormID" Type="Int32" />
+          <Property Name="Allowed" Type="Boolean" />
+          <Property Name="CanAdd" Type="Boolean" />
+          <Property Name="CanEdit" Type="Boolean" />
+          <Property Name="CanDelete" Type="Boolean" />
+          <Property Name="CanPrint" Type="Boolean" />
+          <NavigationProperty Name="Form" Relationship="SecurityModel.FK_UserRoles_Forms" FromRole="UserRole" ToRole="Form" />
+          <NavigationProperty Name="User" Relationship="SecurityModel.FK_UserRoles_Users" FromRole="UserRole" ToRole="User" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="LevelID" Type="Int32" />
+          <Property Name="isBlocked" Type="Boolean" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="LastLogin" Type="DateTime" Precision="0" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Department" Relationship="SecurityModel.FK_Users_Departments" FromRole="User" ToRole="Department" />
+          <NavigationProperty Name="Group" Relationship="SecurityModel.FK_Users_Groups" FromRole="User" ToRole="Group" />
+          <NavigationProperty Name="UserRoles" Relationship="SecurityModel.FK_UserRoles_Users" FromRole="User" ToRole="UserRole" />
+        </EntityType>
+        <Association Name="FK_Users_Departments">
+          <End Type="SecurityModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="SecurityModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="DepartmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRoles_Forms">
+          <End Type="SecurityModel.Form" Role="Form" Multiplicity="0..1" />
+          <End Type="SecurityModel.GroupRole" Role="GroupRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Form">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRole">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Forms">
+          <End Type="SecurityModel.Form" Role="Form" Multiplicity="0..1" />
+          <End Type="SecurityModel.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Form">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRoles_Groups">
+          <End Type="SecurityModel.Group" Role="Group" Multiplicity="0..1" />
+          <End Type="SecurityModel.GroupRole" Role="GroupRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRole">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Groups">
+          <End Type="SecurityModel.Group" Role="Group" Multiplicity="0..1" />
+          <End Type="SecurityModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users">
+          <End Type="SecurityModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="SecurityModel.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SubCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="isDefault" Type="Boolean" />
+          <Property Name="CompanyID" Type="Int32" />
+          <NavigationProperty Name="Company" Relationship="SecurityModel.FK_SubCompany_Companies" FromRole="SubCompany" ToRole="Company" />
+        </EntityType>
+        <Association Name="FK_SubCompany_Companies">
+          <End Type="SecurityModel.Company" Role="Company" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SecurityModel.SubCompany" Role="SubCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AccountingSecurityModelStoreContainer" CdmEntityContainer="SecurityEntities">
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="SecurityModel.Company">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="AccountLength" ColumnName="AccountLength" />
+                <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+                <ScalarProperty Name="isVisible" ColumnName="isVisible" />
+                <ScalarProperty Name="HasSubCompanies" ColumnName="HasSubCompanies" />
+                <ScalarProperty Name="FiscalNumber" ColumnName="FiscalNumber" />
+                <ScalarProperty Name="RegisterNumber" ColumnName="RegisterNumber" />
+                <ScalarProperty Name="SecondLocalCurrencyid" ColumnName="SecondLocalCurrencyid" />
+                <ScalarProperty Name="FirstLocalCurrencyid" ColumnName="FirstLocalCurrencyid" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="SecurityModel.Department">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Forms">
+            <EntityTypeMapping TypeName="SecurityModel.Form">
+              <MappingFragment StoreEntitySet="Forms">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+                <ScalarProperty Name="FormGroup" ColumnName="FormGroup" />
+                <ScalarProperty Name="Panel" ColumnName="Panel" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupRoles">
+            <EntityTypeMapping TypeName="SecurityModel.GroupRole">
+              <MappingFragment StoreEntitySet="GroupRoles">
+                <ScalarProperty Name="CanPrint" ColumnName="CanPrint" />
+                <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+                <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+                <ScalarProperty Name="CanAdd" ColumnName="CanAdd" />
+                <ScalarProperty Name="Allowed" ColumnName="Allowed" />
+                <ScalarProperty Name="FormID" ColumnName="FormID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="SecurityModel.Group">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="SecurityModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRoles">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CanPrint" ColumnName="CanPrint" />
+                <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+                <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+                <ScalarProperty Name="CanAdd" ColumnName="CanAdd" />
+                <ScalarProperty Name="Allowed" ColumnName="Allowed" />
+                <ScalarProperty Name="FormID" ColumnName="FormID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SecurityModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="isBlocked" ColumnName="isBlocked" />
+                <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCompanies">
+            <EntityTypeMapping TypeName="SecurityModel.SubCompany">
+              <MappingFragment StoreEntitySet="SubCompany">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

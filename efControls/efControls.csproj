@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{283DB850-F059-4523-B0C8-33993A661C48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>efControls</RootNamespace>
+    <AssemblyName>efControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\CIGInsurance\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Releases\efControls\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\Accounting\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Accounting\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DepartmentsSearchList.cs" />
+    <Compile Include="Data\GroupsSearchList.cs" />
+    <Compile Include="Data\SecurityEntities.cs" />
+    <Compile Include="Data\Company.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridNewRowHelper.cs" />
+    <Compile Include="Controls\efGrid\efGridViewInfo.cs" />
+    <Compile Include="Controls\efGrid\efGridHandler.cs" />
+    <Compile Include="Controls\efGrid\efGridViewSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridViewSearch.Designer.cs">
+      <DependentUpon>efGridViewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGrid\efGridViewInfoRegistrator.cs" />
+    <Compile Include="Controls\efSearchLookUpEdit.designer.cs">
+      <DependentUpon>efSearchLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efSpinner.designer.cs">
+      <DependentUpon>efSpinner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efTextBox.designer.cs">
+      <DependentUpon>efTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efUnboundComboBox.designer.cs">
+      <DependentUpon>efUnboundComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefSearchLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefSpinner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefUnboundComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Entities\Company.cs" />
+    <Compile Include="Data\Entities\Department.cs" />
+    <Compile Include="Data\Entities\Form.cs" />
+    <Compile Include="Data\Entities\Group.cs" />
+    <Compile Include="Data\Entities\GroupRole.cs" />
+    <Compile Include="Data\Entities\User.cs" />
+    <Compile Include="Data\Entities\UserRole.cs" />
+    <Compile Include="Data\SecurityDataFormServices.cs" />
+    <Compile Include="Data\Department.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SubCompany.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efGridLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efUnboundComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efSpinner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efSearchLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Form.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserRolesSearchList.cs" />
+    <Compile Include="Data\UsersSearchList.cs" />
+    <Compile Include="Forms\efPrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efPrintPreview.Designer.cs">
+      <DependentUpon>efPrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataForm\efDataSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataForm\efDataSearchForm.Designer.cs">
+      <DependentUpon>efDataSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormChangeUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormChangeUserPassword.Designer.cs">
+      <DependentUpon>FormChangeUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IFormExtensions.cs" />
+    <Compile Include="Forms\SecurityForms\FormDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormDepartments.designer.cs">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormGroupRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormGroupRoles.Designer.cs">
+      <DependentUpon>FormGroupRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormGroups.Designer.cs">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormUserRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormUserRoles.designer.cs">
+      <DependentUpon>FormUserRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForms\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Group.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupRole.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ITablePosted.cs" />
+    <Compile Include="Interfaces\ITableCode.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Modules\Dynamic.cs" />
+    <Compile Include="Modules\SecurityService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\SecurityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SecurityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SecurityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\efUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\efUserControl.designer.cs">
+      <DependentUpon>efUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucControlNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucControlNavigator.Designer.cs">
+      <DependentUpon>ucControlNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\bfPDF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\bfPDF.designer.cs">
+      <DependentUpon>bfPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efControlNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ITableAll.cs" />
+    <Compile Include="Interfaces\ITableSome.cs" />
+    <Compile Include="Forms\DataForm\efFormExtensions.cs" />
+    <Compile Include="Controls\efAlertControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efButton.Designer.cs">
+      <DependentUpon>efButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efButtonEdit.Designer.cs">
+      <DependentUpon>efButtonEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efCheckBox.Designer.cs">
+      <DependentUpon>efCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efCheckedListBox.Designer.cs">
+      <DependentUpon>efCheckedListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efComboBox.Designer.cs">
+      <DependentUpon>efComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efGroupControl.Designer.cs">
+      <DependentUpon>efGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efLabel.Designer.cs">
+      <DependentUpon>efLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efLayoutControl.Designer.cs">
+      <DependentUpon>efLayoutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efLayoutControlItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efLayoutControlItem.Designer.cs">
+      <DependentUpon>efLayoutControlItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efListBox.Designer.cs">
+      <DependentUpon>efListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efLookupPictureEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efLookupPictureEdit.Designer.cs">
+      <DependentUpon>efLookupPictureEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efMemoEdit.Designer.cs">
+      <DependentUpon>efMemoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efMemoExEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efMemoExEdit.Designer.cs">
+      <DependentUpon>efMemoExEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efMultiColumnCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efMultiColumnCombobox.Designer.cs">
+      <DependentUpon>efMultiColumnCombobox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efMultilineTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efMultilineTextbox.Designer.cs">
+      <DependentUpon>efMultilineTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efNavBarControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efNavBarControl.Designer.cs">
+      <DependentUpon>efNavBarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efPanel.Designer.cs">
+      <DependentUpon>efPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efPopupContainerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efPopupContainerControl.Designer.cs">
+      <DependentUpon>efPopupContainerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efPopupContainerEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efPopupContainerEdit.Designer.cs">
+      <DependentUpon>efPopupContainerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efRadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efRadioGroup.Designer.cs">
+      <DependentUpon>efRadioGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efSeperator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efSeperator.Designer.cs">
+      <DependentUpon>efSeperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efStyleController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efStyleController.Designer.cs">
+      <DependentUpon>efStyleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\efTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\efTabControl.Designer.cs">
+      <DependentUpon>efTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reports\efReportLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Reports\efReportLabel.Designer.cs">
+      <DependentUpon>efReportLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RepositoryItems\RepositoryItemefPopupContainerEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEditForm.Designer.cs">
+      <DependentUpon>ucEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucImageViewer.Designer.cs">
+      <DependentUpon>ucImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DbContextExtensions.cs" />
+    <Compile Include="Data\iInfo.cs" />
+    <Compile Include="Data\ObservableListSource.cs" />
+    <Compile Include="Data\VfpConnection.cs" />
+    <Compile Include="Data\xDynamicLibrary.cs" />
+    <Compile Include="Forms\efLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efLogin.designer.cs">
+      <DependentUpon>efLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efMainForm.designer.cs">
+      <DependentUpon>efMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efPreferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efPreferences.designer.cs">
+      <DependentUpon>efPreferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efProgressForm.designer.cs">
+      <DependentUpon>efProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efSetConnections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efSetConnections.designer.cs">
+      <DependentUpon>efSetConnections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efBaseForm.designer.cs">
+      <DependentUpon>efBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataForm\efDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataForm\efDataForm.designer.cs">
+      <DependentUpon>efDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\efWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\efWaitForm.designer.cs">
+      <DependentUpon>efWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IControl.cs" />
+    <Compile Include="Interfaces\IDataForm.cs" />
+    <Compile Include="Interfaces\IForm.cs" />
+    <Compile Include="Interfaces\IUserInfo.cs" />
+    <Compile Include="Modules\Alert.cs" />
+    <Compile Include="Modules\App.cs" />
+    <Compile Include="Modules\DevMode.cs" />
+    <Compile Include="Modules\Enums.cs" />
+    <Compile Include="Modules\Exceptions.cs" />
+    <Compile Include="Modules\eztwain.cs" />
+    <Compile Include="Modules\Functions.cs" />
+    <Compile Include="Modules\Lock.cs" />
+    <Compile Include="Modules\NumberToWords.cs" />
+    <Compile Include="Modules\Report.cs" />
+    <Compile Include="Modules\Resolution.cs" />
+    <Compile Include="Modules\Splash.cs" />
+    <Compile Include="Modules\SqlServerInfo.cs" />
+    <Compile Include="Modules\User32.cs" />
+    <Compile Include="Modules\XML.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucPrintControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPrintControl.designer.cs">
+      <DependentUpon>ucPrintControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucScanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucScanControl.Designer.cs">
+      <DependentUpon>ucScanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserRole.cs">
+      <DependentUpon>SecurityModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\efAlertControl.resx">
+      <DependentUpon>efAlertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efButtonEdit.resx">
+      <DependentUpon>efButtonEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efComboBox.resx">
+      <DependentUpon>efComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efControlNavigator.resx">
+      <DependentUpon>efControlNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efDateEdit.resx">
+      <DependentUpon>efDateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efGrid\efGridControl.resx">
+      <DependentUpon>efGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efGrid\efGridViewSearch.resx">
+      <DependentUpon>efGridViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efLabel.resx">
+      <DependentUpon>efLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efLayoutControl.resx">
+      <DependentUpon>efLayoutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efLayoutControlItem.resx">
+      <DependentUpon>efLayoutControlItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efLookupPictureEdit.resx">
+      <DependentUpon>efLookupPictureEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efMemoExEdit.resx">
+      <DependentUpon>efMemoExEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efMultiColumnCombobox.resx">
+      <DependentUpon>efMultiColumnCombobox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efMultilineTextbox.resx">
+      <DependentUpon>efMultilineTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efRadioGroup.resx">
+      <DependentUpon>efRadioGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efSearchLookUpEdit.resx">
+      <DependentUpon>efSearchLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efSeperator.resx">
+      <DependentUpon>efSeperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efSpinner.resx">
+      <DependentUpon>efSpinner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efStyleController.resx">
+      <DependentUpon>efStyleController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efTabControl.resx">
+      <DependentUpon>efTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efTextBox.resx">
+      <DependentUpon>efTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\efUnboundComboBox.resx">
+      <DependentUpon>efUnboundComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Reports\efReportLabel.resx">
+      <DependentUpon>efReportLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RepositoryItems\RepositoryItemefPopupContainerEdit.resx">
+      <DependentUpon>RepositoryItemefPopupContainerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RepositoryItems\RepositoryItemefSearchLookUpEdit.resx">
+      <DependentUpon>RepositoryItemefSearchLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efPrintPreview.resx">
+      <DependentUpon>efPrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataForm\efDataSearchForm.resx">
+      <DependentUpon>efDataSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormChangeUserPassword.resx">
+      <DependentUpon>FormChangeUserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormDepartments.resx">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormGroupRoles.resx">
+      <DependentUpon>FormGroupRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormGroups.resx">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormUserRoles.resx">
+      <DependentUpon>FormUserRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForms\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\efUserControl.resx">
+      <DependentUpon>efUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucControlNavigator.resx">
+      <DependentUpon>ucControlNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\bfPDF.resx">
+      <DependentUpon>bfPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEditForm.resx">
+      <DependentUpon>ucEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucImageViewer.resx">
+      <DependentUpon>ucImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efLogin.resx">
+      <DependentUpon>efLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efMainForm.resx">
+      <DependentUpon>efMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efPreferences.resx">
+      <DependentUpon>efPreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efProgressForm.resx">
+      <DependentUpon>efProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efSetConnections.resx">
+      <DependentUpon>efSetConnections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efBaseForm.resx">
+      <DependentUpon>efBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataForm\efDataForm.resx">
+      <DependentUpon>efDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\efWaitForm.resx">
+      <DependentUpon>efWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserControls\ucPrintControl.resx">
+      <DependentUpon>ucPrintControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucScanControl.resx">
+      <DependentUpon>ucScanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\efControls.Data.Department.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.Group.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.SecurityEntities.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.User.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.UserRole.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="Data\SecurityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SecurityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\SecurityModel.edmx.diagram">
+      <DependentUpon>SecurityModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\SecurityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SecurityModel.edmx</DependentUpon>
+      <LastGenOutput>SecurityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\SecurityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SecurityModel.edmx</DependentUpon>
+      <LastGenOutput>SecurityModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\Logged.png" />
+    <Content Include="Resources\printer.png" />
+    <None Include="Resources\lock-3.png" />
+    <None Include="Resources\Manager-48.png" />
+    <None Include="Resources\Key-48.png" />
+    <None Include="Resources\company.png" />
+    <None Include="Resources\hand-tool.png" />
+    <None Include="Resources\sql-server-express.png" />
+    <None Include="Resources\gears.gif" />
+    <None Include="Resources\form.png" />
+    <None Include="Graphics\security_lock.png" />
+    <Content Include="Observations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gcSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 211</value>
+  </data>
+  <data name="&gt;&gt;gcSearch.Name" xml:space="preserve">
+    <value>gcSearch</value>
+  </data>
+  <data name="&gt;&gt;gcSearch.Type" xml:space="preserve">
+    <value>efControls.efGridControl, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gcSearch.Parent" xml:space="preserve">
+    <value>lcSearch</value>
+  </data>
+  <data name="&gt;&gt;gcSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 31</value>
+  </data>
+  <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
+    <value>barDockControlTop</value>
+  </data>
+  <data name="&gt;&gt;barDockControlTop.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockControl, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockControlTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barDockControlTop.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="barDockControlBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 292</value>
+  </data>
+  <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 27</value>
+  </data>
+  <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
+    <value>barDockControlBottom</value>
+  </data>
+  <data name="&gt;&gt;barDockControlBottom.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockControl, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockControlBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barDockControlBottom.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="barDockControlLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 261</value>
+  </data>
+  <data name="&gt;&gt;barDockControlLeft.Name" xml:space="preserve">
+    <value>barDockControlLeft</value>
+  </data>
+  <data name="&gt;&gt;barDockControlLeft.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockControl, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockControlLeft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barDockControlLeft.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>635, 31</value>
+  </data>
+  <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 261</value>
+  </data>
+  <data name="&gt;&gt;barDockControlRight.Name" xml:space="preserve">
+    <value>barDockControlRight</value>
+  </data>
+  <data name="&gt;&gt;barDockControlRight.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockControl, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockControlRight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barDockControlRight.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="barManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bsMaster.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>135, 17</value>
+  </metadata>
+  <metadata name="bsSearch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>497, 17</value>
+  </metadata>
+  <metadata name="bdController.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>237, 17</value>
+  </metadata>
+  <data name="sccMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="sccMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 261</value>
+  </data>
+  <data name="&gt;&gt;sccMain.Name" xml:space="preserve">
+    <value>sccMain</value>
+  </data>
+  <data name="&gt;&gt;sccMain.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;sccMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sccMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lcSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 261</value>
+  </data>
+  <data name="&gt;&gt;lcSearch.Name" xml:space="preserve">
+    <value>lcSearch</value>
+  </data>
+  <data name="&gt;&gt;lcSearch.Type" xml:space="preserve">
+    <value>efControls.efLayoutControl, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lcSearch.Parent" xml:space="preserve">
+    <value>sccMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;lcSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtOldPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="txtOldPass.Properties.NullValuePrompt" xml:space="preserve">
+    <value>Enter Old Password</value>
+  </data>
+  <data name="txtOldPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtOldPass.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="txtOldPass.ToolTip" xml:space="preserve">
+    <value>Enter Old Password</value>
+  </data>
+  <data name="&gt;&gt;txtOldPass.Name" xml:space="preserve">
+    <value>txtOldPass</value>
+  </data>
+  <data name="&gt;&gt;txtOldPass.Type" xml:space="preserve">
+    <value>efControls.efTextBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtOldPass.Parent" xml:space="preserve">
+    <value>lcPassword</value>
+  </data>
+  <data name="&gt;&gt;txtOldPass.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtConfirm.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 55</value>
+  </data>
+  <data name="txtConfirm.Properties.NullValuePrompt" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="txtConfirm.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="txtConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txtConfirm.ToolTip" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <metadata name="ValidationProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>597, 17</value>
+  </metadata>
+  <data name="txtPassword.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 31</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 7</value>
+  </data>
+  <data name="txtPassword.Properties.NullValuePrompt" xml:space="preserve">
+    <value>Enter New Password</value>
+  </data>
+  <data name="txtPassword.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txtPassword.ToolTip" xml:space="preserve">
+    <value>Enter New Password</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
+    <value>efControls.efTextBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
+    <value>lcPassword</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtConfirm.Name" xml:space="preserve">
+    <value>txtConfirm</value>
+  </data>
+  <data name="&gt;&gt;txtConfirm.Type" xml:space="preserve">
+    <value>efControls.efTextBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtConfirm.Parent" xml:space="preserve">
+    <value>lcPassword</value>
+  </data>
+  <data name="&gt;&gt;txtConfirm.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lcPassword.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lcPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="lcgPassword.CustomizationFormText" xml:space="preserve">
+    <value>lcgPassword</value>
+  </data>
+  <data name="lci1.CustomizationFormText" xml:space="preserve">
+    <value>lci1</value>
+  </data>
+  <data name="lci2.CustomizationFormText" xml:space="preserve">
+    <value>lci2</value>
+  </data>
+  <data name="lci3.CustomizationFormText" xml:space="preserve">
+    <value>lci3</value>
+  </data>
+  <data name="lcPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 83</value>
+  </data>
+  <data name="lcPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lcPassword.Text" xml:space="preserve">
+    <value>efLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;lcPassword.Name" xml:space="preserve">
+    <value>lcPassword</value>
+  </data>
+  <data name="&gt;&gt;lcPassword.Type" xml:space="preserve">
+    <value>efControls.efLayoutControl, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lcPassword.Parent" xml:space="preserve">
+    <value>pccPassword</value>
+  </data>
+  <data name="&gt;&gt;lcPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pccPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 129</value>
+  </data>
+  <data name="pccPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 87</value>
+  </data>
+  <data name="pccPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;pccPassword.Name" xml:space="preserve">
+    <value>pccPassword</value>
+  </data>
+  <data name="&gt;&gt;pccPassword.Type" xml:space="preserve">
+    <value>efControls.efPopupContainerControl, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pccPassword.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;pccPassword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pcePassword.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pcePassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 52</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.1" name="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="pcePassword.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="pcePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 20</value>
+  </data>
+  <data name="pcePassword.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;pcePassword.Name" xml:space="preserve">
+    <value>pcePassword</value>
+  </data>
+  <data name="&gt;&gt;pcePassword.Type" xml:space="preserve">
+    <value>efControls.efPopupContainerEdit, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pcePassword.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;pcePassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="spnLevel.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spnLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 76</value>
+  </data>
+  <data name="spnLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="spnLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;spnLevel.Name" xml:space="preserve">
+    <value>spnLevel</value>
+  </data>
+  <data name="&gt;&gt;spnLevel.Type" xml:space="preserve">
+    <value>efControls.efSpinner, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;spnLevel.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;spnLevel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="notesefMultilineTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 116</value>
+  </data>
+  <data name="notesefMultilineTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 120</value>
+  </data>
+  <data name="notesefMultilineTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;notesefMultilineTextbox.Name" xml:space="preserve">
+    <value>notesefMultilineTextbox</value>
+  </data>
+  <data name="&gt;&gt;notesefMultilineTextbox.Type" xml:space="preserve">
+    <value>efControls.efMultilineTextbox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;notesefMultilineTextbox.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;notesefMultilineTextbox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="isblockedefCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 240</value>
+  </data>
+  <data name="isblockedefCheckBox.Properties.Caption" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="isblockedefCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 19</value>
+  </data>
+  <data name="isblockedefCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;isblockedefCheckBox.Name" xml:space="preserve">
+    <value>isblockedefCheckBox</value>
+  </data>
+  <data name="&gt;&gt;isblockedefCheckBox.Type" xml:space="preserve">
+    <value>efControls.efCheckBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;isblockedefCheckBox.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;isblockedefCheckBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lastlogindxDateTimeInput.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lastlogindxDateTimeInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 76</value>
+  </data>
+  <data name="lastlogindxDateTimeInput.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy mm:ss</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lastlogindxDateTimeInput.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>DateTimeAdvancingCaret</value>
+  </data>
+  <data name="lastlogindxDateTimeInput.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lastlogindxDateTimeInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 20</value>
+  </data>
+  <data name="lastlogindxDateTimeInput.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lastlogindxDateTimeInput.Name" xml:space="preserve">
+    <value>lastlogindxDateTimeInput</value>
+  </data>
+  <data name="&gt;&gt;lastlogindxDateTimeInput.Type" xml:space="preserve">
+    <value>efControls.efDateEdit, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lastlogindxDateTimeInput.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;lastlogindxDateTimeInput.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupidefComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 52</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Columns" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Columns1" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <assembly alias="DevExpress.Data.v16.1" name="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="groupidefComboBox.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v16.1">
+    <value>None</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupidefComboBox.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupidefComboBox.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v16.1">
+    <value>Near</value>
+  </data>
+  <metadata name="bsGroups.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>949, 17</value>
+  </metadata>
+  <data name="groupidefComboBox.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupidefComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 20</value>
+  </data>
+  <data name="groupidefComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupidefComboBox.Name" xml:space="preserve">
+    <value>groupidefComboBox</value>
+  </data>
+  <data name="&gt;&gt;groupidefComboBox.Type" xml:space="preserve">
+    <value>efControls.efComboBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupidefComboBox.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;groupidefComboBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="departmentidefComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 28</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns1" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v16.1">
+    <value>None</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="departmentidefComboBox.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v16.1">
+    <value>Near</value>
+  </data>
+  <metadata name="bsDepartments.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>814, 17</value>
+  </metadata>
+  <data name="departmentidefComboBox.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="departmentidefComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 20</value>
+  </data>
+  <data name="departmentidefComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;departmentidefComboBox.Name" xml:space="preserve">
+    <value>departmentidefComboBox</value>
+  </data>
+  <data name="&gt;&gt;departmentidefComboBox.Type" xml:space="preserve">
+    <value>efControls.efComboBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;departmentidefComboBox.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;departmentidefComboBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="birthdatedxDateTimeInput.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="birthdatedxDateTimeInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 28</value>
+  </data>
+  <data name="birthdatedxDateTimeInput.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>DateTimeAdvancingCaret</value>
+  </data>
+  <data name="birthdatedxDateTimeInput.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="birthdatedxDateTimeInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 20</value>
+  </data>
+  <data name="birthdatedxDateTimeInput.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;birthdatedxDateTimeInput.Name" xml:space="preserve">
+    <value>birthdatedxDateTimeInput</value>
+  </data>
+  <data name="&gt;&gt;birthdatedxDateTimeInput.Type" xml:space="preserve">
+    <value>efControls.efDateEdit, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;birthdatedxDateTimeInput.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;birthdatedxDateTimeInput.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="nameefTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 2</value>
+  </data>
+  <data name="nameefTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>328, 20</value>
+  </data>
+  <data name="nameefTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nameefTextBox.Name" xml:space="preserve">
+    <value>nameefTextBox</value>
+  </data>
+  <data name="&gt;&gt;nameefTextBox.Type" xml:space="preserve">
+    <value>efControls.efTextBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nameefTextBox.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;nameefTextBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="codeTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 2</value>
+  </data>
+  <data name="codeTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="codeTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;codeTextEdit.Name" xml:space="preserve">
+    <value>codeTextEdit</value>
+  </data>
+  <data name="&gt;&gt;codeTextEdit.Type" xml:space="preserve">
+    <value>efControls.efTextBox, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;codeTextEdit.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;codeTextEdit.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>510, 261</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Name" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Type" xml:space="preserve">
+    <value>efControls.efLayoutControl, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Parent" xml:space="preserve">
+    <value>sccMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;lcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lciName.CustomizationFormText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lciName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lciDepartment.CustomizationFormText" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lciDepartment.Text" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="efLayoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="efLayoutControlItem3.Text" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="lciGroup.CustomizationFormText" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="lciGroup.Text" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="simpleSeparator1.CustomizationFormText" xml:space="preserve">
+    <value>simpleSeparator1</value>
+  </data>
+  <data name="lciNotes.CustomizationFormText" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lciNotes.Text" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lciBirth.CustomizationFormText" xml:space="preserve">
+    <value>BirthDate</value>
+  </data>
+  <data name="lciBirth.Text" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="lciLastLogin.CustomizationFormText" xml:space="preserve">
+    <value>LastLogin</value>
+  </data>
+  <data name="lciLastLogin.Text" xml:space="preserve">
+    <value>Last Login</value>
+  </data>
+  <data name="lciBlocked.CustomizationFormText" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="lciBlocked.Text" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="lciLevel.CustomizationFormText" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="lciLevel.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="lciPassword.CustomizationFormText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lciPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <metadata name="imageCollection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>357, 17</value>
+  </metadata>
+  <data name="imageCollection.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v16.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxNi4xLCBWZXJzaW9uPTE2LjEu
+        Ni4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
+        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
+        a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
+        cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
+        /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABAAAAAQAAAACQUAAAAP
+        BQAAAAIfAAAC1gEAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAF4SURBVDhPnZPPSwJBFMf3YN36R4K69AdIhkEdKqwwSDfp
+        0KlunYuif6Bjh+iklrlqu1RewugYdQgU6hJddhzT7BdCau5r3swYa7m09IUvj/d83w8zK6OgSGa+v6Sr
+        m1RXs8x3zFVqhN94FX22ZKhb9DgywAN2VdKB25IRBrbgyiQ5RWRUqJbfBTM6DEUtADQzB1QPdQSwxzn+
+        bkZ98Hy1DTIqBM13ALDgtRCH8tkqkNQMB5qxEV5JaprPXwoxgFYTWo1aJ+AxMQqV8zX4KF4zjsVg3VWn
+        N1C52GBgXyegehphRwxCMTkJ5GAMzLifL5n746KyHufkcAJoOsivJaNCCLDf+du684eVUSFHgHQ+Mdsr
+        V7l+9n8C2F98Wc4s9g2uaND20NJOj4y7AaDbkKT1C+IEwABfsAmPbz+Jdz3ncQRgwL7sZOXpZKHxb8Cy
+        Vsc9pRvAzRXkWIgehfzUUPdY+J7VT4SwV2ixV/qALxVyXo9j2I26hxXlCxulIhS6bf5rAAAAAElFTkSu
+        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
+        AuXiAAwMAC9S/gGnczgQAAAAAElFTkSuQmCCCw==
+</value>
+  </data>
+  <data name="bciPosted.ItemAppearance.Pressed.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;lblFocus.Name" xml:space="preserve">
+    <value>lblFocus</value>
+  </data>
+  <data name="&gt;&gt;lblFocus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFocus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblFocus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="ep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>749, 17</value>
+  </metadata>
+  <data name="efButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 237</value>
+  </data>
+  <data name="efButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 22</value>
+  </data>
+  <data name="efButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="efButton1.Text" xml:space="preserve">
+    <value>efButton1</value>
+  </data>
+  <data name="&gt;&gt;efButton1.Name" xml:space="preserve">
+    <value>efButton1</value>
+  </data>
+  <data name="&gt;&gt;efButton1.Type" xml:space="preserve">
+    <value>efControls.efButton, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;efButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;efButton1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnChangePassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnChangePassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 105</value>
+  </data>
+  <data name="btnChangePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="btnChangePassword.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="btnChangePassword.Text" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="btnChangePassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnChangePassword.Name" xml:space="preserve">
+    <value>btnChangePassword</value>
+  </data>
+  <data name="&gt;&gt;btnChangePassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnChangePassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnChangePassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AccessibleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>635, 319</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 647</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>621, 298</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Users Management</value>
+  </data>
+  <data name="&gt;&gt;gvSearch.Name" xml:space="preserve">
+    <value>gvSearch</value>
+  </data>
+  <data name="&gt;&gt;gvSearch.Type" xml:space="preserve">
+    <value>efControls.efGridViewSearch, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colSearch.Name" xml:space="preserve">
+    <value>colSearch</value>
+  </data>
+  <data name="&gt;&gt;colSearch.Type" xml:space="preserve">
+    <value>efControls.efGridColumn, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;toolBar.Name" xml:space="preserve">
+    <value>toolBar</value>
+  </data>
+  <data name="&gt;&gt;toolBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnNew.Name" xml:space="preserve">
+    <value>btnNew</value>
+  </data>
+  <data name="&gt;&gt;btnNew.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
+    <value>btnEdit</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Name" xml:space="preserve">
+    <value>statusBar</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barManager.Name" xml:space="preserve">
+    <value>barManager</value>
+  </data>
+  <data name="&gt;&gt;barManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bsMaster.Name" xml:space="preserve">
+    <value>bsMaster</value>
+  </data>
+  <data name="&gt;&gt;bsMaster.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bdController.Name" xml:space="preserve">
+    <value>bdController</value>
+  </data>
+  <data name="&gt;&gt;bdController.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarAndDockingController, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lcgSearch.Name" xml:space="preserve">
+    <value>lcgSearch</value>
+  </data>
+  <data name="&gt;&gt;lcgSearch.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lcgMain.Name" xml:space="preserve">
+    <value>lcgMain</value>
+  </data>
+  <data name="&gt;&gt;lcgMain.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;imageCollection.Name" xml:space="preserve">
+    <value>imageCollection</value>
+  </data>
+  <data name="&gt;&gt;imageCollection.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bsiCreatedBy.Name" xml:space="preserve">
+    <value>bsiCreatedBy</value>
+  </data>
+  <data name="&gt;&gt;bsiCreatedBy.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPosted.Name" xml:space="preserve">
+    <value>btnPosted</value>
+  </data>
+  <data name="&gt;&gt;btnPosted.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bsiModifiedBy.Name" xml:space="preserve">
+    <value>bsiModifiedBy</value>
+  </data>
+  <data name="&gt;&gt;bsiModifiedBy.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bciPosted.Name" xml:space="preserve">
+    <value>bciPosted</value>
+  </data>
+  <data name="&gt;&gt;bciPosted.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bsSearch.Name" xml:space="preserve">
+    <value>bsSearch</value>
+  </data>
+  <data name="&gt;&gt;bsSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ValidationProvider.Name" xml:space="preserve">
+    <value>ValidationProvider</value>
+  </data>
+  <data name="&gt;&gt;ValidationProvider.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ep.Name" xml:space="preserve">
+    <value>ep</value>
+  </data>
+  <data name="&gt;&gt;ep.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lcgPassword.Name" xml:space="preserve">
+    <value>lcgPassword</value>
+  </data>
+  <data name="&gt;&gt;lcgPassword.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lci1.Name" xml:space="preserve">
+    <value>lci1</value>
+  </data>
+  <data name="&gt;&gt;lci1.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lci2.Name" xml:space="preserve">
+    <value>lci2</value>
+  </data>
+  <data name="&gt;&gt;lci2.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lci3.Name" xml:space="preserve">
+    <value>lci3</value>
+  </data>
+  <data name="&gt;&gt;lci3.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciName.Name" xml:space="preserve">
+    <value>lciName</value>
+  </data>
+  <data name="&gt;&gt;lciName.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciBirth.Name" xml:space="preserve">
+    <value>lciBirth</value>
+  </data>
+  <data name="&gt;&gt;lciBirth.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bsDepartments.Name" xml:space="preserve">
+    <value>bsDepartments</value>
+  </data>
+  <data name="&gt;&gt;bsDepartments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lciDepartment.Name" xml:space="preserve">
+    <value>lciDepartment</value>
+  </data>
+  <data name="&gt;&gt;lciDepartment.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bsGroups.Name" xml:space="preserve">
+    <value>bsGroups</value>
+  </data>
+  <data name="&gt;&gt;bsGroups.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lciGroup.Name" xml:space="preserve">
+    <value>lciGroup</value>
+  </data>
+  <data name="&gt;&gt;lciGroup.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciLastLogin.Name" xml:space="preserve">
+    <value>lciLastLogin</value>
+  </data>
+  <data name="&gt;&gt;lciLastLogin.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciBlocked.Name" xml:space="preserve">
+    <value>lciBlocked</value>
+  </data>
+  <data name="&gt;&gt;lciBlocked.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciNotes.Name" xml:space="preserve">
+    <value>lciNotes</value>
+  </data>
+  <data name="&gt;&gt;lciNotes.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;efLayoutControlItem3.Name" xml:space="preserve">
+    <value>efLayoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;efLayoutControlItem3.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator1.Name" xml:space="preserve">
+    <value>simpleSeparator1</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lciLevel.Name" xml:space="preserve">
+    <value>lciLevel</value>
+  </data>
+  <data name="&gt;&gt;lciLevel.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lciPassword.Name" xml:space="preserve">
+    <value>lciPassword</value>
+  </data>
+  <data name="&gt;&gt;lciPassword.Type" xml:space="preserve">
+    <value>efControls.lci, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormUsers</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>efControls.efDataSearchForm, efControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

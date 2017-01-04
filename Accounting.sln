@@ -1,13 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.BO", "Accounting.BO\Accounting.BO.csproj", "{7FCDF5CB-CE15-4FD9-BEBA-55E067494309}"
+	ProjectSection(ProjectDependencies) = postProject
+		{283DB850-F059-4523-B0C8-33993A661C48} = {283DB850-F059-4523-B0C8-33993A661C48}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.DO", "Accounting.DO\Accounting.DO.csproj", "{DF557220-F9C2-4217-AC72-D9807BF6D47D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{283DB850-F059-4523-B0C8-33993A661C48} = {283DB850-F059-4523-B0C8-33993A661C48}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.UI", "Accounting.UI\Accounting.UI.csproj", "{D36A54AA-A9EB-4E20-83AC-8CE256B4B19B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{283DB850-F059-4523-B0C8-33993A661C48} = {283DB850-F059-4523-B0C8-33993A661C48}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{84899095-F178-49DE-91A8-812AB30F37BA}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Notes.txt = Notes.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efControls", "..\efControls\efControls.csproj", "{283DB850-F059-4523-B0C8-33993A661C48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efControls", "efControls\efControls.csproj", "{283DB850-F059-4523-B0C8-33993A661C48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
