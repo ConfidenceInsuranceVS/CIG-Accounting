@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="CIGInsurance">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="PC119\SQLEXPRESS:sa">
+          <Created>2015-12-04T09:13:22.6684354+02:00</Created>
+          <Type>SQL</Type>
+          <Server>PC119\SQLEXPRESS</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="PC-221\SQLEXPRESS:sa">
+          <Created>2015-11-30T12:04:03.5826946+02:00</Created>
+          <Type>SQL</Type>
+          <Server>PC-221\SQLEXPRESS</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="RAFIC-PC\SQLEXPRESS:sa">
+          <Created>2015-05-16T12:04:56.1753825+03:00</Created>
+          <Type>SQL</Type>
+          <Server>RAFIC-PC\SQLEXPRESS</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>master</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="_find duplicates.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>_find duplicates.sql</FullPath>
+        </FileNode>
+        <FileNode Name="_security.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>_security.sql</FullPath>
+        </FileNode>
+        <FileNode Name="000-DBS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>000-DBS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="000-DROPS ALL THE DEFAULT CONSTRAINTS IN A DATABASE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>000-DROPS ALL THE DEFAULT CONSTRAINTS IN A DATABASE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Branches.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Branches.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-CarsCategories.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-CarsCategories.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Carz.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Carz.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Claimdetailtypes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Claimdetailtypes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Claimnatures.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Claimnatures.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Claimstypes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Claimstypes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Clauses.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Clauses.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Countries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Countries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Rates.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Rates.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Recours.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Recours.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001-Treaties.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>001-Treaties.sql</FullPath>
+        </FileNode>
+        <FileNode Name="002-Reinsurers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>002-Reinsurers.sql</FullPath>
+        </FileNode>
+        <FileNode Name="003-Brokers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>003-Brokers.sql</FullPath>
+        </FileNode>
+        <FileNode Name="004-ClaimDetails.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>004-ClaimDetails.sql</FullPath>
+        </FileNode>
+        <FileNode Name="004-Claims.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>004-Claims.sql</FullPath>
+        </FileNode>
+        <FileNode Name="005-Policies.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC119\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC119\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>005-Policies.sql</FullPath>
+        </FileNode>
+        <FileNode Name="005-PoliciesDetails.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC119\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC119\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>005-PoliciesDetails.sql</FullPath>
+        </FileNode>
+        <FileNode Name="006-EndorsementsDetails.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC119\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC119\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>006-EndorsementsDetails.sql</FullPath>
+        </FileNode>
+        <FileNode Name="006-Endorsements.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PC119\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>PC119\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>006-Endorsements.sql</FullPath>
+        </FileNode>
+        <FileNode Name="999-DatesToNull.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>999-DatesToNull.sql</FullPath>
+        </FileNode>
+        <FileNode Name="999-zFunctionsAndRelations.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:RAFIC-PC\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>RAFIC-PC\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>999-zFunctionsAndRelations.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

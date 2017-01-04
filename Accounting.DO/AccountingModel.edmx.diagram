@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c5433a80b6224d7e9ff58a5b7320c731" Name="Diagram1" ZoomLevel="76">
+        <EntityTypeShape EntityType="AccountingModel.ActivityLogger" Width="1.5" PointX="14.375" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.AccountStatu" Width="1.5" PointX="5.375" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.AccountType" Width="1.5" PointX="10.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.Chartofaccountsdetail" Width="1.5" PointX="10.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.Journalparent" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" FillColor="OliveDrab" />
+        <EntityTypeShape EntityType="AccountingModel.CurrencyRate" Width="1.5" PointX="10.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.Sector" Width="1.5" PointX="12.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.Vouchertype" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountingModel.Cashdistribution" Width="1.5" PointX="16.125" PointY="0.5" />
+        <EntityTypeShape EntityType="AccountingModel.description" Width="1.5" PointX="14.375" PointY="0.5" />
+        <EntityTypeShape EntityType="AccountingModel.Costcenter" Width="1.5" PointX="14.375" PointY="3" />
+        <EntityTypeShape EntityType="AccountingModel.Bank" Width="1.5" PointX="3.125" PointY="5.25" />
+        <EntityTypeShape EntityType="AccountingModel.Chartofaccount" Width="1.5" PointX="7.625" PointY="5" />
+        <AssociationConnector Association="AccountingModel.FK_Chartofaccountsdetails_Chartofaccounts" />
+        <AssociationConnector Association="AccountingModel.FK_Chartofaccounts_AccountStatus" />
+        <AssociationConnector Association="AccountingModel.FK_Chartofaccounts_AccountType" />
+        <AssociationConnector Association="AccountingModel.FK_Journalparents_Vouchertypes" />
+        <EntityTypeShape EntityType="AccountingModel.TrialBalance1" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AccountingModel.Journalchild" Width="1.5" PointX="5.5" PointY="0.5" />
+        <AssociationConnector Association="AccountingModel.FK_Journalchilds_Journalparents" />
+        <EntityTypeShape EntityType="AccountingModel.Currency" Width="1.5" PointX="7.875" PointY="0.75" />
+        <AssociationConnector Association="AccountingModel.FK_Rates_Currencies" />
+        <AssociationConnector Association="AccountingModel.FK_Journalchilds_Banks" />
+        <AssociationConnector Association="AccountingModel.FK_Journalchilds_Chartofaccounts" />
+        <AssociationConnector Association="AccountingModel.FK_Journalchilds_Currencies" />
+        <EntityTypeShape EntityType="AccountingModel.Bankreconciliation" Width="1.5" PointX="12.25" PointY="3.25" />
+        <EntityTypeShape EntityType="AccountingModel.Installment" Width="1.5" PointX="3.375" PointY="9.75" />
+        <AssociationConnector Association="AccountingModel.FK_Journalchilds_TrialBalance" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

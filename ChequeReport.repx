@@ -1,0 +1,300 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>AccountingUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyFullName>
+///   <AssemblyLocation>N:\efCigApps\Accounting\Release\AccountingUI.exe</AssemblyLocation>
+///   <TypeName>Accounting.Reports.ChequeReport</TypeName>
+///   <Localization>en-US</Localization>
+///   <Version>15.2</Version>
+///   <References>
+///     <Reference Path="N:\efCigApps\Accounting\Release\AccountingUI.exe" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Data.SqlXml\v4.0_4.0.0.0__b77a5c561934e089\System.Data.SqlXml.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Security\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Security.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Deployment\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soap\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraGrid.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraGrid.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Utils.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.Utils.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\UIAutomationTypes\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationTypes.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Input.Manipulations\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Input.Manipulations.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\UIAutomationProvider\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationProvider.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.DirectoryServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.RegularExpressions\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Design\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Design.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data.OracleClient\v4.0_4.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing.Design\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.Design.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.DirectoryServices.Protocols\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.Protocols.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.ServiceProcess\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.ServiceProcess.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration.Install\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Internals\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Internals.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\SMDiagnostics\v4.0_4.0.0.0__b77a5c561934e089\SMDiagnostics.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Build.Utilities.v4.0\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.Build.Utilities.v4.0.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Build.Framework\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.Build.Framework.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Build.Tasks.v4.0\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.Build.Tasks.v4.0.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\UIAutomationClient\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationClient.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraEditors.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraEditors.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Data.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Linq.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraPrinting.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraPrinting.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraBars.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraBars.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraTreeList.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraTreeList.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraLayout.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraLayout.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraReports.v15.2.Extensions\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraReports.v15.2.Extensions.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Utils.v15.2.UI\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.Utils.v15.2.UI.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraRichEdit.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraRichEdit.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Pdf.v15.2.Core\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.Pdf.v15.2.Core.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Pdf.v15.2.Drawing\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.Pdf.v15.2.Drawing.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraVerticalGrid.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraVerticalGrid.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.DataAccess.v15.2.UI\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.DataAccess.v15.2.UI.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.CodeParser.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.CodeParser.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraCharts.v15.2.Extensions\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraCharts.v15.2.Extensions.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraCharts.v15.2.Wizard\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraCharts.v15.2.Wizard.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraNavBar.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraNavBar.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraPivotGrid.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraPivotGrid.v15.2.dll" />
+///     <Reference Path="C:\Users\Public\Documents\DevExpress Demos 15.2\Components\Reporting\Bin\EntityFramework.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Dynamic\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Dynamic.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Images.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.Images.v15.2.dll" />
+///     <Reference Path="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraPdfViewer.v15.2\v4.0_15.2.9.0__b88d1754d700e49a\DevExpress.XtraPdfViewer.v15.2.dll" />
+///   </References>
+///   <Resources>
+///     <Resource Name="XtraReportSerialization.ChequeReport">
+/// zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFDKhCGwAAAAABEBAABQeAByAFAAaQBjAHQAdQByAGUAQgBvAHgAMQAuAEkAbQBhAGcAZQAmAFMAeQBzAHQAZQBtAC4ARAByAGEAdwBpAG4AZwAuAEkAbQBhAGcAZQAAAAAAIBgbAACJUE5HDQoaCgAAAA1JSERSAAAAygAAAMwIBgAAADI8PLUAAAAEZ0FNQQAAsY58+1GTAAAAIGNIUk0AAIcPAACMDwAA/VIAAIFAAAB9eQAA6YsAADzlAAAZzHM8hXcAAAo5
+/// aUNDUFBob3Rvc2hvcCBJQ0MgcHJvZmlsZQAASMedlndUVNcWh8+9d3qhzTACUobeu8AA0nuTXkVhmBlgKAMOMzSxIaICEUVEmiJIUMSA0VAkVkSxEBRUsAckCCgxGEVULG9G1ouurLz38vL746xv7bP3ufvsvc9aFwCSpy+XlwZLAZDKE/CDPJzpEZFRdOwAgAEeYIApAExWRrpfsHsIEMnLzYWeIXICXwQB8HpYvAJw09AzgE4H/5+kWel8geiYABGbszkZLBEXiDglS5Auts+KmBqXLGYYJWa+KEERy4k5YZENPvsssqOY2ak8tojFOaezU9li7hXxtkwhR8SIr4gLM7mcLBHfErFGijCVK+I34thUDjMDABRJbBdwWIkiNhExiR8S5CLi5QDgSAlfcdxXLOBkC8SXcklLz+FzExIFdB2WLt3U2ppB9+RkpXAEAsMAJiuZyWfTXdJS05m8HAAW7/xZMuLa0kVFtjS1trQ0NDMy/apQ
+/// /3Xzb0rc20V6Gfi5ZxCt/4vtr/zSGgBgzIlqs/OLLa4KgM4tAMjd+2LTOACApKhvHde/ug9NPC+JAkG6jbFxVlaWEZfDMhIX9A/9T4e/oa++ZyQ+7o/y0F058UxhioAurhsrLSVNyKdnpDNZHLrhn4f4Hwf+dR4GQZx4Dp/DE0WEiaaMy0sQtZvH5gq4aTw6l/efmvgPw/6kxbkWidL4EVBjjIDUdSpAfu0HKAoRINH7xV3/o2+++DAgfnnhKpOLc//vN/1nwaXiJYOb8DnOJSiEzhLyMxf3xM8SoAEBSAIqkAfKQB3oAENgBqyALXAEbsAb+IMQEAlWAxZIBKmAD7JAHtgECkEx2An2gGpQBxpBM2gFx0EnOAXOg0vgGrgBboP7YBRMgGdgFrwGCxAEYSEyRIHkIRVIE9KHzCAGZA+5Qb5QEBQJxUIJEA8SQnnQZqgYKoOqoXqoGfoeOgmdh65Ag9BdaAyahn6H3sEITIKpsBKsBRvD
+/// DNgJ9oFD4FVwArwGzoUL4B1wJdwAH4U74PPwNfg2PAo/g+cQgBARGqKKGCIMxAXxR6KQeISPrEeKkAqkAWlFupE+5CYyiswgb1EYFAVFRxmibFGeqFAUC7UGtR5VgqpGHUZ1oHpRN1FjqFnURzQZrYjWR9ugvdAR6AR0FroQXYFuQrejL6JvoyfQrzEYDA2jjbHCeGIiMUmYtZgSzD5MG+YcZhAzjpnDYrHyWH2sHdYfy8QKsIXYKuxR7FnsEHYC+wZHxKngzHDuuCgcD5ePq8AdwZ3BDeEmcQt4Kbwm3gbvj2fjc/Cl+EZ8N/46fgK/QJAmaBPsCCGEJMImQiWhlXCR8IDwkkgkqhGtiYFELnEjsZJ4jHiZOEZ8S5Ih6ZFcSNEkIWkH6RDpHOku6SWZTNYiO5KjyALyDnIz+QL5EfmNBEXCSMJLgi2xQaJGokNiSOK5JF5SU9JJcrVkrmSF5AnJ65IzUngpLSkXKabUeqkaqZNSI1Jz
+/// 0hRpU2l/6VTpEukj0lekp2SwMloybjJsmQKZgzIXZMYpCEWd4kJhUTZTGikXKRNUDFWb6kVNohZTv6MOUGdlZWSXyYbJZsvWyJ6WHaUhNC2aFy2FVko7ThumvVuitMRpCWfJ9iWtS4aWzMstlXOU48gVybXJ3ZZ7J0+Xd5NPlt8l3yn/UAGloKcQqJClsF/hosLMUupS26WspUVLjy+9pwgr6ikGKa5VPKjYrzinpKzkoZSuVKV0QWlGmabsqJykXK58RnlahaJir8JVKVc5q/KULkt3oqfQK+m99FlVRVVPVaFqveqA6oKatlqoWr5am9pDdYI6Qz1evVy9R31WQ0XDTyNPo0XjniZek6GZqLlXs09zXktbK1xrq1an1pS2nLaXdq52i/YDHbKOg84anQadW7oYXYZusu4+3Rt6sJ6FXqJejd51fVjfUp+rv09/0ABtYG3AM2gwGDEkGToZZhq2GI4Z0Yx8jfKNOo2eG2sYRxnvMu4z
+/// /mhiYZJi0mhy31TG1Ns037Tb9HczPTOWWY3ZLXOyubv5BvMu8xfL9Jdxlu1fdseCYuFnsdWix+KDpZUl37LVctpKwyrWqtZqhEFlBDBKGJet0dbO1husT1m/tbG0Edgct/nN1tA22faI7dRy7eWc5Y3Lx+3U7Jh29Xaj9nT7WPsD9qMOqg5MhwaHx47qjmzHJsdJJ12nJKejTs+dTZz5zu3O8y42Lutczrkirh6uRa4DbjJuoW7Vbo/c1dwT3FvcZz0sPNZ6nPNEe/p47vIc8VLyYnk1e816W3mv8+71IfkE+1T7PPbV8+X7dvvBft5+u/0erNBcwVvR6Q/8vfx3+z8M0A5YE/BjICYwILAm8EmQaVBeUF8wJTgm+Ejw6xDnkNKQ+6E6ocLQnjDJsOiw5rD5cNfwsvDRCOOIdRHXIhUiuZFdUdiosKimqLmVbiv3rJyItogujB5epb0qe9WV1QqrU1afjpGMYcaciEXHhsceiX3P9Gc2
+/// MOfivOJq42ZZLqy9rGdsR3Y5e5pjxynjTMbbxZfFTyXYJexOmE50SKxInOG6cKu5L5I8k+qS5pP9kw8lf0oJT2lLxaXGpp7kyfCSeb1pymnZaYPp+umF6aNrbNbsWTPL9+E3ZUAZqzK6BFTRz1S/UEe4RTiWaZ9Zk/kmKyzrRLZ0Ni+7P0cvZ3vOZK577rdrUWtZa3vyVPM25Y2tc1pXvx5aH7e+Z4P6hoINExs9Nh7eRNiUvOmnfJP8svxXm8M3dxcoFWwsGN/isaWlUKKQXziy1XZr3TbUNu62ge3m26u2fyxiF10tNimuKH5fwiq5+o3pN5XffNoRv2Og1LJ0/07MTt7O4V0Ouw6XSZfllo3v9tvdUU4vLyp/tSdmz5WKZRV1ewl7hXtHK30ru6o0qnZWva9OrL5d41zTVqtYu712fh9739B+x/2tdUp1xXXvDnAP3Kn3qO9o0GqoOIg5mHnwSWNYY9+3jG+bmxSaips+HOIdGj0c
+/// dLi32aq5+YjikdIWuEXYMn00+uiN71y/62o1bK1vo7UVHwPHhMeefh/7/fBxn+M9JxgnWn/Q/KG2ndJe1AF15HTMdiZ2jnZFdg2e9D7Z023b3f6j0Y+HTqmeqjkte7r0DOFMwZlPZ3PPzp1LPzdzPuH8eE9Mz/0LERdu9Qb2Dlz0uXj5kvulC31OfWcv210+dcXmysmrjKud1yyvdfRb9Lf/ZPFT+4DlQMd1q+tdN6xvdA8uHzwz5DB0/qbrzUu3vG5du73i9uBw6PCdkeiR0TvsO1N3U+6+uJd5b+H+xgfoB0UPpR5WPFJ81PCz7s9to5ajp8dcx/ofBz++P84af/ZLxi/vJwqekJ9UTKpMNk+ZTZ2adp++8XTl04ln6c8WZgp/lf619rnO8x9+c/ytfzZiduIF/8Wn30teyr889GrZq565gLlHr1NfL8wXvZF/c/gt423fu/B3kwtZ77HvKz/ofuj+6PPxwafUT5/+BQOY8/y6xOjT
+/// AAAACXBIWXMAAAsTAAALEwEAmpwYAAAQSUlEQVR4Xu3d+48UdaIFcOQlCAzykLcwIoJBIKAEJogMICpcCYJeVoM8zIJXooArsitRohkQV+8VDT4yIioiEkAxuBJARMQFcZR1MioYfDD2f3F/7e3T29VWV59+zPS3qr9VdSb5OMPpbz3AOemud4dkMikRtHTp0i0dOnRIpCTxff369evYOCnugQceaEj/O7IXJdxUEjOyJcG/Ixsg4aWSmJFTEhUlWlQSMzwlSaxbt249HSjho5KYwUqCnA6WcFFJzChUEsgbLOGikphRrCSQM1jCRSUxo1RJIOcPEh4qiRnllATyArGfSmJGuSUBGoq9VBIz2lISoKHYSSUxo60lARqKfVQSM9pTEqCh2EUlMaO9JQEaij1UEjMqKQnQUOygkphRaUmAhlJ9KokZJkoCNJTqUknMMFUSoKFUj0pihsmSAA2lOlQSM0yXBGgowVNJzPCjJEBDCZZKYoZf
+/// JQEaSnBUEjP8LAnQUIKhkpjhd0mAhuI/lcSMIEoCNBR/qSRmBFUSoKH4RyUxI8iSAA3FHyqJGUGXBGgo5qkkZlSjJEBDMUslMaNaJQEaijkqiRnVLAnQUMxQScyodkmAhlI5lcQMG0oCNJTKqCRm2FISoKG0n0pihk0lARpK+6gkZthWEqChtJ1KYoaNJQEaStuoJGbYWhKgoZRPJTHD5pIADaU8KokZtpcEaCilqSRmhKEkQEMpTiUxIywlARpKYSqJGWEqCdBQOJXEjLCVBGgo+VQSM8JYEqCh5FJJzAhrSYCG8geVxIwwlwRoKP+hkpgR9pIADUUlMSUKJQEaxp1KYkZUSgI0jDOVxIwolQRoGFcqiRlRKwnQMI5UEjOiWBKgYdxEqSTnz5/vyfIgRLUkQMM4iVJJ7rzzztdXrly5qaWl5Ur2up+iXBKgYVxErSTO32XVqlWbzp07N4CN80PUSwI0jANbSvLRRx/duH///rqmpqZB
+/// +P7uu+/O/O677/qzsYW4SwL9+/dPl+XixYvd2HiT4lASoGHUVbskzc3NffH9rrvu2j59+vQ9WI8xY8Ykp0yZkhwyZEjyhhtuOLJhw4Y1n3/++SjvtF7ekjguv/zyJD6GHTt27Ho2nQlxKQnQMMqqXZIzZ84MmzBhwj/mzZvX6FqPrE6dOmV/njt3buOuXbtm/vbbb53ZvG677badqXF583Bbu3atL7+8cSoJ0DCqbChJt27dLmaWX1LPnj2TN954Y3Ljxo2rvfPat29fXWpM0ZJ079794q+//trVO22l4lYSoGEUha0kbqmPY2cbGxvnuuf3ySefTCj0sQt69Ojx09dffz3EPY0JcSwJ0DBqwlwSx8SJEw+dPHlypHfeS5Ys2VpTU5MzFiXBzgHv2ErFtSRAwyipdkl++eWXroVKMnr06GTnzp2Ts2fPTv/s3j7xuuyyy5L333//Vu/8L1261HnBggXbnXEqiT9oGBXVLgncd999f88s
+/// 3y2BDfpvv/12wIEDB6YcOXJk7Ouvv/5fqbIc79Kli3dsVt++fZtPnDiRtycMu5PvueeebSqJf2gYBTaUBK688sqWzDpkDR069Cwbu3v37hm33nrr24XKgnefhoaG5WxaUEn8Q8Ows6Ukzz333BLXemS9+OKL/83GA4571NXV7fNO41i2bNkWNp0fVJI/0DDMbCkJ4J0jsx5Z2Nb44IMPprDxDnwMS43LKxgsWrToZTaNaSpJLhqGlU0lgY4dO7Zm1iULRdm8eXPBj0+Oe++99wXvtIBtETbeJJUkHw3DyLaSAHtXQFFwRJ2Nd8MRde+08NJLL93NxpuiknA0DJsgSuKcM/Xhhx9Ofv/996d7X2f69evXnFmnHDU1NT9s3bp1CZvGMXny5A/JtAnsbmbjTVBJCqNhmPhVEuf8KpxYiBMUMe9Zs2btmjZt2t5evXqdx8mMeK3YnqYCv+yOxBNPPJF3aooDp594pxk/fvxhNtYElaQ4GoaF
+/// XyXB6enjxo07jCK45p+Fj0/Oz1ddddW/Tp06Vcvms3jx4v9zT+eFU1Oef/75+06fPj0cVyYePnx4HKYbO3bskdTr3uUm9u7dO827DBNUktJoGAZ+lmTgwIHfZuZbjsT3339Pryj85ptvBg0ePLjJXSyv1AZ/sq6uDrt9k7W1tacKlCR9xJ0to1IqSXloaDubSrJ8+fIGNi/HmjVrNnTr1o1NmwcHFFmuI+7VR0Ob2VSShQsXljymcfbs2SH19fW7i52aUoxKYgca2qraJfF8hEqweTFvvfXWnFGjRp1IbaC7py9JJbEHDW3kV0mgVEnmzJmzE3u5hg8f/s9JkyYlU9sdyeuuu+4Em1ch2BBfsWIFfkHpMtywzaKS2IWGtvGzJC+//PJC17y9Etu2bbv7008/TR9D+eKLL0biF/6xxx5bd+HChTbfP6u1tbXjwYMHJ+OAY6p06WVgu2TYsGHpn1FEHHnHXjCVxC40tImfJQGc2p6Zt1e6
+/// JGyatsD6fvnllzm7j7GXDB/3nn766T9jZwCWg0t7UVr3OJNUksrQ0BZ+lwTXorvmnwN3SGHTlAPvHDgOs3r16o2peSUeffTRv7BxQVFJKkdDG/hdEnDN3yvRnuvN33jjjbk4doKPUO754cDi0aNHx7Jp/KaSmEHDaguiJOBaRo5OnTq1svHF4ONUatrE0KFD8+YHxa5B8YtKYg4NqymokuAyXNdycvTs2fP8V199NYxNVwiuMcF0bH6Am0Cw6fyikphFw2oJqiSAs4Azy8mDPVG4OpFNV0zmhnR0njhBkk3jB5XEPBpWQ5AlgTfffPP2zLIo3BSCTVfMa6+9Np/NC6699tqTbBrTVBJ/0DBoQZcEcPeTzPKoPn36tLT1IimcRczmBW09QNkeKol/aBikapQEcMAQp8hnlkvhXaAtxzZ27tw5h80HHnzwwSfZNKaoJP6iYVCqVRJHoevSHbgh3ZgxY46XWxac/Mjmk5LA3SLZNCaoJP6j
+/// YRCqXRLAJb1FjsxnjRgx4p+ldu++/fbbs1Njnb9PDpwQyaYxQSUJBg39ZkNJHDhqXuqsXlxchQuqcKoJe8hPsZKkJPw6NUUlCQ4N/WRTSeD48eOj8fEqsz5F9evXL3n77bfvwB0dUQ7cTb5ESXRlYkTQ0C+2lcSBG87hNJPMepWEbZfrr7+evuamU+Wjg4Z+sLUkDmyDeM/RqoRKEi00NM32kjhwNL53794/ZNaz3VSS6KGhSWEpiQPvLFOnTj1Q7g0hvFSSaKKhKWEriQNXIU6ZMuXANddckyyzMAls5Ksk0UVDE8JaEsdnn302+oUXXvjTLbfcsmfQoEHpx1rj4aOZvw9OcXF+Tjg3zlZJoouGlQp7SdzOnTs3AOd8Pf7442twrfxfUl933HHHDjwmDpfvPvTQQxvZdCaoJPagYSWiVBKvn3/+uZvz848//ljjfs00lcQuNGyvKJckSCqJfWjYHiqJGSqJnWjYVkGUxM/ngthCJbEX
+/// DdvC75I88sgjG3CR1apVqzbhPli4AV0US6OS2I2G5fKrJLg5HHa5up9P0r9/fzyLBE+rSuIBPJcuXUo/6CcKVBL70bAcfpYE9wK+4oorMN88uFE2bkf6zDPPPMCmDxuVJBxoWIrfJcnMt6iRI0eeLPQAn7BQScKDhsXYUBLAOwvuzMjm5cYutLKBShIuNCzEzw33QiXB6SMsBxwpZ/Ny4FENuKnD77//3pG9Xi0qSfjQkPGzJHPnzm10zTsLj0M4duzYLa+++upf6+vr/9/7Ok4l8c7r448/nrh9+/YFKElqTKJ3795J57ENNlBJwomGXn6WBLp06fJbZt5ZvXr1Sra2tnZyxhw9enRW165dc8Z4n5+Ij2+pPFFbW5sdg2meeuqpVe5x1aKShBcN3fwuybPPPrvUNf+slStXfuEe19zcPMxblPfee2+GewwuvHK/7nDeeXB9PK5xf+edd2bjIaTuaf2mkoQbDR1+lwSuvvrqM5n559i6
+/// dev/usc1NTVd5x3T0tKSs9cLN9Zmj6qeOHHioXnz5jXimhH8GXecnzVr1i73tH5SScKPhhBESQD3vMosI8fixYsv7Nu3709nzpy54eDBgwtT7wQPesdgnfbs2TM9tQ0zf+bMmbtwKrx3DLivI3HgDipsfUxTSaKBhkGVBPAI6sxycuBOJ+PHj08uWrQofZXhiBEj8sZgQx3f3dsk5Zo2bdpetj4mqSTRkRcEWRLAO0L37t0vZpYXmEGDBjWx9TFFJYmWnD8EXRKHs+0QpJqamh+wK5mtT6VUkujJ/lCtkgAe6jNhwoR/ZJbtC9woAt9x0wh83PNrY14liab0f6pZEgf2WOH689TGffoM4cy6FNWjR4/sz86z2qdOnZrNHB07dmzFrmRc4w5Y3k8//XSFdx0qpZJElxUlceCAIe58gnv7Pvzww39LvQucyqyXW2LZsmVb8GAe7LnasmXLUuzx2rx58/ITJ06Mwq5g7zR9+/ZtZsszSSWJ
+/// NnxZURIGBwYz65Y1Y8aM3c7rZ8+ezXvEderL+ftk3XTTTR95x5mkkkQfvtL/c20rCbCNfDx7kY2FV155ZQH+Lp5pEjt27Cg4TaVUknjAl5UlAaxbivMLn9bY2Fjw1PrBgwc3ecfffPPNvh0vUUnio4OtJTl9+vRw1y9h1vz5819135HRuSQYD/oh4xO4gZ0z1iSVJF5oaAO8c2R+CXPgxMgVK1Y0PPnkk/+DExw3bty4ukBJ0jfMZvOulEoSPzS0AR7n5vzCe+FGE84uZPzsfR10w2wxiYY2OHz48LjOnTvnXadSDpVETKOhLWpra9lxlKJUEvEDDW3R0NCwfODAgTlFKEYlEb/Q0Ba4KcTatWvXs4ux3CZNmqSSiK9oaJMLFy703LRp06o+ffq0OMUYMGCAU5L0Q3wOHTo0USURP9HQRnhc3LZt2+6ur6/fvWHDhjX79++vw0N92FgTVBJxo6Ht/L7vsEoiXjSMM5VEGBrGlUoihdAw
+/// jlQSKYaGcaOSSCk0jBOVRMpBw7hQSaRcNIwDlUTagoZRp5JIW9EwylQSaQ8aRpVKIu1FwyhSSaQSNIwalUQqRcMoUUnEBBpGhUoiptAwClQSMYmGYaeSiGk0DDOVRPxAw7BSScQvNAwjlUT8RMOwUUnEbzQME5VEgkDDsFBJJCg0DAOVRIJEQ9upJBI0GtpMJZFqoKGtVBKpFhraSCWRaqKhbVQSqTYa2kQlERvQ0BYqidiChjZQScQmNKw2lURsQ8NqUknERjSsFpVEbEXDalBJxGY0DJpKIrajYZBUEgkDGgZFJZGwoGEQVBIJExr6TSWRsKGhn1QSCSMa+kUlkbCioR9UEgkzGpqmkkjY0dAklUSigIamqCQSFTQ0QSWRKKFhpVQSiRoaVkIlkSiiYXupJBJVNGwPlUSijIZtpZJI1NGwLVQSiQMalkslkbigYTlUEokTGpaikkjc0LAYlUTiiIaFqCQSVzRkVBKJMxp6qSQSdzR0
+/// U0lEShRFJRH5DxqCSiLyBxqqJCK58gKVRCRfzh9UEhEu+4NKIlJY+j8qiUhxKolIGfClkoiUgC+VRKQEfKkkIkUlO/wbuNJcccL5bqsAAAAASUVORK5CYII=</Resource>
+///   </Resources>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class ChequeReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.Parameters.Parameter Date;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.Parameters.Parameter FromTo;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.Parameters.Parameter Tafkit;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.Parameters.Parameter Currency;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.Parameters.Parameter Amount;
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private System.Resources.ResourceManager _resources;
+        private string _resourceString;
+        public ChequeReport() {
+            this._resourceString = DevExpress.XtraReports.Serialization.XRResourceManager.GetResourceFor("XtraReportSerialization.ChequeReport");
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(this._resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tafkit = new DevExpress.XtraReports.Parameters.Parameter();
+            this.FromTo = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Currency = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Date = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.Amount = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.HeightF = 0F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.Date, "Text", "")});
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(247.9167F, 173.2917F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel3.Text = "xrLabel3";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.FromTo, "Text", "")});
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(139.5833F, 68.70833F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(601.0417F, 23F);
+            this.xrLabel4.Text = "xrLabel4";
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.Tafkit, "Text", "")});
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(139.5833F, 112.4167F);
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(601.0417F, 44.875F);
+            this.xrLabel5.Text = "xrLabel5";
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(292.7083F, 10.00001F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(191.5833F, 27F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            this.xrLabel6.Text = "يدفع للمستفيد الأول فقط";
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.Currency, "Text", "")});
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(571.875F, 10.00001F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel2.Text = "xrLabel2";
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(139.5833F, 136.5833F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // TopMargin
+            // 
+            this.TopMargin.HeightF = 0F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.Amount, "Text", "")});
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(697.9167F, 10.00001F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel1.Text = "xrLabel1";
+            // 
+            // Tafkit
+            // 
+            this.Tafkit.Description = "Tafkit";
+            this.Tafkit.Name = "Tafkit";
+            // 
+            // FromTo
+            // 
+            this.FromTo.Description = "FromTo";
+            this.FromTo.Name = "FromTo";
+            // 
+            // Currency
+            // 
+            this.Currency.Description = "Currency";
+            this.Currency.Name = "Currency";
+            // 
+            // Date
+            // 
+            this.Date.Description = "Date";
+            this.Date.Name = "Date";
+            this.Date.Type = typeof(System.DateTime);
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.xrLabel6,
+                        this.xrPictureBox1,
+                        this.xrLabel5,
+                        this.xrLabel4,
+                        this.xrLabel3,
+                        this.xrLabel2,
+                        this.xrLabel1});
+            this.Detail.HeightF = 206.2917F;
+            this.Detail.Name = "Detail";
+            this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Amount
+            // 
+            this.Amount.Description = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.Type = typeof(decimal);
+            this.Amount.ValueInfo = "0";
+            // 
+            // ChequeReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail,
+                        this.TopMargin,
+                        this.BottomMargin});
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Name = "ChequeReport";
+            this.PageHeight = 250;
+            this.PageWidth = 900;
+            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+                        this.Currency,
+                        this.Amount,
+                        this.Date,
+                        this.FromTo,
+                        this.Tafkit});
+            this.Version = "15.2";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}

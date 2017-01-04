@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D36A54AA-A9EB-4E20-83AC-8CE256B4B19B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accounting</RootNamespace>
+    <AssemblyName>AccountingUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>N:\efCigApps\Releases\Accounting\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>http://localhost/AccountingUI/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>78</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>\\Rafic-pc\n%24\CigApps\packages</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Accounting.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Intermed.Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Accounting.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Dynamic">
+      <HintPath>..\packages\DynamicQuery.1.0\lib\35\Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\..\packages\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\cboAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboAccounts.Designer.cs">
+      <DependentUpon>cboAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboBanks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboBanks.Designer.cs">
+      <DependentUpon>cboBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboSubCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboSubCompanies.Designer.cs">
+      <DependentUpon>cboSubCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboVoucherTypes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboVoucherTypes.Designer.cs">
+      <DependentUpon>cboVoucherTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboSectors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboSectors.Designer.cs">
+      <DependentUpon>cboSectors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboAccountStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboAccountStatus.Designer.cs">
+      <DependentUpon>cboAccountStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboAccountType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboAccountType.Designer.cs">
+      <DependentUpon>cboAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboCurrencies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboCurrencies.Designer.cs">
+      <DependentUpon>cboCurrencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cboCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cboCompanies.Designer.cs">
+      <DependentUpon>cboCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ef_Accounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucInstallments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucInstallments.Designer.cs">
+      <DependentUpon>ucInstallments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\CallTransactionForm.cs" />
+    <Compile Include="Forms\Base\AllFormExtensions.cs" />
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormParameters.Designer.cs">
+      <DependentUpon>FormParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormAdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormAdvancedSearch.Designer.cs">
+      <DependentUpon>FormAdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormAccountType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormAccountType.designer.cs">
+      <DependentUpon>FormAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormCompanyCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormCompanyCreation.Designer.cs">
+      <DependentUpon>FormCompanyCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormStatementOfAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormStatementOfAccount.Designer.cs">
+      <DependentUpon>FormStatementOfAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCheques.Designer.cs">
+      <DependentUpon>FormCheques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormPostUnpost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormPostUnpost.Designer.cs">
+      <DependentUpon>FormPostUnpost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormClaimsPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormClaimsPayment.Designer.cs">
+      <DependentUpon>FormClaimsPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormImportVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormImportVoucher.Designer.cs">
+      <DependentUpon>FormImportVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormTrialBalanceFT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormTrialBalanceFT.Designer.cs">
+      <DependentUpon>FormTrialBalanceFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormDepartments.Designer.cs">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormGroupRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormGroupRoles.Designer.cs">
+      <DependentUpon>FormGroupRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormGroups.Designer.cs">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormUserRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormUserRoles.Designer.cs">
+      <DependentUpon>FormUserRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCopyingBalances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCopyingBalances.Designer.cs">
+      <DependentUpon>FormCopyingBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormDifferenceExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormDifferenceExchange.Designer.cs">
+      <DependentUpon>FormDifferenceExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormJournalChecker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormJournalChecker.Designer.cs">
+      <DependentUpon>FormJournalChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormReceiptVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormReceiptVouchers.Designer.cs">
+      <DependentUpon>FormReceiptVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormPaymentVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormPaymentVouchers.Designer.cs">
+      <DependentUpon>FormPaymentVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCreditNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormCreditNotes.Designer.cs">
+      <DependentUpon>FormCreditNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormDebitNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormDebitNotes.Designer.cs">
+      <DependentUpon>FormDebitNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormJournalVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormJournalVouchers.Designer.cs">
+      <DependentUpon>FormJournalVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\FormTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\FormTransactions.Designer.cs">
+      <DependentUpon>FormTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormChartOfAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormChartOfAccounts.Designer.cs">
+      <DependentUpon>FormChartOfAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormCurrencies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormCurrencies.Designer.cs">
+      <DependentUpon>FormCurrencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormSectors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormSectors.designer.cs">
+      <DependentUpon>FormSectors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormVoucherType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormVoucherType.designer.cs">
+      <DependentUpon>FormVoucherType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FormSetConnections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FormSetConnections.Designer.cs">
+      <DependentUpon>FormSetConnections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormProfitAndLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormProfitAndLoss.Designer.cs">
+      <DependentUpon>FormProfitAndLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormUncollectedCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormUncollectedCheques.Designer.cs">
+      <DependentUpon>FormUncollectedCheques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormNotesReceivables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormNotesReceivables.Designer.cs">
+      <DependentUpon>FormNotesReceivables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormReconciliation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormReconciliation.Designer.cs">
+      <DependentUpon>FormReconciliation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormPostDatedCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormPostDatedCheques.Designer.cs">
+      <DependentUpon>FormPostDatedCheques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormAccountBalanceFromTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormAccountBalanceFromTo.Designer.cs">
+      <DependentUpon>FormAccountBalanceFromTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormPrintJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormPrintJournal.Designer.cs">
+      <DependentUpon>FormPrintJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\FormTreasury.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FormTreasury.Designer.cs">
+      <DependentUpon>FormTreasury.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\FormReportBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\FormReportBase.Designer.cs">
+      <DependentUpon>FormReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormBanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FormBanks.designer.cs">
+      <DependentUpon>FormBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptJournalNormal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptJournalNormal.designer.cs">
+      <DependentUpon>RptJournalNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptBankReconciliation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBankReconciliation.Designer.cs">
+      <DependentUpon>RptBankReconciliation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptJournalOfficial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptJournalOfficial.Designer.cs">
+      <DependentUpon>RptJournalOfficial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesInstant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesInstant.Designer.cs">
+      <DependentUpon>RptPostDatedChequesInstant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesCash.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesCash.Designer.cs">
+      <DependentUpon>RptPostDatedChequesCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesSummary.Designer.cs">
+      <DependentUpon>RptPostDatedChequesSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptTreasury.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTreasury.Designer.cs">
+      <DependentUpon>RptTreasury.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivablesInstant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivablesInstant.Designer.cs">
+      <DependentUpon>RptNotesReceivablesInstant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivablesSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivablesSummary.Designer.cs">
+      <DependentUpon>RptNotesReceivablesSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountGlForeign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountGlForeign.Designer.cs">
+      <DependentUpon>RptStatementOfAccountGlForeign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountGlLocal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountGlLocal.Designer.cs">
+      <DependentUpon>RptStatementOfAccountGlLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountBalanced.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountBalanced.Designer.cs">
+      <DependentUpon>RptStatementOfAccountBalanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptNotesReceivables.Designer.cs">
+      <DependentUpon>RptNotesReceivables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountNormal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStatementOfAccountNormal.Designer.cs">
+      <DependentUpon>RptStatementOfAccountNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesDetailed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPostDatedChequesDetailed.Designer.cs">
+      <DependentUpon>RptPostDatedChequesDetailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptTrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTrialBalance.Designer.cs">
+      <DependentUpon>RptTrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptProfitAndLoss.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptProfitAndLoss.Designer.cs">
+      <DependentUpon>RptProfitAndLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptUncollectedChequesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptUncollectedChequesReport.Designer.cs">
+      <DependentUpon>RptUncollectedChequesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptTrialBalanceCurrency.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTrialBalanceCurrency.Designer.cs">
+      <DependentUpon>RptTrialBalanceCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptAccountBalancesCurrency.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptAccountBalancesCurrency.Designer.cs">
+      <DependentUpon>RptAccountBalancesCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptAccountBalances.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptAccountBalances.Designer.cs">
+      <DependentUpon>RptAccountBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptJournalVouchers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptJournalVouchers.Designer.cs">
+      <DependentUpon>RptJournalVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptOtherVouchers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptOtherVouchers.Designer.cs">
+      <DependentUpon>RptOtherVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ucVoucherTypesEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucVoucherTypesEditForm.Designer.cs">
+      <DependentUpon>ucVoucherTypesEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\bfBalances.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\bfBalances.designer.cs">
+      <DependentUpon>bfBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ITableOrder.cs" />
+    <Compile Include="User Controls\Base\ucPrintControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Base\ucPrintControl.designer.cs">
+      <DependentUpon>ucPrintControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PrintControls\ucPrintGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\PrintControls\ucPrintGrid.designer.cs">
+      <DependentUpon>ucPrintGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger\efActivityLogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logger\efActivityLogger.Designer.cs">
+      <DependentUpon>efActivityLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Base\iReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Base\iReport.Designer.cs">
+      <DependentUpon>iReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\ucScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucScan.Designer.cs">
+      <DependentUpon>ucScan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\cboAccounts.resx">
+      <DependentUpon>cboAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboBanks.resx">
+      <DependentUpon>cboBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboSubCompanies.resx">
+      <DependentUpon>cboSubCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboVoucherTypes.resx">
+      <DependentUpon>cboVoucherTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboSectors.resx">
+      <DependentUpon>cboSectors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboAccountStatus.resx">
+      <DependentUpon>cboAccountStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboAccountType.resx">
+      <DependentUpon>cboAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cboCurrencies.resx">
+      <DependentUpon>cboCurrencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ef_Accounts.resx">
+      <DependentUpon>ef_Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucInstallments.resx">
+      <DependentUpon>ucInstallments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormParameters.resx">
+      <DependentUpon>FormParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormAdvancedSearch.resx">
+      <DependentUpon>FormAdvancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormAccountType.resx">
+      <DependentUpon>FormAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormCompanyCreation.resx">
+      <DependentUpon>FormCompanyCreation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormStatementOfAccount.resx">
+      <DependentUpon>FormStatementOfAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormCheques.resx">
+      <DependentUpon>FormCheques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormPostUnpost.resx">
+      <DependentUpon>FormPostUnpost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormClaimsPayment.resx">
+      <DependentUpon>FormClaimsPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormImportVoucher.resx">
+      <DependentUpon>FormImportVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\FormTransactions.resx">
+      <DependentUpon>FormTransactions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormChartOfAccounts.resx">
+      <DependentUpon>FormChartOfAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormCurrencies.resx">
+      <DependentUpon>FormCurrencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormSectors.resx">
+      <DependentUpon>FormSectors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormVoucherType.resx">
+      <DependentUpon>FormVoucherType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormTrialBalanceFT.resx">
+      <DependentUpon>FormTrialBalanceFT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormProfitAndLoss.resx">
+      <DependentUpon>FormProfitAndLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormUncollectedCheques.resx">
+      <DependentUpon>FormUncollectedCheques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormNotesReceivables.resx">
+      <DependentUpon>FormNotesReceivables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormReconciliation.resx">
+      <DependentUpon>FormReconciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormPostDatedCheques.resx">
+      <DependentUpon>FormPostDatedCheques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormAccountBalanceFromTo.resx">
+      <DependentUpon>FormAccountBalanceFromTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormPrintJournal.resx">
+      <DependentUpon>FormPrintJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FormTreasury.resx">
+      <DependentUpon>FormTreasury.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\FormReportBase.resx">
+      <DependentUpon>FormReportBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FormBanks.resx">
+      <DependentUpon>FormBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormDepartments.resx">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormGroups.resx">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormSetConnections.resx">
+      <DependentUpon>FormSetConnections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormCreditNotes.resx">
+      <DependentUpon>FormCreditNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormDebitNotes.resx">
+      <DependentUpon>FormDebitNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormCopyingBalances.resx">
+      <DependentUpon>FormCopyingBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormDifferenceExchange.resx">
+      <DependentUpon>FormDifferenceExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FormJournalChecker.resx">
+      <DependentUpon>FormJournalChecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormJournalVouchers.resx">
+      <DependentUpon>FormJournalVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormPaymentVouchers.resx">
+      <DependentUpon>FormPaymentVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormReceiptVouchers.resx">
+      <DependentUpon>FormReceiptVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptJournalNormal.resx">
+      <DependentUpon>RptJournalNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBankReconciliation.resx">
+      <DependentUpon>RptBankReconciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptJournalOfficial.resx">
+      <DependentUpon>RptJournalOfficial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPostDatedChequesInstant.resx">
+      <DependentUpon>RptPostDatedChequesInstant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPostDatedChequesCash.resx">
+      <DependentUpon>RptPostDatedChequesCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPostDatedChequesSummary.resx">
+      <DependentUpon>RptPostDatedChequesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTreasury.resx">
+      <DependentUpon>RptTreasury.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptNotesReceivablesInstant.resx">
+      <DependentUpon>RptNotesReceivablesInstant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptNotesReceivablesSummary.resx">
+      <DependentUpon>RptNotesReceivablesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStatementOfAccountGlForeign.resx">
+      <DependentUpon>RptStatementOfAccountGlForeign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStatementOfAccountGlLocal.resx">
+      <DependentUpon>RptStatementOfAccountGlLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStatementOfAccountBalanced.resx">
+      <DependentUpon>RptStatementOfAccountBalanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptNotesReceivables.resx">
+      <DependentUpon>RptNotesReceivables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStatementOfAccountNormal.resx">
+      <DependentUpon>RptStatementOfAccountNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPostDatedChequesDetailed.resx">
+      <DependentUpon>RptPostDatedChequesDetailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTrialBalance.resx">
+      <DependentUpon>RptTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptProfitAndLoss.resx">
+      <DependentUpon>RptProfitAndLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptUncollectedChequesReport.resx">
+      <DependentUpon>RptUncollectedChequesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTrialBalanceCurrency.resx">
+      <DependentUpon>RptTrialBalanceCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptAccountBalancesCurrency.resx">
+      <DependentUpon>RptAccountBalancesCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptAccountBalances.resx">
+      <DependentUpon>RptAccountBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptJournalVouchers.resx">
+      <DependentUpon>RptJournalVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptOtherVouchers.resx">
+      <DependentUpon>RptOtherVouchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucVoucherTypesEditForm.resx">
+      <DependentUpon>ucVoucherTypesEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\bfBalances.resx">
+      <DependentUpon>bfBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Base\ucPrintControl.resx">
+      <DependentUpon>ucPrintControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logger\efActivityLogger.resx">
+      <DependentUpon>efActivityLogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Base\iReport.resx">
+      <DependentUpon>iReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\PrintControls\ucPrintGrid.resx">
+      <DependentUpon>ucPrintGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucScan.resx">
+      <DependentUpon>ucScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AccountType.datasource" />
+    <None Include="Properties\DataSources\ActivityLogger.datasource" />
+    <None Include="Properties\DataSources\AdvancedSearch.datasource" />
+    <None Include="Properties\DataSources\Bank.datasource" />
+    <None Include="Properties\DataSources\Bankreconciliation.datasource" />
+    <None Include="Properties\DataSources\CashReport.datasource" />
+    <None Include="Properties\DataSources\Chartofaccount.datasource" />
+    <None Include="Properties\DataSources\ChartSearchList.datasource" />
+    <None Include="Properties\DataSources\Collect.datasource" />
+    <None Include="Properties\DataSources\CompanySearchList.datasource" />
+    <None Include="Properties\DataSources\Costcenter.datasource" />
+    <None Include="Properties\DataSources\Currency.datasource" />
+    <None Include="Properties\DataSources\CurrencySearchList.datasource" />
+    <None Include="Properties\DataSources\DiffExchange.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.Company.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.SubCompany.datasource" />
+    <None Include="Properties\DataSources\efControls.Data.User.datasource" />
+    <None Include="Properties\DataSources\efControls.User.datasource" />
+    <None Include="Properties\DataSources\efSecurity.Company.datasource" />
+    <None Include="Properties\DataSources\Installment.datasource" />
+    <None Include="Properties\DataSources\InstReceipts.datasource" />
+    <None Include="Properties\DataSources\Journalchild.datasource" />
+    <None Include="Properties\DataSources\JournalList.datasource" />
+    <None Include="Properties\DataSources\JournalNormal.datasource" />
+    <None Include="Properties\DataSources\JournalOfficial.datasource" />
+    <None Include="Properties\DataSources\Journalparent.datasource" />
+    <None Include="Properties\DataSources\JournalVouchers.datasource" />
+    <None Include="Properties\DataSources\NotesReceivable.datasource" />
+    <None Include="Properties\DataSources\NotesSummary.datasource" />
+    <None Include="Properties\DataSources\OtherVouchers.datasource" />
+    <None Include="Properties\DataSources\PostDatedChequesDetailed.datasource" />
+    <None Include="Properties\DataSources\PostDatedChequesInstant.datasource" />
+    <None Include="Properties\DataSources\PostdatedChequesSummary.datasource" />
+    <None Include="Properties\DataSources\PostDatedDetailedResult.datasource" />
+    <None Include="Properties\DataSources\PrintVouchers.datasource" />
+    <None Include="Properties\DataSources\ProfitAndLoss.datasource" />
+    <None Include="Properties\DataSources\SectorSearchList.datasource" />
+    <None Include="Properties\DataSources\Treasury.datasource" />
+    <None Include="Properties\DataSources\TrialBalance.datasource" />
+    <None Include="Properties\DataSources\ucAccounts.datasource" />
+    <None Include="Properties\DataSources\ucBanks.datasource" />
+    <None Include="Properties\DataSources\ucDocuments.datasource" />
+    <None Include="Properties\DataSources\UncollectedCheques.datasource" />
+    <None Include="Properties\DataSources\vChartOfAccounts.datasource" />
+    <None Include="Properties\DataSources\vfpData.datasource" />
+    <None Include="Properties\DataSources\voucherChecker.datasource" />
+    <None Include="Properties\DataSources\Vouchertype.datasource" />
+    <None Include="Properties\DataSources\voucherTypes.datasource" />
+    <None Include="Properties\DataSources\VoucherTypeSearchList.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Excluded\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\efControls\efControls.csproj">
+      <Project>{283db850-f059-4523-b0c8-33993a661c48}</Project>
+      <Name>efControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accounting.BO\Accounting.BO.csproj">
+      <Project>{7fcdf5cb-ce15-4fd9-beba-55e067494309}</Project>
+      <Name>Accounting.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accounting.DO\Accounting.DO.csproj">
+      <Project>{df557220-f9c2-4217-ac72-d9807bf6d47d}</Project>
+      <Name>Accounting.DO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v16.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v16.1.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v16.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v16.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v16.1.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v16.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPdfViewer.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v16.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v16.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporting1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounting.ico" />
+    <None Include="Resources\Fox16.png" />
+    <None Include="Resources\Fox32.png" />
+    <None Include="Resources\andco.png" />
+    <None Include="Resources\andco.bmp" />
+    <None Include="Resources\ZoomOut_16x16.png" />
+    <None Include="Resources\ZoomSearch_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

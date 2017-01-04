@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-GB">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="RAFIC-LAPTOP\SQLEXPRESS_Accounting.CIG_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="RAFIC-LAPTOP\SQLEXPRESS" />
+          <Parameter Name="database" Value="Accounting.CIG" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="p@ssw0rd" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="usp_TodayPostdatedChecks">
+        <ProcName>usp.TodayPostdatedChecks</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="usp_TodayPostdatedChecks">
+            <Field Name="Account" Type="String" />
+            <Field Name="Maturity" Type="DateTime" />
+            <Field Name="Bank" Type="String" />
+            <Field Name="Document" Type="String" />
+            <Field Name="Currency" Type="String" />
+            <Field Name="Debit" Type="Decimal" />
+            <Field Name="Credit" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="dashboardSqlDataSource1" DataMember="usp_TodayPostdatedChecks">
+      <DataItems>
+        <Dimension DataMember="Account" UniqueName="DataItem0" />
+        <Dimension DataMember="Bank" UniqueName="DataItem1" />
+        <Dimension DataMember="Currency" Name="C" UniqueName="DataItem2" />
+        <Dimension DataMember="Document" UniqueName="DataItem3" />
+        <Dimension DataMember="Maturity" UniqueName="DataItem4" />
+        <Dimension DataMember="Debit" SortOrder="Descending" UniqueName="DataItem6">
+          <NumericFormat FormatType="Number" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="Credit" UniqueName="DataItem5">
+          <NumericFormat FormatType="Number" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Weight="58.125">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="76.875">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="16.875">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="63.75">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="84.375">
+          <Dimension UniqueName="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="65.625">
+          <Dimension UniqueName="DataItem6" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="159.375">
+          <Dimension UniqueName="DataItem5" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

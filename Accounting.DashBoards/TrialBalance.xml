@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-GB">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="RAFIC-LAPTOP\SQLEXPRESS_Accounting.CIG_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="RAFIC-LAPTOP\SQLEXPRESS" />
+          <Parameter Name="database" Value="Accounting.CIG" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="p@ssw0rd" />
+        </Parameters>
+      </Connection>
+      <Query Type="TableQuery" Name="TrialBalance">
+        <Filter>[TrialBalance.Year] = 2013</Filter>
+        <Table Name="TrialBalance">
+          <Column Name="Year" />
+          <Column Name="Debit" />
+          <Column Name="Credit" />
+        </Table>
+        <Table Name="Chartofaccounts">
+          <Column Name="Code" Alias="Account" />
+        </Table>
+        <Table Name="Currencies">
+          <Column Name="Code" Alias="Currency" />
+        </Table>
+        <Relation Type="Inner" Parent="TrialBalance" Nested="Chartofaccounts">
+          <KeyColumn Parent="Accountid" Nested="ID" />
+        </Relation>
+        <Relation Type="Inner" Parent="TrialBalance" Nested="Currencies">
+          <KeyColumn Parent="CurrencyID" Nested="ID" />
+        </Relation>
+        <OrderBy Table="Chartofaccounts" Column="Code" />
+        <OrderBy Table="Currencies" Column="Code" />
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="TrialBalance">
+            <Field Name="Year" Type="Int32" />
+            <Field Name="Account" Type="String" />
+            <Field Name="Currency" Type="String" />
+            <Field Name="Debit" Type="Decimal" />
+            <Field Name="Credit" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="dashboardSqlDataSource1" DataMember="TrialBalance">
+      <DataItems>
+        <Measure DataMember="Year" UniqueName="DataItem0" />
+        <Dimension DataMember="Account" UniqueName="DataItem1" />
+        <Dimension DataMember="Currency" UniqueName="DataItem2" />
+        <Measure DataMember="Debit" UniqueName="DataItem3" />
+        <Measure DataMember="Credit" UniqueName="DataItem4" />
+      </DataItems>
+      <GridColumns>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem0" />
+        </GridMeasureColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Card ComponentName="cardDashboardItem1" Name="Cards 1" DataSource="dashboardSqlDataSource1" DataMember="TrialBalance">
+      <DataItems>
+        <Measure DataMember="Account" SummaryType="Count" UniqueName="DataItem0" />
+        <Measure DataMember="Currency" SummaryType="Count" UniqueName="DataItem1" />
+        <Measure DataMember="Debit" UniqueName="DataItem2" />
+        <Measure DataMember="Credit" UniqueName="DataItem3" />
+      </DataItems>
+      <Card>
+        <ActualValue UniqueName="DataItem0" />
+        <TargetValue UniqueName="DataItem1" />
+      </Card>
+      <Card>
+        <ActualValue UniqueName="DataItem2" />
+        <TargetValue UniqueName="DataItem3" />
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutItem DashboardItem="gridDashboardItem1" />
+        <LayoutItem DashboardItem="cardDashboardItem1" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

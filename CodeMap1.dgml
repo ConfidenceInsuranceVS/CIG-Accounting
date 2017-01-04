@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @2 @3 Member=(Name=OnShown OverloadingParameters=[(@4 Namespace=System Type=EventArgs)]))" Category="CodeSchema_Method" Bounds="-757.495020747046,-826.319758337011,87.4933333333333,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="OnShown" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" IsOverloaded="True" Label="OnShown" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=49 StartCharacterOffset=8 EndLineNumber=49 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="(@1 @2 Type=efDataSearchForm Member=onShownMoveLast)" Category="CodeSchema_Method" Bounds="-772.718447672526,-639.562433899366,136.223333333333,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="onShownMoveLast" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" IsOverloaded="True" Label="onShownMoveLast" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataSearchForm.cs StartLineNumber=25 StartCharacterOffset=8 EndLineNumber=25 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="@10" Category="CodeSchema_Method" Bounds="-904.917845865885,-479.602233899366,123.043333333333,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="checkAvailability" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" IsOverloaded="True" Label="checkAvailability" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataSearchForm.cs StartLineNumber=12 StartCharacterOffset=8 EndLineNumber=12 EndCharacterOffset=8)" />
+    <Node Id="@11" Category="CodeSchema_Method" Bounds="-775.793533717498,-740.903051944889,136.223333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="onShownMoveLast" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method Virtual" Icon="CodeSchema_Method" Label="onShownMoveLast" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=65 StartCharacterOffset=8 EndLineNumber=65 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="@5" Category="CodeSchema_Method" Bounds="-625.458775634765,-318.664651224015,60.99,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="print" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="print" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=281 StartCharacterOffset=8 EndLineNumber=281 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="@7" Category="CodeSchema_Method" Bounds="-807.828775634766,-298.706460306046,141.73,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="btnDelete_ItemClick" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="btnDelete_ItemClick" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=171 StartCharacterOffset=8 EndLineNumber=171 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Method" Bounds="-968.775442301432,-307.685540506241,127.623333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="btnEdit_ItemClick" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="btnEdit_ItemClick" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=141 StartCharacterOffset=8 EndLineNumber=141 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="@9" Category="CodeSchema_Method" Bounds="-823.485578226041,-363.641933899366,122.956019733333,25.95628288" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="checkAvailability" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method Virtual" Icon="CodeSchema_Method" Label="checkAvailability" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///C:/mnt/myFiles/Desktop/CigApps/efControls/Forms/DataForm/efDataForm.cs StartLineNumber=313 StartCharacterOffset=8 EndLineNumber=313 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="EfDataForm" Bounds="-988.775442301432,-403.642033899366,444.306666666667,150.89567359332" Group="Expanded" Label="efDataForm" UseManualLocation="True" />
+    <Node Id="EfDataSearchForm" Bounds="-924.917845865885,-519.602333899366,163.043333333333,85.9602" Group="Expanded" Label="efDataSearchForm" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="(@1 @2 @3 Member=(Name=OnShown OverloadingParameters=[(@4 Namespace=System Type=EventArgs)]))" Target="@11" Category="CodeSchema_Calls" Bounds="-712.826457554045,-800.359752197266,3.58513563588042,50.4793132238855" Weight="1" />
+    <Link Source="(@1 @2 Type=efDataSearchForm Member=onShownMoveLast)" Target="@11" Bounds="-707.015020297924,-705.94720571996,2.01437507546211,66.3847777414449" />
+    <Link Source="@10" Target="@9" Category="CodeSchema_Calls" Bounds="-731.225283812101,-493.735056688075,5.67667802734127,137.868993862277" Weight="1" />
+    <Link Source="@5" Target="@9" Category="CodeSchema_Calls" Bounds="-705.118806324279,-335.345607805242,79.6600306895139,21.4497031751616" Weight="1" />
+    <Link Source="@7" Target="@9" Category="CodeSchema_Calls" Bounds="-753.763947409349,-329.288485705136,11.7942927403491,30.5820253990903" Weight="1" />
+    <Link Source="@8" Target="@9" Category="CodeSchema_Calls" Bounds="-871.803848266253,-334.405097723699,68.2602909591458,26.7195572174573" Weight="1" />
+    <Link Source="EfDataForm" Target="@5" Category="Contains" />
+    <Link Source="EfDataForm" Target="@7" Category="Contains" />
+    <Link Source="EfDataForm" Target="@8" Category="Contains" />
+    <Link Source="EfDataForm" Target="@9" Category="Contains" />
+    <Link Source="EfDataSearchForm" Target="@10" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="Is Protected" Description="Flag to indicate the scope is Protected" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsVirtual" Label="Is Virtual" Description="Flag to indicate the method can be overridden" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FunctionTypeFlags" Label="FunctionTypeFlags" Description="FunctionTypeFlags" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsOverloaded" Label="IsOverloaded" Description="IsOverloaded" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(283db850-f059-4523-b0c8-33993a661c48.OutputPathUri)" />
+    <Alias n="2" Id="Namespace=efControls" />
+    <Alias n="3" Id="Type=efDataForm" />
+    <Alias n="4" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/mscorlib.dll" />
+    <Alias n="5" Id="(@1 @2 @3 Member=(Name=print OverloadingParameters=[(@4 Namespace=System Type=Boolean)]))" />
+    <Alias n="6" Uri="Assembly=$(ProgramFilesUri)/DevExpress 15.2/Components/Bin/Framework/DevExpress.XtraBars.v15.2.dll" />
+    <Alias n="7" Id="(@1 @2 @3 Member=(Name=btnDelete_ItemClick OverloadingParameters=[(@4 Namespace=System Type=Object),(@6 Namespace=DevExpress.XtraBars Type=ItemClickEventArgs)]))" />
+    <Alias n="8" Id="(@1 @2 @3 Member=(Name=btnEdit_ItemClick OverloadingParameters=[(@4 Namespace=System Type=Object),(@6 Namespace=DevExpress.XtraBars Type=ItemClickEventArgs)]))" />
+    <Alias n="9" Id="(@1 @2 @3 Member=checkAvailability)" />
+    <Alias n="10" Id="(@1 @2 Type=efDataSearchForm Member=checkAvailability)" />
+    <Alias n="11" Id="(@1 @2 @3 Member=onShownMoveLast)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Category 1" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Category1')" />
+      <Setter Property="Background" Value="#FFE51400" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="Has category">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="Has category">
+      <Condition Expression="HasCategory('InheritsFrom')" />
+      <Setter Property="Stroke" Value="#FF00A600" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#8000A600" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Calls" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Calls')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Function Pointer" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_FunctionPointer')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Reference" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_FieldReference')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="283db850-f059-4523-b0c8-33993a661c48.OutputPathUri" Value="file:///C:/mnt/myFiles/Desktop/CigApps/efControls/bin/Debug/efControls.dll" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
+    <Path Id="ProgramFilesUri" Value="file:///C:/Program Files (x86)" />
+  </Paths>
+</DirectedGraph>

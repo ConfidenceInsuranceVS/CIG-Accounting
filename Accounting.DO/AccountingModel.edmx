@@ -1,0 +1,2722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Accounting.CIGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="_ActivityLogger">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Machine" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateIn" Type="smalldatetime" />
+          <Property Name="DateOut" Type="smalldatetime" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="AccountStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="1" />
+          <Property Name="Description" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="AccountType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="1" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Bankreconciliation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Jvdate" Type="smalldatetime" />
+          <Property Name="Reference" Type="int" />
+          <Property Name="Maturity" Type="smalldatetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="80" />
+          <Property Name="Debit" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Credit" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="Dc" Type="nvarchar" MaxLength="1" />
+          <Property Name="Ispassed" Type="bit" />
+          <Property Name="Isposted" Type="bit" />
+          <Property Name="Rowguid" Type="uniqueidentifier" />
+          <Property Name="Accountid" Type="int" />
+          <Property Name="Currencyid" Type="int" />
+          <Property Name="Vouchertypeid" Type="int" />
+          <Property Name="Voucherid" Type="int" />
+          <Property Name="SC" Type="int" />
+        </EntityType>
+        <EntityType Name="Banks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Cashdistribution">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Chartofaccounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="12" />
+          <Property Name="Description" Type="nvarchar" MaxLength="60" />
+          <Property Name="Opendate" Type="smalldatetime" />
+          <Property Name="Special" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="isParent" Type="bit" />
+          <Property Name="Currencyid" Type="int" />
+          <Property Name="Accountstatusid" Type="int" />
+          <Property Name="Accounttypeid" Type="int" />
+          <Property Name="Balancesheetid" Type="int" />
+        </EntityType>
+        <EntityType Name="Chartofaccountsdetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="ntext" />
+          <Property Name="Company" Type="nvarchar" MaxLength="60" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="Work" Type="nvarchar" MaxLength="20" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="40" />
+          <Property Name="Pobox" Type="nvarchar" MaxLength="40" />
+          <Property Name="Sector" Type="nvarchar" MaxLength="2" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="Accountid" Type="int" />
+          <Property Name="Thirdpartytypeid" Type="int" />
+          <Property Name="sectorid" Type="int" />
+        </EntityType>
+        <EntityType Name="Costcenter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Opendate" Type="smalldatetime" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reasondate" Type="smalldatetime" />
+          <Property Name="Isparent" Type="bit" />
+          <Property Name="Iscancelled" Type="bit" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="Rate" Type="decimal" Precision="20" Scale="10" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="OrderID" Type="int" />
+        </EntityType>
+        <EntityType Name="Descriptions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Installments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ydate" Type="int" />
+          <Property Name="Type" Type="nvarchar" MaxLength="3" />
+          <Property Name="Reference" Type="int" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="1" />
+          <Property Name="Policy" Type="nvarchar" MaxLength="15" />
+          <Property Name="Endorsement" Type="nvarchar" MaxLength="15" />
+          <Property Name="Broker" Type="nvarchar" MaxLength="5" />
+          <Property Name="Insured" Type="nvarchar" MaxLength="80" />
+          <Property Name="Serial" Type="int" />
+          <Property Name="Paydate" Type="smalldatetime" />
+          <Property Name="Amount" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Issuedate" Type="smalldatetime" />
+          <Property Name="Sc" Type="int" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Journalchilds">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ratecurrency" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Maturity" Type="smalldatetime" />
+          <Property Name="Document" Type="nvarchar" MaxLength="45" />
+          <Property Name="Amount" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Amount1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Amount2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Dc" Type="nvarchar" MaxLength="1" />
+          <Property Name="Description" Type="nvarchar" MaxLength="80" />
+          <Property Name="Line" Type="int" />
+          <Property Name="Isposted" Type="bit" />
+          <Property Name="Ispassed" Type="bit" />
+          <Property Name="Recstamp" Type="nvarchar" MaxLength="10" />
+          <Property Name="Accountid" Type="int" />
+          <Property Name="Voucherid" Type="int" />
+          <Property Name="Currencyid" Type="int" />
+          <Property Name="Bankid" Type="int" />
+          <Property Name="Ydate" Type="int" />
+          <Property Name="Mdate" Type="int" />
+          <Property Name="AccountYearCurrency" Type="nvarchar" MaxLength="4000" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Journalparents">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reference" Type="int" />
+          <Property Name="Jvdate" Type="smalldatetime" />
+          <Property Name="Rate2nd" Type="decimal" Precision="20" Scale="5" />
+          <Property Name="Fromto" Type="nvarchar" MaxLength="60" />
+          <Property Name="Details" Type="ntext" />
+          <Property Name="Isposted" Type="bit" />
+          <Property Name="Vouchertypeid" Type="int" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="YDate" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="SC" Type="int" />
+          <Property Name="Instpay" Type="decimal" Precision="20" Scale="2" />
+        </EntityType>
+        <EntityType Name="Rates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ratedate" Type="smalldatetime" />
+          <Property Name="Rate" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Parity" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Currencyid" Type="int" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="YDate" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="MDate" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="DDate" Type="int" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Sectors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="TrialBalance">
+          <Key>
+            <PropertyRef Name="AccountYearCurrency" />
+          </Key>
+          <Property Name="AccountYearCurrency" Type="nvarchar" MaxLength="4000" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Accountid" Type="int" Nullable="false" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="Credit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd01" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd02" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd03" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd04" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd05" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd06" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd07" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd08" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd09" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd10" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd11" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd12" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit1st" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit2nd" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Balance" Type="decimal" Precision="21" Scale="2" StoreGeneratedPattern="Computed" />
+          <Property Name="Balance1st" Type="decimal" Precision="21" Scale="2" StoreGeneratedPattern="Computed" />
+          <Property Name="Balance2nd" Type="decimal" Precision="21" Scale="2" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Vouchertypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="Type" Type="nvarchar" MaxLength="3" />
+          <Property Name="JV" Type="bit" />
+          <Property Name="PV" Type="bit" />
+          <Property Name="RV" Type="bit" />
+          <Property Name="CN" Type="bit" />
+          <Property Name="DN" Type="bit" />
+          <Property Name="CreatedByID" Type="int" />
+          <Property Name="Creationdate" Type="smalldatetime" />
+          <Property Name="ModifiedByID" Type="int" />
+          <Property Name="Modificationdate" Type="smalldatetime" />
+          <Property Name="OrderID" Type="int" />
+        </EntityType>
+        <Association Name="FK_Chartofaccounts_AccountStatus">
+          <End Role="AccountStatus" Type="Self.AccountStatus" Multiplicity="0..1" />
+          <End Role="Chartofaccounts" Type="Self.Chartofaccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountStatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccounts">
+              <PropertyRef Name="Accountstatusid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Chartofaccounts_AccountType">
+          <End Role="AccountType" Type="Self.AccountType" Multiplicity="0..1" />
+          <End Role="Chartofaccounts" Type="Self.Chartofaccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccounts">
+              <PropertyRef Name="Accounttypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Chartofaccountsdetails_Chartofaccounts">
+          <End Role="Chartofaccounts" Type="Self.Chartofaccounts" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Chartofaccountsdetails" Type="Self.Chartofaccountsdetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chartofaccounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccountsdetails">
+              <PropertyRef Name="Accountid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Banks">
+          <End Role="Banks" Type="Self.Banks" Multiplicity="0..1" />
+          <End Role="Journalchilds" Type="Self.Journalchilds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banks">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchilds">
+              <PropertyRef Name="Bankid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Chartofaccounts">
+          <End Role="Chartofaccounts" Type="Self.Chartofaccounts" Multiplicity="0..1" />
+          <End Role="Journalchilds" Type="Self.Journalchilds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chartofaccounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchilds">
+              <PropertyRef Name="Accountid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Currencies">
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+          <End Role="Journalchilds" Type="Self.Journalchilds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchilds">
+              <PropertyRef Name="Currencyid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Journalparents">
+          <End Role="Journalparents" Type="Self.Journalparents" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Journalchilds" Type="Self.Journalchilds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journalparents">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchilds">
+              <PropertyRef Name="Voucherid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_TrialBalance">
+          <End Role="TrialBalance" Type="Self.TrialBalance" Multiplicity="0..1" />
+          <End Role="Journalchilds" Type="Self.Journalchilds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrialBalance">
+              <PropertyRef Name="AccountYearCurrency" />
+            </Principal>
+            <Dependent Role="Journalchilds">
+              <PropertyRef Name="AccountYearCurrency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalparents_Vouchertypes">
+          <End Role="Vouchertypes" Type="Self.Vouchertypes" Multiplicity="0..1" />
+          <End Role="Journalparents" Type="Self.Journalparents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vouchertypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalparents">
+              <PropertyRef Name="Vouchertypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rates_Currencies">
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Rates" Type="Self.Rates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Rates">
+              <PropertyRef Name="Currencyid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AccountBalance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="FromAccount" Type="varchar" Mode="In" />
+          <Parameter Name="ToAccount" Type="varchar" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+          <Parameter Name="SkipZeros" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="AdvancedSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Bank_Reconciliation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="AccountID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CashReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CheckerCurrencies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+          <Parameter Name="Typeid" Type="int" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CheckerDescription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="type" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CheckerEditedDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+          <Parameter Name="Typeid" Type="int" Mode="In" />
+          <Parameter Name="Userid" Type="int" Mode="In" />
+          <Parameter Name="Amount" Type="int" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CheckerEditedHours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+          <Parameter Name="Typeid" Type="int" Mode="In" />
+          <Parameter Name="Userid" Type="int" Mode="In" />
+          <Parameter Name="Amount" Type="nvarchar" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CheckerMaturity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+          <Parameter Name="Typeid" Type="int" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Collect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="phase" Type="nvarchar" Mode="In" />
+          <Parameter Name="acc" Type="int" Mode="In" />
+          <Parameter Name="status" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ExchangeDifference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="TillDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+          <Parameter Name="BeforeClosing" Type="int" Mode="In" />
+          <Parameter Name="Local1st" Type="int" Mode="In" />
+          <Parameter Name="Local2nd" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fillLookups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="source" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="destination" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="getAccountBalances" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="AccountYearCurrency" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="cID" Type="int" Mode="In" />
+          <Parameter Name="mID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="JournalNormal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="AccountID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="VoucherTypeID" Type="int" Mode="In" />
+          <Parameter Name="FromRef" Type="int" Mode="In" />
+          <Parameter Name="ToRef" Type="int" Mode="In" />
+        </Function>
+        <Function Name="JournalOfficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+        </Function>
+        <Function Name="JournalVouchers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="AccountID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="VoucherTypeID" Type="int" Mode="In" />
+          <Parameter Name="FromRef" Type="int" Mode="In" />
+          <Parameter Name="ToRef" Type="int" Mode="In" />
+        </Function>
+        <Function Name="NotesReceivables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="TillDate" Type="datetime" Mode="In" />
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PostDatedChequesDetailed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="fdate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="tdate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="adate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="Cur1" Type="int" Mode="In" />
+          <Parameter Name="Cur2" Type="int" Mode="In" />
+          <Parameter Name="Inhouse" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="PostDatedChequesInstant" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="fdate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="tdate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="adate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="Cur1" Type="int" Mode="In" />
+          <Parameter Name="Cur2" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PostUnpostVouchers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="IsPosted" Type="bit" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="Type" Type="int" Mode="In" />
+          <Parameter Name="FromReference" Type="int" Mode="In" />
+          <Parameter Name="ToReference" Type="int" Mode="In" />
+          <Parameter Name="SC" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ProfitAndLoss" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="level" Type="int" Mode="In" />
+          <Parameter Name="FromMonth" Type="int" Mode="In" />
+          <Parameter Name="ToMonth" Type="int" Mode="In" />
+          <Parameter Name="Currency" Type="int" Mode="In" />
+          <Parameter Name="BeforeClosing" Type="int" Mode="In" />
+        </Function>
+        <Function Name="StatementOfAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="FromAccount" Type="nvarchar" Mode="In" />
+          <Parameter Name="ToAccount" Type="nvarchar" Mode="In" />
+          <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Treasury" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="TrialBalance1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp" StoreFunctionName="TrialBalance">
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+          <Parameter Name="BeforeClosing" Type="bit" Mode="In" />
+          <Parameter Name="Level" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UncollectedCheques" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="ToDate" Type="smalldatetime" Mode="In" />
+          <Parameter Name="Accountid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="updateSubCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="flag" Type="int" Mode="In" />
+          <Parameter Name="clear" Type="int" Mode="In" />
+        </Function>
+        <Function Name="vChartOfAccounts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ID" Type="int" Nullable="false" />
+                <Property Name="Code" Type="nvarchar" MaxLength="12" />
+                <Property Name="Description" Type="nvarchar" MaxLength="60" />
+                <Property Name="isParent" Type="bit" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="vJournalParents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="usp">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="type" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ID" Type="int" Nullable="false" />
+                <Property Name="Code" Type="nvarchar" MaxLength="3" />
+                <Property Name="Reference" Type="int" />
+                <Property Name="Vouchertypeid" Type="int" />
+                <Property Name="SC" Type="nvarchar" MaxLength="1" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="AccountingCIGModelStoreContainer">
+          <EntitySet Name="_ActivityLogger" EntityType="Self._ActivityLogger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccountStatus" EntityType="Self.AccountStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccountType" EntityType="Self.AccountType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bankreconciliation" EntityType="Self.Bankreconciliation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cashdistribution" EntityType="Self.Cashdistribution" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Chartofaccounts" EntityType="Self.Chartofaccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Chartofaccountsdetails" EntityType="Self.Chartofaccountsdetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Costcenter" EntityType="Self.Costcenter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Descriptions" EntityType="Self.Descriptions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Journalchilds" EntityType="Self.Journalchilds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Journalparents" EntityType="Self.Journalparents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rates" EntityType="Self.Rates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sectors" EntityType="Self.Sectors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrialBalance" EntityType="Self.TrialBalance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vouchertypes" EntityType="Self.Vouchertypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Installments" EntityType="Self.Installments" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Installments].[ID] AS [ID], 
+    [Installments].[Ydate] AS [Ydate], 
+    [Installments].[Type] AS [Type], 
+    [Installments].[Reference] AS [Reference], 
+    [Installments].[Branch] AS [Branch], 
+    [Installments].[Policy] AS [Policy], 
+    [Installments].[Endorsement] AS [Endorsement], 
+    [Installments].[Broker] AS [Broker], 
+    [Installments].[Insured] AS [Insured], 
+    [Installments].[Serial] AS [Serial], 
+    [Installments].[Paydate] AS [Paydate], 
+    [Installments].[Amount] AS [Amount], 
+    [Installments].[Issuedate] AS [Issuedate], 
+    [Installments].[Sc] AS [Sc], 
+    [Installments].[CreatedByID] AS [CreatedByID], 
+    [Installments].[Creationdate] AS [Creationdate], 
+    [Installments].[ModifiedByID] AS [ModifiedByID], 
+    [Installments].[Modificationdate] AS [Modificationdate]
+    FROM [dbo].[Installments] AS [Installments]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Chartofaccounts_AccountStatus" Association="Self.FK_Chartofaccounts_AccountStatus">
+            <End Role="AccountStatus" EntitySet="AccountStatus" />
+            <End Role="Chartofaccounts" EntitySet="Chartofaccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Chartofaccounts_AccountType" Association="Self.FK_Chartofaccounts_AccountType">
+            <End Role="AccountType" EntitySet="AccountType" />
+            <End Role="Chartofaccounts" EntitySet="Chartofaccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Chartofaccountsdetails_Chartofaccounts" Association="Self.FK_Chartofaccountsdetails_Chartofaccounts">
+            <End Role="Chartofaccounts" EntitySet="Chartofaccounts" />
+            <End Role="Chartofaccountsdetails" EntitySet="Chartofaccountsdetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Banks" Association="Self.FK_Journalchilds_Banks">
+            <End Role="Banks" EntitySet="Banks" />
+            <End Role="Journalchilds" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Chartofaccounts" Association="Self.FK_Journalchilds_Chartofaccounts">
+            <End Role="Chartofaccounts" EntitySet="Chartofaccounts" />
+            <End Role="Journalchilds" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Currencies" Association="Self.FK_Journalchilds_Currencies">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Journalchilds" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Journalparents" Association="Self.FK_Journalchilds_Journalparents">
+            <End Role="Journalparents" EntitySet="Journalparents" />
+            <End Role="Journalchilds" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_TrialBalance" Association="Self.FK_Journalchilds_TrialBalance">
+            <End Role="TrialBalance" EntitySet="TrialBalance" />
+            <End Role="Journalchilds" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalparents_Vouchertypes" Association="Self.FK_Journalparents_Vouchertypes">
+            <End Role="Vouchertypes" EntitySet="Vouchertypes" />
+            <End Role="Journalparents" EntitySet="Journalparents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rates_Currencies" Association="Self.FK_Rates_Currencies">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Rates" EntitySet="Rates" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AccountingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ActivityLogger">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="String" MaxLength="36" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Machine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateIn" Type="DateTime" Precision="0" />
+          <Property Name="DateOut" Type="DateTime" Precision="0" />
+          <Property Name="Remarks" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AccountStatu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Chartofaccounts" Relationship="AccountingModel.FK_Chartofaccounts_AccountStatus" FromRole="AccountStatu" ToRole="Chartofaccount" />
+        </EntityType>
+        <EntityType Name="AccountType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Chartofaccounts" Relationship="AccountingModel.FK_Chartofaccounts_AccountType" FromRole="AccountType" ToRole="Chartofaccount" />
+        </EntityType>
+        <EntityType Name="Chartofaccountsdetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Work" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Pobox" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Sector" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <Property Name="Accountid" Type="Int32" />
+          <Property Name="Thirdpartytypeid" Type="Int32" />
+          <NavigationProperty Name="Chartofaccount" Relationship="AccountingModel.FK_Chartofaccountsdetails_Chartofaccounts" FromRole="Chartofaccountsdetail" ToRole="Chartofaccount" />
+          <Property Name="sectorid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Journalparent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reference" Type="Int32" />
+          <Property Name="Jvdate" Type="DateTime" Precision="0" />
+          <Property Name="Rate2nd" Type="Decimal" Precision="20" Scale="5" />
+          <Property Name="Fromto" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Isposted" Type="Boolean" />
+          <Property Name="Vouchertypeid" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <Property Name="YDate" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Vouchertype" Relationship="AccountingModel.FK_Journalparents_Vouchertypes" FromRole="Journalparent" ToRole="Vouchertype" />
+          <Property Name="SC" Type="Int32" />
+          <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_Journalparents" FromRole="Journalparent" ToRole="Journalchild" />
+          <Property Name="Instpay" Type="Decimal" Precision="20" Scale="2" />
+        </EntityType>
+        <EntityType Name="CurrencyRate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ratedate" Type="DateTime" Precision="0" />
+          <Property Name="Rate" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Parity" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Currencyid" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <Property Name="YDate" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MDate" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="DDate" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Currency" Relationship="AccountingModel.FK_Rates_Currencies" FromRole="CurrencyRate" ToRole="Currency" />
+        </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Vouchertype">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="JV" Type="Boolean" />
+          <Property Name="PV" Type="Boolean" />
+          <Property Name="RV" Type="Boolean" />
+          <Property Name="CN" Type="Boolean" />
+          <Property Name="DN" Type="Boolean" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Journalparents" Relationship="AccountingModel.FK_Journalparents_Vouchertypes" FromRole="Vouchertype" ToRole="Journalparent" />
+          <Property Name="OrderID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="AccountingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ActivityLoggers" EntityType="AccountingModel.ActivityLogger" />
+          <EntitySet Name="AccountStatus" EntityType="Self.AccountStatu" />
+          <EntitySet Name="AccountTypes" EntityType="Self.AccountType" />
+          <EntitySet Name="Chartofaccountsdetails" EntityType="Self.Chartofaccountsdetail" />
+          <EntitySet Name="Journalparents" EntityType="Self.Journalparent" />
+          <EntitySet Name="CurrencyRates" EntityType="AccountingModel.CurrencyRate" />
+          <EntitySet Name="Sectors" EntityType="Self.Sector" />
+          <EntitySet Name="Vouchertypes" EntityType="Self.Vouchertype" />
+          <FunctionImport Name="vChartOfAccounts" IsComposable="true" ReturnType="Collection(AccountingModel.vChartOfAccounts)" />
+          <FunctionImport Name="Collect" ReturnType="Collection(AccountingModel.Collect)">
+            <Parameter Name="phase" Mode="In" Type="String" />
+            <Parameter Name="acc" Mode="In" Type="Int32" />
+            <Parameter Name="status" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Cashdistributions" EntityType="AccountingModel.Cashdistribution" />
+          <EntitySet Name="descriptions" EntityType="AccountingModel.description" />
+          <EntitySet Name="Costcenters" EntityType="AccountingModel.Costcenter" />
+          <FunctionImport Name="PostUnpostVouchers">
+            <Parameter Name="IsPosted" Mode="In" Type="Boolean" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Type" Mode="In" Type="Int32" />
+            <Parameter Name="FromReference" Mode="In" Type="Int32" />
+            <Parameter Name="ToReference" Mode="In" Type="Int32" />
+            <Parameter Name="SC" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Banks" EntityType="AccountingModel.Bank" />
+          <EntitySet Name="Chartofaccounts" EntityType="AccountingModel.Chartofaccount" />
+          <AssociationSet Name="FK_Chartofaccountsdetails_Chartofaccounts" Association="AccountingModel.FK_Chartofaccountsdetails_Chartofaccounts">
+            <End Role="Chartofaccount" EntitySet="Chartofaccounts" />
+            <End Role="Chartofaccountsdetail" EntitySet="Chartofaccountsdetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Chartofaccounts_AccountStatus" Association="AccountingModel.FK_Chartofaccounts_AccountStatus">
+            <End Role="AccountStatu" EntitySet="AccountStatus" />
+            <End Role="Chartofaccount" EntitySet="Chartofaccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Chartofaccounts_AccountType" Association="AccountingModel.FK_Chartofaccounts_AccountType">
+            <End Role="AccountType" EntitySet="AccountTypes" />
+            <End Role="Chartofaccount" EntitySet="Chartofaccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalparents_Vouchertypes" Association="AccountingModel.FK_Journalparents_Vouchertypes">
+            <End Role="Vouchertype" EntitySet="Vouchertypes" />
+            <End Role="Journalparent" EntitySet="Journalparents" />
+          </AssociationSet>
+          <FunctionImport Name="CheckerDescription" ReturnType="Collection(AccountingModel.CheckerDescription)">
+            <Parameter Name="type" Mode="In" Type="Int32" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CheckerMaturity" ReturnType="Collection(AccountingModel.CheckerMaturity)">
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+            <Parameter Name="Typeid" Mode="In" Type="Int32" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CheckerCurrencies" ReturnType="Collection(AccountingModel.CheckerCurrencies)">
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+            <Parameter Name="Typeid" Mode="In" Type="Int32" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CheckerEditedDate" ReturnType="Collection(AccountingModel.CheckerEditedDate)">
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+            <Parameter Name="Typeid" Mode="In" Type="Int32" />
+            <Parameter Name="Userid" Mode="In" Type="Int32" />
+            <Parameter Name="Amount" Mode="In" Type="Int32" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="fillLookups">
+            <Parameter Name="source" Mode="In" Type="String" />
+            <Parameter Name="destination" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="updateSubCompany">
+            <Parameter Name="flag" Mode="In" Type="Int32" />
+            <Parameter Name="clear" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="vJournalParents" IsComposable="true" ReturnType="Collection(AccountingModel.vJournalParents)">
+            <Parameter Name="year" Mode="In" Type="Int32" />
+            <Parameter Name="type" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="AccountBalance" ReturnType="Collection(AccountingModel.AccountBalance)">
+            <Parameter Name="year" Mode="In" Type="Int32" />
+            <Parameter Name="FromAccount" Mode="In" Type="String" />
+            <Parameter Name="ToAccount" Mode="In" Type="String" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+            <Parameter Name="SkipZeros" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="ExchangeDifference" ReturnType="Collection(AccountingModel.ExchangeDifference)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="TillDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+            <Parameter Name="BeforeClosing" Mode="In" Type="Int32" />
+            <Parameter Name="Local1st" Mode="In" Type="Int32" />
+            <Parameter Name="Local2nd" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ProfitAndLoss" ReturnType="Collection(AccountingModel.ProfitAndLoss)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="level" Mode="In" Type="Int32" />
+            <Parameter Name="FromMonth" Mode="In" Type="Int32" />
+            <Parameter Name="ToMonth" Mode="In" Type="Int32" />
+            <Parameter Name="Currency" Mode="In" Type="Int32" />
+            <Parameter Name="BeforeClosing" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="TrialBalance1" EntityType="AccountingModel.TrialBalance1" />
+          <FunctionImport Name="PostDatedChequesInstant">
+            <Parameter Name="fdate" Mode="In" Type="DateTime" />
+            <Parameter Name="tdate" Mode="In" Type="DateTime" />
+            <Parameter Name="adate" Mode="In" Type="DateTime" />
+            <Parameter Name="Cur1" Mode="In" Type="Int32" />
+            <Parameter Name="Cur2" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="getAccountBalances" ReturnType="Collection(AccountingModel.getAccountBalances)">
+          <Parameter Name="AccountYearCurrency" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getUserInfo" ReturnType="Collection(AccountingModel.getUserInfo)">
+            <Parameter Name="cID" Mode="In" Type="Int32" />
+            <Parameter Name="mID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Journalchilds" EntityType="AccountingModel.Journalchild" />
+          <AssociationSet Name="FK_Journalchilds_Journalparents" Association="AccountingModel.FK_Journalchilds_Journalparents">
+            <End Role="Journalparent" EntitySet="Journalparents" />
+            <End Role="Journalchild" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <EntitySet Name="Currencies" EntityType="AccountingModel.Currency" />
+          <AssociationSet Name="FK_Rates_Currencies" Association="AccountingModel.FK_Rates_Currencies">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="CurrencyRate" EntitySet="CurrencyRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Banks" Association="AccountingModel.FK_Journalchilds_Banks">
+            <End Role="Bank" EntitySet="Banks" />
+            <End Role="Journalchild" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Chartofaccounts" Association="AccountingModel.FK_Journalchilds_Chartofaccounts">
+            <End Role="Chartofaccount" EntitySet="Chartofaccounts" />
+            <End Role="Journalchild" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Journalchilds_Currencies" Association="AccountingModel.FK_Journalchilds_Currencies">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="Journalchild" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <FunctionImport Name="StatementOfAccount" ReturnType="Collection(AccountingModel.StatementOfAccount)">
+            <Parameter Name="FromAccount" Mode="In" Type="String" />
+            <Parameter Name="ToAccount" Mode="In" Type="String" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CashReport" ReturnType="Collection(AccountingModel.CashReport)">
+            <Parameter Name="year" Mode="In" Type="Int32" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PostDatedChequesDetailed" ReturnType="Collection(AccountingModel.PostDatedChequesDetailed)">
+            <Parameter Name="fdate" Mode="In" Type="DateTime" />
+            <Parameter Name="tdate" Mode="In" Type="DateTime" />
+            <Parameter Name="adate" Mode="In" Type="DateTime" />
+            <Parameter Name="Cur1" Mode="In" Type="Int32" />
+            <Parameter Name="Cur2" Mode="In" Type="Int32" />
+            <Parameter Name="Inhouse" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <EntitySet Name="Bankreconciliations" EntityType="AccountingModel.Bankreconciliation" />
+          <FunctionImport Name="Bank_Reconciliation" ReturnType="Collection(AccountingModel.Bank_Reconciliation)">
+            <Parameter Name="AccountID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Installments" EntityType="AccountingModel.Installment" />
+          <FunctionImport Name="Treasury" ReturnType="Collection(AccountingModel.Treasury)">
+          <Parameter Name="Date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="AdvancedSearch" ReturnType="Collection(AccountingModel.AdvancedSearch)">
+          <Parameter Name="Year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="TrialBalance" ReturnType="Collection(AccountingModel.TrialBalance)">
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+            <Parameter Name="BeforeClosing" Mode="In" Type="Boolean" />
+            <Parameter Name="Level" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="JournalNormal" ReturnType="Collection(AccountingModel.JournalNormal)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="AccountID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="VoucherTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="FromRef" Mode="In" Type="Int32" />
+            <Parameter Name="ToRef" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="JournalOfficial" ReturnType="Collection(AccountingModel.JournalOfficial)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="JournalVouchers" ReturnType="Collection(AccountingModel.JournalVouchers)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="AccountID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="VoucherTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="FromRef" Mode="In" Type="Int32" />
+            <Parameter Name="ToRef" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UncollectedCheques" ReturnType="Collection(AccountingModel.UncollectedCheques)">
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="NotesReceivables" ReturnType="Collection(AccountingModel.NotesReceivables)">
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="TillDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <AssociationSet Name="FK_Journalchilds_TrialBalance" Association="AccountingModel.FK_Journalchilds_TrialBalance">
+            <End Role="TrialBalance1" EntitySet="TrialBalance1" />
+            <End Role="Journalchild" EntitySet="Journalchilds" />
+          </AssociationSet>
+          <FunctionImport Name="CheckerEditedHours" ReturnType="Collection(AccountingModel.CheckerEditedHours_Result1)">
+            <Parameter Name="Accountid" Mode="In" Type="Int32" />
+            <Parameter Name="Typeid" Mode="In" Type="Int32" />
+            <Parameter Name="Userid" Mode="In" Type="Int32" />
+            <Parameter Name="Amount" Mode="In" Type="String" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="vChartOfAccounts">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="60" />
+          <Property Type="Boolean" Name="isParent" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Collect">
+          <Property Type="String" Name="Document" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Maturity" Precision="0" />
+          <Property Type="String" Name="cur" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Precision="20" Scale="2" />
+          <Property Type="String" Name="Bank" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="dc" MaxLength="1" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <EntityType Name="Cashdistribution">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="description">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Costcenter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Opendate" Type="DateTime" Precision="0" />
+          <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reasondate" Type="DateTime" Precision="0" />
+          <Property Name="Isparent" Type="Boolean" />
+          <Property Name="Iscancelled" Type="Boolean" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_Banks" FromRole="Bank" ToRole="Journalchild" />
+        </EntityType>
+        <EntityType Name="Chartofaccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Opendate" Type="DateTime" Precision="0" />
+          <Property Name="Special" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <Property Name="isParent" Type="Boolean" />
+          <Property Name="Currencyid" Type="Int32" />
+          <Property Name="Accountstatusid" Type="Int32" />
+          <Property Name="Accounttypeid" Type="Int32" />
+          <Property Name="Balancesheetid" Type="Int32" />
+          <NavigationProperty Name="Chartofaccountsdetails" Relationship="AccountingModel.FK_Chartofaccountsdetails_Chartofaccounts" FromRole="Chartofaccount" ToRole="Chartofaccountsdetail" />
+          <NavigationProperty Name="AccountStatu" Relationship="AccountingModel.FK_Chartofaccounts_AccountStatus" FromRole="Chartofaccount" ToRole="AccountStatu" />
+          <NavigationProperty Name="AccountType" Relationship="AccountingModel.FK_Chartofaccounts_AccountType" FromRole="Chartofaccount" ToRole="AccountType" />
+          <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_Chartofaccounts" FromRole="Chartofaccount" ToRole="Journalchild" />
+        </EntityType>
+        <Association Name="FK_Chartofaccountsdetails_Chartofaccounts">
+          <End Type="AccountingModel.Chartofaccount" Role="Chartofaccount" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.Chartofaccountsdetail" Role="Chartofaccountsdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chartofaccount">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccountsdetail">
+              <PropertyRef Name="Accountid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Chartofaccounts_AccountStatus">
+          <End Type="AccountingModel.AccountStatu" Role="AccountStatu" Multiplicity="0..1" />
+          <End Type="AccountingModel.Chartofaccount" Role="Chartofaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountStatu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccount">
+              <PropertyRef Name="Accountstatusid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Chartofaccounts_AccountType">
+          <End Type="AccountingModel.AccountType" Role="AccountType" Multiplicity="0..1" />
+          <End Type="AccountingModel.Chartofaccount" Role="Chartofaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Chartofaccount">
+              <PropertyRef Name="Accounttypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalparents_Vouchertypes">
+          <End Type="AccountingModel.Vouchertype" Role="Vouchertype" Multiplicity="0..1" />
+          <End Type="AccountingModel.Journalparent" Role="Journalparent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vouchertype">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalparent">
+              <PropertyRef Name="Vouchertypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="CheckerDescription">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="CheckerMaturity">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="CheckerCurrencies">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="Decimal" Name="Amount1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amountr" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="Amount2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amountf" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Int32" Name="Line" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="CheckerEditedDate">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="String" Name="CName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Creationdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="MName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modificationdate" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="CheckerEditedHours">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="String" Name="CName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Creationdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="MName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modificationdate" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="vJournalParents">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="Int32" Name="Vouchertypeid" Nullable="true" />
+          <Property Type="String" Name="SC" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="AccountBalance">
+          <Property Type="Int32" Name="YDate" Nullable="true" />
+          <Property Type="String" Name="sc" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="Accountid" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="Currencyid" Nullable="true" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ExchangeDifference">
+          <Property Type="Int32" Name="YDate" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="Int32" Name="AccountID" Nullable="false" />
+          <Property Type="Int32" Name="Currencyid" Nullable="true" />
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="20" Scale="10" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Difference1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Difference2nd" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="ProfitAndLoss">
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="60" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <EntityType Name="TrialBalance1">
+          <Key>
+            <PropertyRef Name="AccountYearCurrency" />
+          </Key>
+          <Property Name="AccountYearCurrency" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Accountid" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="Credit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenCredit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="OpenDebit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit1st12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit1st12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Credit2nd12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd01" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd02" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd03" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd04" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd05" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd06" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd07" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd08" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd09" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd10" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd11" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Debit2nd12" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseCredit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="CloseDebit2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Balance" Type="Decimal" Precision="21" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Balance1st" Type="Decimal" Precision="21" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Balance2nd" Type="Decimal" Precision="21" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_TrialBalance" FromRole="TrialBalance1" ToRole="Journalchild" />
+        </EntityType>
+        <ComplexType Name="PostDatedChequesInstant">
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Document" Nullable="true" MaxLength="45" />
+          <Property Type="Int32" Name="asBank" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="Int32" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="Int32" Name="Jvdate" Nullable="true" />
+          <Property Type="Int32" Name="Ydate" Nullable="true" />
+          <Property Type="String" Name="Sc" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="getAccountBalances">
+          <Property Type="Decimal" Name="amount" Nullable="true" Precision="21" Scale="2" />
+          <Property Type="Decimal" Name="amount1st" Nullable="true" Precision="21" Scale="2" />
+          <Property Type="Decimal" Name="amount2nd" Nullable="true" Precision="21" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="getUserInfo">
+          <Property Type="String" Name="cCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="mCode" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="Journalchild">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ratecurrency" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Maturity" Type="DateTime" Precision="0" />
+          <Property Name="Document" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Amount1st" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Amount2nd" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Dc" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Line" Type="Int32" />
+          <Property Name="Isposted" Type="Boolean" />
+          <Property Name="Ispassed" Type="Boolean" />
+          <Property Name="Recstamp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Accountid" Type="Int32" />
+          <Property Name="Voucherid" Type="Int32" />
+          <Property Name="Currencyid" Type="Int32" />
+          <Property Name="Bankid" Type="Int32" />
+          <Property Name="Ydate" Type="Int32" />
+          <Property Name="Mdate" Type="Int32" />
+          <Property Name="AccountYearCurrency" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Journalparent" Relationship="AccountingModel.FK_Journalchilds_Journalparents" FromRole="Journalchild" ToRole="Journalparent" />
+          <NavigationProperty Name="Bank" Relationship="AccountingModel.FK_Journalchilds_Banks" FromRole="Journalchild" ToRole="Bank" />
+          <NavigationProperty Name="Chartofaccount" Relationship="AccountingModel.FK_Journalchilds_Chartofaccounts" FromRole="Journalchild" ToRole="Chartofaccount" />
+          <NavigationProperty Name="Currency" Relationship="AccountingModel.FK_Journalchilds_Currencies" FromRole="Journalchild" ToRole="Currency" />
+          <NavigationProperty Name="TrialBalance" Relationship="AccountingModel.FK_Journalchilds_TrialBalance" FromRole="Journalchild" ToRole="TrialBalance1" />
+        </EntityType>
+        <Association Name="FK_Journalchilds_Journalparents">
+          <End Type="AccountingModel.Journalparent" Role="Journalparent" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.Journalchild" Role="Journalchild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journalparent">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchild">
+              <PropertyRef Name="Voucherid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Rate" Type="Decimal" Precision="20" Scale="10" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+          <Property Name="OrderID" Type="Int32" />
+          <NavigationProperty Name="Rates" Relationship="AccountingModel.FK_Rates_Currencies" FromRole="Currency" ToRole="CurrencyRate" />
+          <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_Currencies" FromRole="Currency" ToRole="Journalchild" />
+        </EntityType>
+        <Association Name="FK_Rates_Currencies">
+          <End Type="AccountingModel.Currency" Role="Currency" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AccountingModel.CurrencyRate" Role="CurrencyRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CurrencyRate">
+              <PropertyRef Name="Currencyid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Banks">
+          <End Type="AccountingModel.Bank" Role="Bank" Multiplicity="0..1" />
+          <End Type="AccountingModel.Journalchild" Role="Journalchild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchild">
+              <PropertyRef Name="Bankid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Chartofaccounts">
+          <End Type="AccountingModel.Chartofaccount" Role="Chartofaccount" Multiplicity="0..1" />
+          <End Type="AccountingModel.Journalchild" Role="Journalchild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chartofaccount">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchild">
+              <PropertyRef Name="Accountid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Journalchilds_Currencies">
+          <End Type="AccountingModel.Currency" Role="Currency" Multiplicity="0..1" />
+          <End Type="AccountingModel.Journalchild" Role="Journalchild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journalchild">
+              <PropertyRef Name="Currencyid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StatementOfAccount">
+          <Property Type="String" Name="sc" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="AccountDescription" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="JvDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Vouchertypeid" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="CashReport">
+          <Property Type="Int32" Name="Ydate" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Deposit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Withdrawal" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="PostDatedChequesDetailed">
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="DateTime" Name="Jvdate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Document" Nullable="true" MaxLength="45" />
+          <Property Type="String" Name="Cur" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Bank" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="Int32" Name="YDate" Nullable="true" />
+          <Property Type="String" Name="Dc" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Sc" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="JvID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Bankreconciliation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Jvdate" Type="DateTime" Precision="0" />
+          <Property Name="Reference" Type="Int32" />
+          <Property Name="Maturity" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Debit" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Credit" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Dc" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Ispassed" Type="Boolean" />
+          <Property Name="Isposted" Type="Boolean" />
+          <Property Name="Rowguid" Type="Guid" />
+          <Property Name="Accountid" Type="Int32" />
+          <Property Name="Currencyid" Type="Int32" />
+          <Property Name="Vouchertypeid" Type="Int32" />
+          <Property Name="Voucherid" Type="Int32" />
+          <Property Name="SC" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="Bank_Reconciliation">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="Jvdate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="Ispassed" Nullable="true" />
+          <Property Type="Boolean" Name="Isposted" Nullable="true" />
+          <Property Type="Int32" Name="Vouchertypeid" Nullable="true" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="80" />
+          <Property Type="Int32" Name="Currencyid" Nullable="true" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="Flag" Nullable="true" MaxLength="1" />
+          <Property Type="Guid" Name="Rowguid" Nullable="true" />
+          <Property Type="Int32" Name="Voucherid" Nullable="true" />
+          <Property Type="Int32" Name="SC" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Installment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ydate" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Reference" Type="Int32" />
+          <Property Name="Branch" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Policy" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Endorsement" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Broker" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Insured" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Serial" Type="Int32" />
+          <Property Name="Paydate" Type="DateTime" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Issuedate" Type="DateTime" Precision="0" />
+          <Property Name="Sc" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" />
+          <Property Name="Creationdate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedByID" Type="Int32" />
+          <Property Name="Modificationdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <ComplexType Name="Treasury">
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="ord" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit1" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="AdvancedSearch">
+          <Property Type="String" Name="type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="reference" Nullable="true" />
+          <Property Type="DateTime" Name="jvdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="sc" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="AccountDescription" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Document" Nullable="true" MaxLength="45" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amount1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amount2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="Dc" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Bank" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Details" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="Isposted" Nullable="true" />
+          <Property Type="Decimal" Name="Ratecurrency" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="TrialBalance">
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="sc" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="JournalNormal">
+          <Property Type="DateTime" Name="jvdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="SC" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="reference" Nullable="true" />
+          <Property Type="String" Name="account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="AccountDescription" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="dc" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Amount1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amount2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Boolean" Name="Isposted" Nullable="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="JournalOfficial">
+          <Property Type="DateTime" Name="jvdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="SC" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="reference" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="AccountDescription" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="Dc" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Boolean" Name="Isposted" Nullable="true" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="JournalVouchers">
+          <Property Type="DateTime" Name="jvdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="type" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="TypeDescription" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="reference" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="AccountDescription" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="Dc" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Amount1st" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Amount2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Rate2nd" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="Ratecurrency" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="String" Name="Details" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="CurrencyDescription" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Fromto" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="UncollectedCheques">
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="NotesReceivables">
+          <Property Type="Int32" Name="ydate" Nullable="true" />
+          <Property Type="String" Name="currency" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="document" Nullable="true" MaxLength="45" />
+          <Property Type="DateTime" Name="maturity" Nullable="true" Precision="16" />
+          <Property Type="String" Name="account" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="type" Nullable="true" MaxLength="2" />
+          <Property Type="DateTime" Name="jvdate" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="reference" Nullable="true" />
+          <Property Type="String" Name="description" Nullable="true" MaxLength="60" />
+          <Property Type="Decimal" Name="debit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="credit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="debit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="credit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="debit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="credit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="SC" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+        </ComplexType>
+        <Association Name="FK_Journalchilds_TrialBalance">
+          <End Type="AccountingModel.TrialBalance1" Role="TrialBalance1" Multiplicity="0..1" />
+          <End Type="AccountingModel.Journalchild" Role="Journalchild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrialBalance1">
+              <PropertyRef Name="AccountYearCurrency" />
+            </Principal>
+            <Dependent Role="Journalchild">
+              <PropertyRef Name="AccountYearCurrency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="CheckerEditedHours_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="String" Name="CName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Creationdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="MName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modificationdate" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="CheckerEditedHours_Result1">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="String" Name="CName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Creationdate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="MName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modificationdate" Nullable="true" Precision="16" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AccountingCIGModelStoreContainer" CdmEntityContainer="AccountingEntities">
+          <EntitySetMapping Name="ActivityLoggers">
+            <EntityTypeMapping TypeName="AccountingModel.ActivityLogger">
+              <MappingFragment StoreEntitySet="_ActivityLogger">
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Machine" ColumnName="Machine" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+                <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+                <ScalarProperty Name="DateOut" ColumnName="DateOut" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccountStatus">
+            <EntityTypeMapping TypeName="AccountingModel.AccountStatu">
+              <MappingFragment StoreEntitySet="AccountStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccountTypes">
+            <EntityTypeMapping TypeName="AccountingModel.AccountType">
+              <MappingFragment StoreEntitySet="AccountType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chartofaccountsdetails">
+            <EntityTypeMapping TypeName="AccountingModel.Chartofaccountsdetail">
+              <MappingFragment StoreEntitySet="Chartofaccountsdetails">
+                <ScalarProperty Name="sectorid" ColumnName="sectorid" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Pobox" ColumnName="Pobox" />
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="Accountid" ColumnName="Accountid" />
+                <ScalarProperty Name="Thirdpartytypeid" ColumnName="Thirdpartytypeid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Journalparents">
+            <EntityTypeMapping TypeName="AccountingModel.Journalparent">
+              <MappingFragment StoreEntitySet="Journalparents">
+                <ScalarProperty Name="Instpay" ColumnName="Instpay" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Jvdate" ColumnName="Jvdate" />
+                <ScalarProperty Name="Rate2nd" ColumnName="Rate2nd" />
+                <ScalarProperty Name="Fromto" ColumnName="Fromto" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="Vouchertypeid" ColumnName="Vouchertypeid" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="YDate" ColumnName="YDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrencyRates">
+            <EntityTypeMapping TypeName="AccountingModel.CurrencyRate">
+              <MappingFragment StoreEntitySet="Rates">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ratedate" ColumnName="Ratedate" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Parity" ColumnName="Parity" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="YDate" ColumnName="YDate" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sectors">
+            <EntityTypeMapping TypeName="AccountingModel.Sector">
+              <MappingFragment StoreEntitySet="Sectors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vouchertypes">
+            <EntityTypeMapping TypeName="AccountingModel.Vouchertype">
+              <MappingFragment StoreEntitySet="Vouchertypes">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="JV" ColumnName="JV" />
+                <ScalarProperty Name="PV" ColumnName="PV" />
+                <ScalarProperty Name="RV" ColumnName="RV" />
+                <ScalarProperty Name="CN" ColumnName="CN" />
+                <ScalarProperty Name="DN" ColumnName="DN" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="vChartOfAccounts" FunctionName="Accounting.CIGModel.Store.vChartOfAccounts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.vChartOfAccounts">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="isParent" ColumnName="isParent" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Collect" FunctionName="Accounting.CIGModel.Store.Collect" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.Collect">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="cur" ColumnName="cur" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="dc" ColumnName="dc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Cashdistributions">
+            <EntityTypeMapping TypeName="AccountingModel.Cashdistribution">
+              <MappingFragment StoreEntitySet="Cashdistribution">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="descriptions">
+            <EntityTypeMapping TypeName="AccountingModel.description">
+              <MappingFragment StoreEntitySet="Descriptions">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Costcenters">
+            <EntityTypeMapping TypeName="AccountingModel.Costcenter">
+              <MappingFragment StoreEntitySet="Costcenter">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Iscancelled" ColumnName="Iscancelled" />
+                <ScalarProperty Name="Isparent" ColumnName="Isparent" />
+                <ScalarProperty Name="Reasondate" ColumnName="Reasondate" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="Opendate" ColumnName="Opendate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PostUnpostVouchers" FunctionName="Accounting.CIGModel.Store.PostUnpostVouchers" />
+          <EntitySetMapping Name="Banks">
+            <EntityTypeMapping TypeName="AccountingModel.Bank">
+              <MappingFragment StoreEntitySet="Banks">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chartofaccounts">
+            <EntityTypeMapping TypeName="AccountingModel.Chartofaccount">
+              <MappingFragment StoreEntitySet="Chartofaccounts">
+                <ScalarProperty Name="Balancesheetid" ColumnName="Balancesheetid" />
+                <ScalarProperty Name="Accounttypeid" ColumnName="Accounttypeid" />
+                <ScalarProperty Name="Accountstatusid" ColumnName="Accountstatusid" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="isParent" ColumnName="isParent" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Special" ColumnName="Special" />
+                <ScalarProperty Name="Opendate" ColumnName="Opendate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CheckerDescription" FunctionName="Accounting.CIGModel.Store.CheckerDescription">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CheckerDescription">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CheckerMaturity" FunctionName="Accounting.CIGModel.Store.CheckerMaturity">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CheckerMaturity">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CheckerCurrencies" FunctionName="Accounting.CIGModel.Store.CheckerCurrencies">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CheckerCurrencies">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Amount1st" ColumnName="Amount1st" />
+                <ScalarProperty Name="Amountr" ColumnName="Amountr" />
+                <ScalarProperty Name="Amount2nd" ColumnName="Amount2nd" />
+                <ScalarProperty Name="Amountf" ColumnName="Amountf" />
+                <ScalarProperty Name="Line" ColumnName="Line" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CheckerEditedDate" FunctionName="Accounting.CIGModel.Store.CheckerEditedDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CheckerEditedDate">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="MName" ColumnName="MName" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fillLookups" FunctionName="Accounting.CIGModel.Store.fillLookups" />
+          <FunctionImportMapping FunctionImportName="updateSubCompany" FunctionName="Accounting.CIGModel.Store.updateSubCompany" />
+          <FunctionImportMapping FunctionImportName="vJournalParents" FunctionName="Accounting.CIGModel.Store.vJournalParents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.vJournalParents">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Vouchertypeid" ColumnName="Vouchertypeid" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AccountBalance" FunctionName="Accounting.CIGModel.Store.AccountBalance">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.AccountBalance">
+                <ScalarProperty Name="YDate" ColumnName="YDate" />
+                <ScalarProperty Name="sc" ColumnName="sc" />
+                <ScalarProperty Name="Accountid" ColumnName="Accountid" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ExchangeDifference" FunctionName="Accounting.CIGModel.Store.ExchangeDifference">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.ExchangeDifference">
+                <ScalarProperty Name="YDate" ColumnName="YDate" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Balance1st" ColumnName="Balance1st" />
+                <ScalarProperty Name="Balance2nd" ColumnName="Balance2nd" />
+                <ScalarProperty Name="Difference1st" ColumnName="Difference1st" />
+                <ScalarProperty Name="Difference2nd" ColumnName="Difference2nd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ProfitAndLoss" FunctionName="Accounting.CIGModel.Store.ProfitAndLoss">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.ProfitAndLoss">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TrialBalance1">
+            <EntityTypeMapping TypeName="AccountingModel.TrialBalance1">
+              <MappingFragment StoreEntitySet="TrialBalance">
+                <ScalarProperty Name="Balance2nd" ColumnName="Balance2nd" />
+                <ScalarProperty Name="Balance1st" ColumnName="Balance1st" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CloseDebit2nd" ColumnName="CloseDebit2nd" />
+                <ScalarProperty Name="CloseCredit2nd" ColumnName="CloseCredit2nd" />
+                <ScalarProperty Name="CloseDebit1st" ColumnName="CloseDebit1st" />
+                <ScalarProperty Name="CloseCredit1st" ColumnName="CloseCredit1st" />
+                <ScalarProperty Name="CloseDebit" ColumnName="CloseDebit" />
+                <ScalarProperty Name="CloseCredit" ColumnName="CloseCredit" />
+                <ScalarProperty Name="Debit2nd12" ColumnName="Debit2nd12" />
+                <ScalarProperty Name="Debit2nd11" ColumnName="Debit2nd11" />
+                <ScalarProperty Name="Debit2nd10" ColumnName="Debit2nd10" />
+                <ScalarProperty Name="Debit2nd09" ColumnName="Debit2nd09" />
+                <ScalarProperty Name="Debit2nd08" ColumnName="Debit2nd08" />
+                <ScalarProperty Name="Debit2nd07" ColumnName="Debit2nd07" />
+                <ScalarProperty Name="Debit2nd06" ColumnName="Debit2nd06" />
+                <ScalarProperty Name="Debit2nd05" ColumnName="Debit2nd05" />
+                <ScalarProperty Name="Debit2nd04" ColumnName="Debit2nd04" />
+                <ScalarProperty Name="Debit2nd03" ColumnName="Debit2nd03" />
+                <ScalarProperty Name="Debit2nd02" ColumnName="Debit2nd02" />
+                <ScalarProperty Name="Debit2nd01" ColumnName="Debit2nd01" />
+                <ScalarProperty Name="Credit2nd12" ColumnName="Credit2nd12" />
+                <ScalarProperty Name="Credit2nd11" ColumnName="Credit2nd11" />
+                <ScalarProperty Name="Credit2nd10" ColumnName="Credit2nd10" />
+                <ScalarProperty Name="Credit2nd09" ColumnName="Credit2nd09" />
+                <ScalarProperty Name="Credit2nd08" ColumnName="Credit2nd08" />
+                <ScalarProperty Name="Credit2nd07" ColumnName="Credit2nd07" />
+                <ScalarProperty Name="Credit2nd06" ColumnName="Credit2nd06" />
+                <ScalarProperty Name="Credit2nd05" ColumnName="Credit2nd05" />
+                <ScalarProperty Name="Credit2nd04" ColumnName="Credit2nd04" />
+                <ScalarProperty Name="Credit2nd03" ColumnName="Credit2nd03" />
+                <ScalarProperty Name="Credit2nd02" ColumnName="Credit2nd02" />
+                <ScalarProperty Name="Credit2nd01" ColumnName="Credit2nd01" />
+                <ScalarProperty Name="Debit1st12" ColumnName="Debit1st12" />
+                <ScalarProperty Name="Debit1st11" ColumnName="Debit1st11" />
+                <ScalarProperty Name="Debit1st10" ColumnName="Debit1st10" />
+                <ScalarProperty Name="Debit1st09" ColumnName="Debit1st09" />
+                <ScalarProperty Name="Debit1st08" ColumnName="Debit1st08" />
+                <ScalarProperty Name="Debit1st07" ColumnName="Debit1st07" />
+                <ScalarProperty Name="Debit1st06" ColumnName="Debit1st06" />
+                <ScalarProperty Name="Debit1st05" ColumnName="Debit1st05" />
+                <ScalarProperty Name="Debit1st04" ColumnName="Debit1st04" />
+                <ScalarProperty Name="Debit1st03" ColumnName="Debit1st03" />
+                <ScalarProperty Name="Debit1st02" ColumnName="Debit1st02" />
+                <ScalarProperty Name="Debit1st01" ColumnName="Debit1st01" />
+                <ScalarProperty Name="Credit1st12" ColumnName="Credit1st12" />
+                <ScalarProperty Name="Credit1st11" ColumnName="Credit1st11" />
+                <ScalarProperty Name="Credit1st10" ColumnName="Credit1st10" />
+                <ScalarProperty Name="Credit1st09" ColumnName="Credit1st09" />
+                <ScalarProperty Name="Credit1st08" ColumnName="Credit1st08" />
+                <ScalarProperty Name="Credit1st07" ColumnName="Credit1st07" />
+                <ScalarProperty Name="Credit1st06" ColumnName="Credit1st06" />
+                <ScalarProperty Name="Credit1st05" ColumnName="Credit1st05" />
+                <ScalarProperty Name="Credit1st04" ColumnName="Credit1st04" />
+                <ScalarProperty Name="Credit1st03" ColumnName="Credit1st03" />
+                <ScalarProperty Name="Credit1st02" ColumnName="Credit1st02" />
+                <ScalarProperty Name="Credit1st01" ColumnName="Credit1st01" />
+                <ScalarProperty Name="Debit12" ColumnName="Debit12" />
+                <ScalarProperty Name="Debit11" ColumnName="Debit11" />
+                <ScalarProperty Name="Debit10" ColumnName="Debit10" />
+                <ScalarProperty Name="Debit09" ColumnName="Debit09" />
+                <ScalarProperty Name="Debit08" ColumnName="Debit08" />
+                <ScalarProperty Name="Debit07" ColumnName="Debit07" />
+                <ScalarProperty Name="Debit06" ColumnName="Debit06" />
+                <ScalarProperty Name="Debit05" ColumnName="Debit05" />
+                <ScalarProperty Name="Debit04" ColumnName="Debit04" />
+                <ScalarProperty Name="Debit03" ColumnName="Debit03" />
+                <ScalarProperty Name="Debit02" ColumnName="Debit02" />
+                <ScalarProperty Name="Debit01" ColumnName="Debit01" />
+                <ScalarProperty Name="Credit12" ColumnName="Credit12" />
+                <ScalarProperty Name="Credit11" ColumnName="Credit11" />
+                <ScalarProperty Name="Credit10" ColumnName="Credit10" />
+                <ScalarProperty Name="Credit09" ColumnName="Credit09" />
+                <ScalarProperty Name="Credit08" ColumnName="Credit08" />
+                <ScalarProperty Name="Credit07" ColumnName="Credit07" />
+                <ScalarProperty Name="Credit06" ColumnName="Credit06" />
+                <ScalarProperty Name="Credit05" ColumnName="Credit05" />
+                <ScalarProperty Name="Credit04" ColumnName="Credit04" />
+                <ScalarProperty Name="Credit03" ColumnName="Credit03" />
+                <ScalarProperty Name="Credit02" ColumnName="Credit02" />
+                <ScalarProperty Name="Credit01" ColumnName="Credit01" />
+                <ScalarProperty Name="OpenDebit2nd" ColumnName="OpenDebit2nd" />
+                <ScalarProperty Name="OpenCredit2nd" ColumnName="OpenCredit2nd" />
+                <ScalarProperty Name="OpenDebit1st" ColumnName="OpenDebit1st" />
+                <ScalarProperty Name="OpenCredit1st" ColumnName="OpenCredit1st" />
+                <ScalarProperty Name="OpenDebit" ColumnName="OpenDebit" />
+                <ScalarProperty Name="OpenCredit" ColumnName="OpenCredit" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="Accountid" ColumnName="Accountid" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="AccountYearCurrency" ColumnName="AccountYearCurrency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PostDatedChequesInstant" FunctionName="Accounting.CIGModel.Store.PostDatedChequesInstant">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getAccountBalances" FunctionName="Accounting.CIGModel.Store.getAccountBalances">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.getAccountBalances">
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="amount1st" ColumnName="amount1st" />
+                <ScalarProperty Name="amount2nd" ColumnName="amount2nd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getUserInfo" FunctionName="Accounting.CIGModel.Store.getUserInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.getUserInfo">
+                <ScalarProperty Name="cCode" ColumnName="cCode" />
+                <ScalarProperty Name="mCode" ColumnName="mCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Journalchilds">
+            <EntityTypeMapping TypeName="AccountingModel.Journalchild">
+              <MappingFragment StoreEntitySet="Journalchilds">
+                <ScalarProperty Name="AccountYearCurrency" ColumnName="AccountYearCurrency" />
+                <ScalarProperty Name="Mdate" ColumnName="Mdate" />
+                <ScalarProperty Name="Ydate" ColumnName="Ydate" />
+                <ScalarProperty Name="Bankid" ColumnName="Bankid" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="Voucherid" ColumnName="Voucherid" />
+                <ScalarProperty Name="Accountid" ColumnName="Accountid" />
+                <ScalarProperty Name="Recstamp" ColumnName="Recstamp" />
+                <ScalarProperty Name="Ispassed" ColumnName="Ispassed" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="Line" ColumnName="Line" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Amount2nd" ColumnName="Amount2nd" />
+                <ScalarProperty Name="Amount1st" ColumnName="Amount1st" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Ratecurrency" ColumnName="Ratecurrency" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="AccountingModel.Currency">
+              <MappingFragment StoreEntitySet="Currencies">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="StatementOfAccount" FunctionName="Accounting.CIGModel.Store.StatementOfAccount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.StatementOfAccount">
+                <ScalarProperty Name="sc" ColumnName="sc" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="JvDate" ColumnName="JvDate" />
+                <ScalarProperty Name="Vouchertypeid" ColumnName="Vouchertypeid" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Balance1st" ColumnName="Balance1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+                <ScalarProperty Name="Balance2nd" ColumnName="Balance2nd" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CashReport" FunctionName="Accounting.CIGModel.Store.CashReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CashReport">
+                <ScalarProperty Name="Ydate" ColumnName="Ydate" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="Withdrawal" ColumnName="Withdrawal" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PostDatedChequesDetailed" FunctionName="Accounting.CIGModel.Store.PostDatedChequesDetailed">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.PostDatedChequesDetailed">
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Jvdate" ColumnName="Jvdate" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="Cur" ColumnName="Cur" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="YDate" ColumnName="YDate" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Sc" ColumnName="Sc" />
+                <ScalarProperty Name="JvID" ColumnName="JvID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Bankreconciliations">
+            <EntityTypeMapping TypeName="AccountingModel.Bankreconciliation">
+              <MappingFragment StoreEntitySet="Bankreconciliation">
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Voucherid" ColumnName="Voucherid" />
+                <ScalarProperty Name="Vouchertypeid" ColumnName="Vouchertypeid" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="Accountid" ColumnName="Accountid" />
+                <ScalarProperty Name="Rowguid" ColumnName="Rowguid" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="Ispassed" ColumnName="Ispassed" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Jvdate" ColumnName="Jvdate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Bank_Reconciliation" FunctionName="Accounting.CIGModel.Store.Bank_Reconciliation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.Bank_Reconciliation">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Jvdate" ColumnName="Jvdate" />
+                <ScalarProperty Name="Ispassed" ColumnName="Ispassed" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="Vouchertypeid" ColumnName="Vouchertypeid" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currencyid" ColumnName="Currencyid" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Rowguid" ColumnName="Rowguid" />
+                <ScalarProperty Name="Voucherid" ColumnName="Voucherid" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Installments">
+            <EntityTypeMapping TypeName="AccountingModel.Installment">
+              <MappingFragment StoreEntitySet="Installments">
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Sc" ColumnName="Sc" />
+                <ScalarProperty Name="Issuedate" ColumnName="Issuedate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Paydate" ColumnName="Paydate" />
+                <ScalarProperty Name="Serial" ColumnName="Serial" />
+                <ScalarProperty Name="Insured" ColumnName="Insured" />
+                <ScalarProperty Name="Broker" ColumnName="Broker" />
+                <ScalarProperty Name="Endorsement" ColumnName="Endorsement" />
+                <ScalarProperty Name="Policy" ColumnName="Policy" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Ydate" ColumnName="Ydate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Treasury" FunctionName="Accounting.CIGModel.Store.Treasury">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.Treasury">
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Balance1st" ColumnName="Balance1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+                <ScalarProperty Name="Balance2nd" ColumnName="Balance2nd" />
+                <ScalarProperty Name="Debit1" ColumnName="Debit1" />
+                <ScalarProperty Name="Credit1" ColumnName="Credit1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AdvancedSearch" FunctionName="Accounting.CIGModel.Store.AdvancedSearch">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.AdvancedSearch">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="reference" ColumnName="reference" />
+                <ScalarProperty Name="jvdate" ColumnName="jvdate" />
+                <ScalarProperty Name="sc" ColumnName="sc" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Amount1st" ColumnName="Amount1st" />
+                <ScalarProperty Name="Amount2nd" ColumnName="Amount2nd" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="Ratecurrency" ColumnName="Ratecurrency" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TrialBalance" FunctionName="Accounting.CIGModel.Store.TrialBalance1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.TrialBalance">
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="sc" ColumnName="sc" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="JournalNormal" FunctionName="Accounting.CIGModel.Store.JournalNormal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.JournalNormal">
+                <ScalarProperty Name="jvdate" ColumnName="jvdate" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="reference" ColumnName="reference" />
+                <ScalarProperty Name="account" ColumnName="account" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="dc" ColumnName="dc" />
+                <ScalarProperty Name="Amount1st" ColumnName="Amount1st" />
+                <ScalarProperty Name="Amount2nd" ColumnName="Amount2nd" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="JournalOfficial" FunctionName="Accounting.CIGModel.Store.JournalOfficial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.JournalOfficial">
+                <ScalarProperty Name="jvdate" ColumnName="jvdate" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="reference" ColumnName="reference" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Isposted" ColumnName="Isposted" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="JournalVouchers" FunctionName="Accounting.CIGModel.Store.JournalVouchers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.JournalVouchers">
+                <ScalarProperty Name="jvdate" ColumnName="jvdate" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="TypeDescription" ColumnName="TypeDescription" />
+                <ScalarProperty Name="reference" ColumnName="reference" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Dc" ColumnName="Dc" />
+                <ScalarProperty Name="Amount1st" ColumnName="Amount1st" />
+                <ScalarProperty Name="Amount2nd" ColumnName="Amount2nd" />
+                <ScalarProperty Name="Rate2nd" ColumnName="Rate2nd" />
+                <ScalarProperty Name="Ratecurrency" ColumnName="Ratecurrency" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="CurrencyDescription" ColumnName="CurrencyDescription" />
+                <ScalarProperty Name="Fromto" ColumnName="Fromto" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UncollectedCheques" FunctionName="Accounting.CIGModel.Store.UncollectedCheques">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.UncollectedCheques">
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="NotesReceivables" FunctionName="Accounting.CIGModel.Store.NotesReceivables">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.NotesReceivables">
+                <ScalarProperty Name="ydate" ColumnName="ydate" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="document" ColumnName="document" />
+                <ScalarProperty Name="maturity" ColumnName="maturity" />
+                <ScalarProperty Name="account" ColumnName="account" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="jvdate" ColumnName="jvdate" />
+                <ScalarProperty Name="reference" ColumnName="reference" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="debit" ColumnName="debit" />
+                <ScalarProperty Name="credit" ColumnName="credit" />
+                <ScalarProperty Name="debit1st" ColumnName="debit1st" />
+                <ScalarProperty Name="credit1st" ColumnName="credit1st" />
+                <ScalarProperty Name="debit2nd" ColumnName="debit2nd" />
+                <ScalarProperty Name="credit2nd" ColumnName="credit2nd" />
+                <ScalarProperty Name="SC" ColumnName="SC" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CheckerEditedHours" FunctionName="Accounting.CIGModel.Store.CheckerEditedHours">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.CheckerEditedHours_Result1">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="Creationdate" ColumnName="Creationdate" />
+                <ScalarProperty Name="MName" ColumnName="MName" />
+                <ScalarProperty Name="Modificationdate" ColumnName="Modificationdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
