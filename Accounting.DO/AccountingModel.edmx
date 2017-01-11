@@ -1014,13 +1014,7 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
             <Parameter Name="BeforeClosing" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="TrialBalance1" EntityType="AccountingModel.TrialBalance1" />
-          <FunctionImport Name="PostDatedChequesInstant">
-            <Parameter Name="fdate" Mode="In" Type="DateTime" />
-            <Parameter Name="tdate" Mode="In" Type="DateTime" />
-            <Parameter Name="adate" Mode="In" Type="DateTime" />
-            <Parameter Name="Cur1" Mode="In" Type="Int32" />
-            <Parameter Name="Cur2" Mode="In" Type="Int32" />
-          </FunctionImport>
+          
           <FunctionImport Name="getAccountBalances" ReturnType="Collection(AccountingModel.getAccountBalances)">
           <Parameter Name="AccountYearCurrency" Mode="In" Type="String" />
           </FunctionImport>
@@ -1136,6 +1130,14 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
             <Parameter Name="Amount" Mode="In" Type="String" />
             <Parameter Name="Year" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="PostDatedChequesInstant" ReturnType="Collection(AccountingModel.PostDatedChequesInstant_Result)">
+            <Parameter Name="fdate" Mode="In" Type="DateTime" />
+            <Parameter Name="tdate" Mode="In" Type="DateTime" />
+            <Parameter Name="adate" Mode="In" Type="DateTime" />
+            <Parameter Name="Cur1" Mode="In" Type="Int32" />
+            <Parameter Name="Cur2" Mode="In" Type="Int32" />
+          </FunctionImport>
+          
           </EntityContainer>
         <ComplexType Name="vChartOfAccounts">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -1462,27 +1464,7 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
           <Property Name="Balance2nd" Type="Decimal" Precision="21" Scale="2" annotation:StoreGeneratedPattern="Computed" />
           <NavigationProperty Name="Journalchilds" Relationship="AccountingModel.FK_Journalchilds_TrialBalance" FromRole="TrialBalance1" ToRole="Journalchild" />
         </EntityType>
-        <ComplexType Name="PostDatedChequesInstant">
-          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
-          <Property Type="String" Name="Document" Nullable="true" MaxLength="45" />
-          <Property Type="Int32" Name="asBank" Nullable="true" />
-          <Property Type="String" Name="Account" Nullable="true" MaxLength="12" />
-          <Property Type="Int32" Name="Description" Nullable="true" />
-          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
-          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="19" Scale="2" />
-          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="19" Scale="2" />
-          <Property Type="String" Name="Type" Nullable="true" MaxLength="1" />
-          <Property Type="Int32" Name="Reference" Nullable="true" />
-          <Property Type="Int32" Name="Jvdate" Nullable="true" />
-          <Property Type="Int32" Name="Ydate" Nullable="true" />
-          <Property Type="String" Name="Sc" Nullable="true" MaxLength="1" />
-        </ComplexType>
+       
         <ComplexType Name="getAccountBalances">
           <Property Type="Decimal" Name="amount" Nullable="true" Precision="21" Scale="2" />
           <Property Type="Decimal" Name="amount1st" Nullable="true" Precision="21" Scale="2" />
@@ -1882,6 +1864,29 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
           <Property Type="String" Name="MName" Nullable="true" MaxLength="50" />
           <Property Type="DateTime" Name="Modificationdate" Nullable="true" Precision="16" />
         </ComplexType>
+        <ComplexType Name="PostDatedChequesInstant_Result">
+          <Property Type="DateTime" Name="Maturity" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="Document" Nullable="true" />
+          <Property Type="Int32" Name="Bank" Nullable="true" />
+          <Property Type="Int32" Name="Account" Nullable="true" />
+          <Property Type="Int32" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+          <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Debit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit1st" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Balance1st" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="Decimal" Name="Debit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Credit2nd" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Balance2nd" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="Int32" Name="Type" Nullable="true" />
+          <Property Type="Int32" Name="Reference" Nullable="true" />
+          <Property Type="Int32" Name="Jvdate" Nullable="true" />
+          <Property Type="Int32" Name="Ydate" Nullable="true" />
+          <Property Type="String" Name="Sc" Nullable="true" MaxLength="1" />
+          <Property Type="Int32" Name="JvID" Nullable="false" />
+        </ComplexType>
+      
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2323,8 +2328,7 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="PostDatedChequesInstant" FunctionName="Accounting.CIGModel.Store.PostDatedChequesInstant">
-          </FunctionImportMapping>
+          
           <FunctionImportMapping FunctionImportName="getAccountBalances" FunctionName="Accounting.CIGModel.Store.getAccountBalances">
             <ResultMapping>
               <ComplexTypeMapping TypeName="AccountingModel.getAccountBalances">
@@ -2696,6 +2700,33 @@ warning 6002: The table/view 'Accounting.Company.dbo.Installments' does not have
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PostDatedChequesInstant" FunctionName="Accounting.CIGModel.Store.PostDatedChequesInstant">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AccountingModel.PostDatedChequesInstant_Result">
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Debit1st" ColumnName="Debit1st" />
+                <ScalarProperty Name="Credit1st" ColumnName="Credit1st" />
+                <ScalarProperty Name="Balance1st" ColumnName="Balance1st" />
+                <ScalarProperty Name="Debit2nd" ColumnName="Debit2nd" />
+                <ScalarProperty Name="Credit2nd" ColumnName="Credit2nd" />
+                <ScalarProperty Name="Balance2nd" ColumnName="Balance2nd" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Jvdate" ColumnName="Jvdate" />
+                <ScalarProperty Name="Ydate" ColumnName="Ydate" />
+                <ScalarProperty Name="Sc" ColumnName="Sc" />
+                <ScalarProperty Name="JvID" ColumnName="JvID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+         
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

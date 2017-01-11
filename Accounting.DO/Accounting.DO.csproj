@@ -136,6 +136,11 @@
     <Compile Include="CheckerMaturity.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PostDatedChequesInstantResult.cs" />
+    <Compile Include="PostdatedChequesInstantSummary.cs" />
+    <Compile Include="PostDatedChequesInstant_Result.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SearchLists\AccountTypeSearchList.cs" />
     <Compile Include="SearchLists\CompanySearchList.cs" />
     <Compile Include="SearchLists\StandardSearchList.cs" />
@@ -213,9 +218,6 @@
     </Compile>
     <Compile Include="NotesSummary.cs" />
     <Compile Include="OtherVouchers.cs" />
-    <Compile Include="PostDatedChequesInstant.cs">
-      <DependentUpon>AccountingModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="PostDatedDetailedResult.cs" />
     <Compile Include="ProfitAndLoss.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
@@ -293,6 +295,9 @@
     <None Include="vfpData.xss">
       <DependentUpon>vfpData.xsd</DependentUpon>
     </None>
+    <None Include="_AccountingDB\1160914 Accounting module.xlsx.xlsx" />
+    <None Include="_AccountingDB\Accounting.Company" />
+    <None Include="_AccountingDB\Accounting.Security" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

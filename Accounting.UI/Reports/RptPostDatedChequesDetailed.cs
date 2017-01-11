@@ -28,7 +28,7 @@ namespace Accounting.Reports
         private void xrLabel12_EvaluateBinding(object sender, BindingEventArgs e)
         {
             var rec = ((PostDatedDetailedResult)GetCurrentRow());
-            //    e.Value = rec.Document.Substring(0, rec.Document.IndexOf(' ')); modified by  samir 8/12/2016 BU 8/12/2016-1
+            //    e.Value = rec.Document.Substring(0, rec.Document.IndexOf(' ')); modified by samir 8/12/2016 BU 8/12/2016-1
             e.Value = ((PostDatedDetailedResult)GetCurrentRow()).Document;
         }
 

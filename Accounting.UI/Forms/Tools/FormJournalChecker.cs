@@ -3,6 +3,7 @@ using System.Linq;
 using efControls;
 using System.Collections.Generic;
 using efControls.Data;
+using System.Windows.Forms;
 
 namespace Accounting
 {
@@ -187,8 +188,8 @@ namespace Accounting
             bsResult.Clear();
             using (AccountingEntities ae = new AccountingEntities(App.MainConnectionString))
             {
-                var jvType = (int?)cboVoucherTypes.EditValue ?? 0;
-
+              var jvType = (int?)cboVoucherTypes.EditValue ?? 0;
+             
                 Splash.Show(this);
                 Splash.SetCaption("Please Wait ...");
                 Splash.SetDescription("Collecting Data ...");
@@ -381,7 +382,7 @@ namespace Accounting
             {
                 var rec = (voucherChecker)bsResult.Current;
                 if (rec.Id == -1) { return; }
-                //de.callTransactionForm(((DateTime)rec.JvDate).Year, rec.Type, (int)rec.Reference, rec.Sc); //check with Rafic why code is commented UE-12/12/2016-3
+                //  de.callTransactionForm(((DateTime)rec.JvDate).Year, rec.Type, (int)rec.Reference, rec.Sc); //check with Rafic why code is commented UE-12/12/2016-3
 
 
                 //var mForm = (FormMain)MdiParent;
@@ -408,6 +409,9 @@ namespace Accounting
                 //    mForm.getFormRights(frm, mForm.ribbon.Items["bbiJV"].Id);
                 //    mForm.showForm(frm);
                 //}
+                     
+                 CallTransactionForm.callTransactionForm((FormMain)this.MdiParent, App.WorkingYear, rec.Type, (int)rec.Id);// ref UE-10/01/2017-1
+                
             }
         }
 

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule compareAgainstControlValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPostDatedCheques));
             this.deFrom = new efControls.efDateEdit();
             this.colMaturity = new efControls.efGridColumn();
-            this.bsResult = new System.Windows.Forms.BindingSource();
+            this.bsResult = new System.Windows.Forms.BindingSource(this.components);
             this.rgType = new efControls.efRadioGroup();
             this.lciType = new efControls.lci();
             this.lciFromDate = new efControls.lci();
@@ -56,14 +57,14 @@
             this.colType = new efControls.efGridColumn();
             this.colReference = new efControls.efGridColumn();
             this.colYdate = new efControls.efGridColumn();
-            this.formImages = new DevExpress.Utils.ImageCollection();
+            this.formImages = new DevExpress.Utils.ImageCollection(this.components);
             this.lciGridResult = new efControls.lci();
             this.deTill = new efControls.efDateEdit();
             this.lciTillDate = new efControls.lci();
             this.deCash = new efControls.efDateEdit();
             this.lciCashDate = new efControls.lci();
             this.gcSummary = new efControls.efGridControl();
-            this.bsSummary = new System.Windows.Forms.BindingSource();
+            this.bsSummary = new System.Windows.Forms.BindingSource(this.components);
             this.gvSummary = new efControls.efGridView();
             this.colSC1 = new efControls.efGridColumn();
             this.colCheques = new efControls.efGridColumn();
@@ -80,6 +81,7 @@
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsResult)).BeginInit();
@@ -286,6 +288,8 @@
             this.gcResult.TabIndex = 17;
             this.gcResult.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvResult});
+            
+
             // 
             // gvResult
             // 
@@ -338,6 +342,7 @@
             this.gvResult.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvResult_RowCellClick);
             this.gvResult.ColumnFilterChanged += new System.EventHandler(this.gvResult_ColumnFilterChanged);
             this.gvResult.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gvResult_CustomUnboundColumnData);
+           
             // 
             // colScan
             // 
@@ -837,6 +842,7 @@
             this.lcMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lcgMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsResult)).EndInit();
@@ -862,6 +868,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSummary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSummary)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

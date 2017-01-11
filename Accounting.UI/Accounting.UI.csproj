@@ -939,7 +939,6 @@
     <None Include="Properties\DataSources\NotesSummary.datasource" />
     <None Include="Properties\DataSources\OtherVouchers.datasource" />
     <None Include="Properties\DataSources\PostDatedChequesDetailed.datasource" />
-    <None Include="Properties\DataSources\PostDatedChequesInstant.datasource" />
     <None Include="Properties\DataSources\PostdatedChequesSummary.datasource" />
     <None Include="Properties\DataSources\PostDatedDetailedResult.datasource" />
     <None Include="Properties\DataSources\PrintVouchers.datasource" />

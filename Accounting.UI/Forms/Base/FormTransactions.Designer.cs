@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransactions));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
@@ -36,7 +37,7 @@
             this.ripceCollect = new efControls.RepositoryItemefPopupContainerEdit();
             this.pccCollect = new efControls.efPopupContainerControl();
             this.gcCollect = new efControls.efGridControl();
-            this.bsCollect = new System.Windows.Forms.BindingSource();
+            this.bsCollect = new System.Windows.Forms.BindingSource(this.components);
             this.gvCollect = new efControls.efGridView();
             this.colDocument1 = new efControls.efGridColumn();
             this.colMaturity1 = new efControls.efGridColumn();
@@ -46,7 +47,7 @@
             this.coldc1 = new efControls.efGridColumn();
             this.colDc = new efControls.efGridColumn();
             this.riDC = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.bsDetails = new System.Windows.Forms.BindingSource();
+            this.bsDetails = new System.Windows.Forms.BindingSource(this.components);
             this.txtFromTo = new efControls.efTextBox();
             this.lciFromTo = new efControls.lci();
             this.meDetails = new efControls.efMemoEdit();
@@ -65,21 +66,21 @@
             this.colLine = new efControls.efGridColumn();
             this.colAccount = new efControls.efGridColumn();
             this.riAccounts = new Accounting.RepositoryItemef_Accounts();
-            this.bsAccounts = new System.Windows.Forms.BindingSource();
+            this.bsAccounts = new System.Windows.Forms.BindingSource(this.components);
             this.riAccountsView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCodeDescription = new efControls.efGridColumn();
             this.colMaturity = new efControls.efGridColumn();
             this.rideMaturity = new efControls.RepositoryItemefDateEdit();
             this.colCurrencyid = new efControls.efGridColumn();
             this.riCurrencies = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.bsCurrencies = new System.Windows.Forms.BindingSource();
+            this.bsCurrencies = new System.Windows.Forms.BindingSource(this.components);
             this.colAmount = new efControls.efGridColumn();
             this.riAmounts = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colDescription = new efControls.efGridColumn();
             this.ritxtDescription = new efControls.RepositoryItemefTextBox();
             this.colBankid = new efControls.efGridColumn();
             this.riBanks = new Accounting.RepositoryItemef_Accounts();
-            this.bsBanks = new System.Windows.Forms.BindingSource();
+            this.bsBanks = new System.Windows.Forms.BindingSource(this.components);
             this.riBanksView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColBank = new efControls.efGridColumn();
             this.colAmount1st = new efControls.efGridColumn();
@@ -111,7 +112,7 @@
             this.lciBanks = new efControls.lci();
             this.cboBanks = new Accounting.cboBanks();
             this.lcgBalances = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.pmGrid = new DevExpress.XtraBars.PopupMenu();
+            this.pmGrid = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbiInsert = new DevExpress.XtraBars.BarButtonItem();
             this.bbiMoveUP = new DevExpress.XtraBars.BarButtonItem();
             this.bbiMoveDOWN = new DevExpress.XtraBars.BarButtonItem();
@@ -128,7 +129,7 @@
             this.btnCopyFrom = new DevExpress.XtraBars.BarButtonItem();
             this.btnCheque = new DevExpress.XtraBars.BarButtonItem();
             this.btnScan = new DevExpress.XtraBars.BarButtonItem();
-            this.pmScan = new DevExpress.XtraBars.PopupMenu();
+            this.pmScan = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbiImportPDF = new DevExpress.XtraBars.BarButtonItem();
             this.sbdcGridBar = new DevExpress.XtraBars.StandaloneBarDockControl();
             this.lciGridBar = new efControls.lci();
@@ -140,12 +141,12 @@
             this.chkPrint = new efControls.efCheckBox();
             this.lciPrint = new efControls.lci();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.bsVoucherType = new System.Windows.Forms.BindingSource();
+            this.bsVoucherType = new System.Windows.Forms.BindingSource(this.components);
             this.cboSubCompanies = new Accounting.cboSubCompanies();
             this.lciSubCompanies = new efControls.lci();
             this.colSC = new efControls.efGridColumn();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.accBalances = new DevExpress.XtraBars.Alerter.AlertControl();
+            this.accBalances = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
@@ -253,7 +254,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.gcSearch.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gcSearch.Size = new System.Drawing.Size(116, 409);
+            this.gcSearch.Size = new System.Drawing.Size(116, 403);
             // 
             // gvSearch
             // 
@@ -323,22 +324,22 @@
             // 
             // barDockControlTop
             // 
-            this.barDockControlTop.Size = new System.Drawing.Size(924, 28);
+            this.barDockControlTop.Size = new System.Drawing.Size(924, 31);
             // 
             // barDockControlBottom
             // 
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 487);
-            this.barDockControlBottom.Size = new System.Drawing.Size(924, 24);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 484);
+            this.barDockControlBottom.Size = new System.Drawing.Size(924, 27);
             // 
             // barDockControlLeft
             // 
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 459);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 453);
             // 
             // barDockControlRight
             // 
-            this.barDockControlRight.Location = new System.Drawing.Point(924, 28);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 459);
+            this.barDockControlRight.Location = new System.Drawing.Point(924, 31);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 453);
             // 
             // barManager
             // 
@@ -374,18 +375,18 @@
             // 
             // sccMain
             // 
-            this.sccMain.Location = new System.Drawing.Point(0, 28);
-            this.sccMain.Size = new System.Drawing.Size(924, 459);
+            this.sccMain.Location = new System.Drawing.Point(0, 31);
+            this.sccMain.Size = new System.Drawing.Size(924, 453);
             // 
             // lcSearch
             // 
             this.lcSearch.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(678, 161, 250, 350);
-            this.lcSearch.Size = new System.Drawing.Size(120, 459);
+            this.lcSearch.Size = new System.Drawing.Size(120, 453);
             this.lcSearch.Controls.SetChildIndex(this.gcSearch, 0);
             // 
             // lcgSearch
             // 
-            this.lcgSearch.Size = new System.Drawing.Size(120, 459);
+            this.lcgSearch.Size = new System.Drawing.Size(120, 453);
             // 
             // lcMain
             // 
@@ -414,7 +415,7 @@
             this.lcMain.Controls.Add(this.txtFromTo);
             this.lcMain.Controls.Add(this.txtReference);
             this.lcMain.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1200, 115, 250, 700);
-            this.lcMain.Size = new System.Drawing.Size(792, 459);
+            this.lcMain.Size = new System.Drawing.Size(799, 453);
             // 
             // lcgMain
             // 
@@ -434,7 +435,7 @@
             this.lciPrint,
             this.emptySpaceItem1,
             this.lciSubCompanies});
-            this.lcgMain.Size = new System.Drawing.Size(792, 459);
+            this.lcgMain.Size = new System.Drawing.Size(799, 453);
             // 
             // imageCollection
             // 
@@ -736,7 +737,7 @@
             this.lcgDetails.Location = new System.Drawing.Point(0, 25);
             this.lcgDetails.Name = "lcgDetails";
             this.lcgDetails.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.lcgDetails.Size = new System.Drawing.Size(792, 3);
+            this.lcgDetails.Size = new System.Drawing.Size(799, 3);
             this.lcgDetails.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.lcgDetails.Text = "...";
             // 
@@ -903,7 +904,7 @@
             this.riBanks,
             this.rideMaturity,
             this.ripceCollect});
-            this.gcDetails.Size = new System.Drawing.Size(788, 329);
+            this.gcDetails.Size = new System.Drawing.Size(795, 320);
             this.gcDetails.TabIndex = 30;
             this.gcDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDetails});
@@ -1262,7 +1263,7 @@
             this.lciGridDetails.IsRequired = null;
             this.lciGridDetails.Location = new System.Drawing.Point(0, 28);
             this.lciGridDetails.Name = "lciGridDetails";
-            this.lciGridDetails.Size = new System.Drawing.Size(792, 333);
+            this.lciGridDetails.Size = new System.Drawing.Size(799, 324);
             this.lciGridDetails.TextSize = new System.Drawing.Size(0, 0);
             this.lciGridDetails.TextVisible = false;
             // 
@@ -1273,7 +1274,7 @@
             this.txtDebit1st.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtDebit1st.EnterMoveNextControl = true;
             this.txtDebit1st.Information = null;
-            this.txtDebit1st.Location = new System.Drawing.Point(590, 395);
+            this.txtDebit1st.Location = new System.Drawing.Point(597, 386);
             this.txtDebit1st.MenuManager = this.barManager;
             this.txtDebit1st.Name = "txtDebit1st";
             this.txtDebit1st.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
@@ -1308,7 +1309,7 @@
             this.txtCredit1st.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtCredit1st.EnterMoveNextControl = true;
             this.txtCredit1st.Information = null;
-            this.txtCredit1st.Location = new System.Drawing.Point(590, 417);
+            this.txtCredit1st.Location = new System.Drawing.Point(597, 408);
             this.txtCredit1st.MenuManager = this.barManager;
             this.txtCredit1st.Name = "txtCredit1st";
             this.txtCredit1st.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
@@ -1345,7 +1346,7 @@
             this.txtBalance1st.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtBalance1st.EnterMoveNextControl = true;
             this.txtBalance1st.Information = null;
-            this.txtBalance1st.Location = new System.Drawing.Point(590, 439);
+            this.txtBalance1st.Location = new System.Drawing.Point(597, 430);
             this.txtBalance1st.MenuManager = this.barManager;
             this.txtBalance1st.Name = "txtBalance1st";
             this.txtBalance1st.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -1371,7 +1372,7 @@
             this.lciBalance1st.IsRequired = null;
             this.lciBalance1st.Location = new System.Drawing.Point(0, 44);
             this.lciBalance1st.Name = "lciBalance1st";
-            this.lciBalance1st.Size = new System.Drawing.Size(147, 22);
+            this.lciBalance1st.Size = new System.Drawing.Size(147, 25);
             this.lciBalance1st.Text = "Balance";
             this.lciBalance1st.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.lciBalance1st.TextSize = new System.Drawing.Size(40, 13);
@@ -1384,7 +1385,7 @@
             this.txtDebit2nd.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtDebit2nd.EnterMoveNextControl = true;
             this.txtDebit2nd.Information = null;
-            this.txtDebit2nd.Location = new System.Drawing.Point(692, 395);
+            this.txtDebit2nd.Location = new System.Drawing.Point(699, 386);
             this.txtDebit2nd.MenuManager = this.barManager;
             this.txtDebit2nd.Name = "txtDebit2nd";
             this.txtDebit2nd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
@@ -1419,7 +1420,7 @@
             this.txtCredit2nd.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtCredit2nd.EnterMoveNextControl = true;
             this.txtCredit2nd.Information = null;
-            this.txtCredit2nd.Location = new System.Drawing.Point(692, 417);
+            this.txtCredit2nd.Location = new System.Drawing.Point(699, 408);
             this.txtCredit2nd.MenuManager = this.barManager;
             this.txtCredit2nd.Name = "txtCredit2nd";
             this.txtCredit2nd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
@@ -1454,7 +1455,7 @@
             this.txtBalance2nd.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtBalance2nd.EnterMoveNextControl = true;
             this.txtBalance2nd.Information = null;
-            this.txtBalance2nd.Location = new System.Drawing.Point(692, 439);
+            this.txtBalance2nd.Location = new System.Drawing.Point(699, 430);
             this.txtBalance2nd.MenuManager = this.barManager;
             this.txtBalance2nd.Name = "txtBalance2nd";
             this.txtBalance2nd.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -1480,7 +1481,7 @@
             this.lciBalance2nd.IsRequired = null;
             this.lciBalance2nd.Location = new System.Drawing.Point(147, 44);
             this.lciBalance2nd.Name = "lciBalance2nd";
-            this.lciBalance2nd.Size = new System.Drawing.Size(102, 22);
+            this.lciBalance2nd.Size = new System.Drawing.Size(102, 25);
             this.lciBalance2nd.TextSize = new System.Drawing.Size(0, 0);
             this.lciBalance2nd.TextVisible = false;
             // 
@@ -1492,7 +1493,7 @@
             this.txtRate.DisplayType = efControls.Enums.DisplayType.Numeric;
             this.txtRate.EnterMoveNextControl = true;
             this.txtRate.Information = null;
-            this.txtRate.Location = new System.Drawing.Point(290, 439);
+            this.txtRate.Location = new System.Drawing.Point(293, 433);
             this.txtRate.MenuManager = this.barManager;
             this.txtRate.Name = "txtRate";
             this.txtRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
@@ -1505,7 +1506,7 @@
             this.txtRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRate.Properties.ReadOnly = true;
-            this.txtRate.Size = new System.Drawing.Size(65, 18);
+            this.txtRate.Size = new System.Drawing.Size(66, 18);
             this.txtRate.StyleController = this.lcMain;
             this.txtRate.TabIndex = 44;
             // 
@@ -1514,9 +1515,9 @@
             this.lciRate.Control = this.txtRate;
             this.lciRate.CustomizationFormText = "Rate";
             this.lciRate.IsRequired = null;
-            this.lciRate.Location = new System.Drawing.Point(234, 44);
+            this.lciRate.Location = new System.Drawing.Point(237, 44);
             this.lciRate.Name = "lciRate";
-            this.lciRate.Size = new System.Drawing.Size(123, 22);
+            this.lciRate.Size = new System.Drawing.Size(124, 22);
             this.lciRate.Text = "Rate";
             this.lciRate.TextSize = new System.Drawing.Size(50, 13);
             // 
@@ -1530,10 +1531,10 @@
             this.Currency,
             this.lciAccounts,
             this.lciBanks});
-            this.lcgInfo.Location = new System.Drawing.Point(0, 393);
+            this.lcgInfo.Location = new System.Drawing.Point(0, 387);
             this.lcgInfo.Name = "lcgInfo";
             this.lcgInfo.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.lcgInfo.Size = new System.Drawing.Size(538, 66);
+            this.lcgInfo.Size = new System.Drawing.Size(544, 66);
             this.lcgInfo.TextVisible = false;
             // 
             // lciDescription
@@ -1543,7 +1544,7 @@
             this.lciDescription.IsRequired = null;
             this.lciDescription.Location = new System.Drawing.Point(0, 0);
             this.lciDescription.Name = "lciDescription";
-            this.lciDescription.Size = new System.Drawing.Size(538, 22);
+            this.lciDescription.Size = new System.Drawing.Size(544, 22);
             this.lciDescription.TextSize = new System.Drawing.Size(0, 0);
             this.lciDescription.TextVisible = false;
             // 
@@ -1555,13 +1556,13 @@
             this.txtDescription.DisplayType = efControls.Enums.DisplayType.Default;
             this.txtDescription.EnterMoveNextControl = true;
             this.txtDescription.Information = null;
-            this.txtDescription.Location = new System.Drawing.Point(2, 395);
+            this.txtDescription.Location = new System.Drawing.Point(2, 389);
             this.txtDescription.MenuManager = this.barManager;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Properties.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(534, 18);
+            this.txtDescription.Size = new System.Drawing.Size(540, 18);
             this.txtDescription.StyleController = this.lcMain;
             this.txtDescription.TabIndex = 51;
             // 
@@ -1573,7 +1574,7 @@
             this.Currency.MaxSize = new System.Drawing.Size(0, 22);
             this.Currency.MinSize = new System.Drawing.Size(108, 22);
             this.Currency.Name = "Currency";
-            this.Currency.Size = new System.Drawing.Size(234, 22);
+            this.Currency.Size = new System.Drawing.Size(237, 22);
             this.Currency.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.Currency.TextSize = new System.Drawing.Size(50, 13);
             // 
@@ -1583,14 +1584,14 @@
             this.cboCurrencies.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsDetails, "Currencyid", true));
             this.cboCurrencies.DefaultState = efControls.Enums.ControlState.AlwaysDisabled;
             this.cboCurrencies.EnterMoveNextControl = true;
-            this.cboCurrencies.Location = new System.Drawing.Point(56, 439);
+            this.cboCurrencies.Location = new System.Drawing.Point(56, 433);
             this.cboCurrencies.MaximumSize = new System.Drawing.Size(0, 18);
             this.cboCurrencies.MenuManager = this.barManager;
             this.cboCurrencies.MinimumSize = new System.Drawing.Size(0, 18);
             this.cboCurrencies.Name = "cboCurrencies";
             this.cboCurrencies.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cboCurrencies.Properties.Name = "efComboBox";
-            this.cboCurrencies.Size = new System.Drawing.Size(176, 18);
+            this.cboCurrencies.Size = new System.Drawing.Size(179, 18);
             this.cboCurrencies.StyleController = this.lcMain;
             this.cboCurrencies.TabIndex = 64;
             this.cboCurrencies.ValueToDisplay = Accounting.cboCurrencies.DisplayValue.Description;
@@ -1603,7 +1604,7 @@
             this.lciAccounts.MaxSize = new System.Drawing.Size(0, 22);
             this.lciAccounts.MinSize = new System.Drawing.Size(108, 22);
             this.lciAccounts.Name = "lciAccounts";
-            this.lciAccounts.Size = new System.Drawing.Size(538, 22);
+            this.lciAccounts.Size = new System.Drawing.Size(544, 22);
             this.lciAccounts.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciAccounts.Text = "Account";
             this.lciAccounts.TextSize = new System.Drawing.Size(50, 13);
@@ -1616,7 +1617,7 @@
             this.cboAccounts.DefaultState = efControls.Enums.ControlState.AlwaysDisabled;
             this.cboAccounts.DropdownWidth = 0;
             this.cboAccounts.EnterMoveNextControl = true;
-            this.cboAccounts.Location = new System.Drawing.Point(56, 417);
+            this.cboAccounts.Location = new System.Drawing.Point(56, 411);
             this.cboAccounts.MaximumSize = new System.Drawing.Size(0, 18);
             this.cboAccounts.MenuManager = this.barManager;
             this.cboAccounts.MinimumSize = new System.Drawing.Size(0, 18);
@@ -1630,7 +1631,7 @@
             this.cboAccounts.Properties.View = this.cboAccountsView;
             this.cboAccounts.ShowAccountNumber = false;
             this.cboAccounts.ShowContextImage = false;
-            this.cboAccounts.Size = new System.Drawing.Size(480, 18);
+            this.cboAccounts.Size = new System.Drawing.Size(486, 18);
             this.cboAccounts.StartWith = null;
             this.cboAccounts.StyleController = this.lcMain;
             this.cboAccounts.TabIndex = 66;
@@ -1665,11 +1666,11 @@
             // 
             this.lciBanks.Control = this.cboBanks;
             this.lciBanks.IsRequired = null;
-            this.lciBanks.Location = new System.Drawing.Point(357, 44);
+            this.lciBanks.Location = new System.Drawing.Point(361, 44);
             this.lciBanks.MaxSize = new System.Drawing.Size(0, 22);
             this.lciBanks.MinSize = new System.Drawing.Size(108, 22);
             this.lciBanks.Name = "lciBanks";
-            this.lciBanks.Size = new System.Drawing.Size(181, 22);
+            this.lciBanks.Size = new System.Drawing.Size(183, 22);
             this.lciBanks.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciBanks.Text = "Bank";
             this.lciBanks.TextSize = new System.Drawing.Size(50, 13);
@@ -1680,14 +1681,14 @@
             this.cboBanks.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsDetails, "Bankid", true));
             this.cboBanks.DefaultState = efControls.Enums.ControlState.AlwaysDisabled;
             this.cboBanks.EnterMoveNextControl = true;
-            this.cboBanks.Location = new System.Drawing.Point(413, 439);
+            this.cboBanks.Location = new System.Drawing.Point(417, 433);
             this.cboBanks.MaximumSize = new System.Drawing.Size(0, 18);
             this.cboBanks.MenuManager = this.barManager;
             this.cboBanks.MinimumSize = new System.Drawing.Size(0, 18);
             this.cboBanks.Name = "cboBanks";
             this.cboBanks.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cboBanks.Properties.Name = "efComboBox";
-            this.cboBanks.Size = new System.Drawing.Size(123, 18);
+            this.cboBanks.Size = new System.Drawing.Size(125, 18);
             this.cboBanks.StyleController = this.lcMain;
             this.cboBanks.TabIndex = 67;
             this.cboBanks.ValueToDisplay = Accounting.cboBanks.DisplayValue.Description;
@@ -1703,10 +1704,10 @@
             this.lciDebit2nd,
             this.lciCredit2nd,
             this.lciBalance2nd});
-            this.lcgBalances.Location = new System.Drawing.Point(543, 393);
+            this.lcgBalances.Location = new System.Drawing.Point(550, 384);
             this.lcgBalances.Name = "lcgBalances";
             this.lcgBalances.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.lcgBalances.Size = new System.Drawing.Size(249, 66);
+            this.lcgBalances.Size = new System.Drawing.Size(249, 69);
             this.lcgBalances.TextVisible = false;
             // 
             // pmGrid
@@ -1913,33 +1914,33 @@
             // sbdcGridBar
             // 
             this.sbdcGridBar.CausesValidation = false;
-            this.sbdcGridBar.Location = new System.Drawing.Point(2, 363);
+            this.sbdcGridBar.Location = new System.Drawing.Point(2, 354);
             this.sbdcGridBar.Name = "sbdcGridBar";
-            this.sbdcGridBar.Size = new System.Drawing.Size(534, 28);
+            this.sbdcGridBar.Size = new System.Drawing.Size(540, 31);
             this.sbdcGridBar.Text = "standaloneBarDockControl1";
             // 
             // lciGridBar
             // 
             this.lciGridBar.Control = this.sbdcGridBar;
             this.lciGridBar.IsRequired = null;
-            this.lciGridBar.Location = new System.Drawing.Point(0, 361);
+            this.lciGridBar.Location = new System.Drawing.Point(0, 352);
             this.lciGridBar.Name = "lciGridBar";
-            this.lciGridBar.Size = new System.Drawing.Size(538, 32);
+            this.lciGridBar.Size = new System.Drawing.Size(544, 35);
             this.lciGridBar.TextSize = new System.Drawing.Size(0, 0);
             this.lciGridBar.TextVisible = false;
             // 
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.Location = new System.Drawing.Point(538, 361);
+            this.simpleSeparator2.Location = new System.Drawing.Point(544, 352);
             this.simpleSeparator2.Name = "simpleSeparator2";
-            this.simpleSeparator2.Size = new System.Drawing.Size(5, 98);
+            this.simpleSeparator2.Size = new System.Drawing.Size(6, 101);
             this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 0, 0);
             // 
             // ucControlNavigator
             // 
             this.ucControlNavigator.AlwaysEnabled = true;
-            this.ucControlNavigator.Location = new System.Drawing.Point(545, 363);
+            this.ucControlNavigator.Location = new System.Drawing.Point(552, 354);
             this.ucControlNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucControlNavigator.MaximumSize = new System.Drawing.Size(245, 28);
             this.ucControlNavigator.MinimumSize = new System.Drawing.Size(245, 28);
@@ -1954,7 +1955,7 @@
             this.lciControlNavigator.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lciControlNavigator.FillControlToClientArea = false;
             this.lciControlNavigator.IsRequired = null;
-            this.lciControlNavigator.Location = new System.Drawing.Point(543, 361);
+            this.lciControlNavigator.Location = new System.Drawing.Point(550, 352);
             this.lciControlNavigator.MaxSize = new System.Drawing.Size(249, 32);
             this.lciControlNavigator.MinSize = new System.Drawing.Size(249, 32);
             this.lciControlNavigator.Name = "lciControlNavigator";
@@ -1968,7 +1969,7 @@
             this.chkNew.DefaultState = efControls.Enums.ControlState.AlwaysEnabled;
             this.chkNew.EnterMoveNextControl = true;
             this.chkNew.HighLighted = false;
-            this.chkNew.Location = new System.Drawing.Point(698, 2);
+            this.chkNew.Location = new System.Drawing.Point(705, 2);
             this.chkNew.MenuManager = this.barManager;
             this.chkNew.Name = "chkNew";
             this.chkNew.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -1993,7 +1994,7 @@
             // 
             this.lciNEw.Control = this.chkNew;
             this.lciNEw.IsRequired = null;
-            this.lciNEw.Location = new System.Drawing.Point(696, 0);
+            this.lciNEw.Location = new System.Drawing.Point(703, 0);
             this.lciNEw.MaxSize = new System.Drawing.Size(48, 23);
             this.lciNEw.MinSize = new System.Drawing.Size(48, 23);
             this.lciNEw.Name = "lciNEw";
@@ -2007,7 +2008,7 @@
             this.chkPrint.DefaultState = efControls.Enums.ControlState.AlwaysEnabled;
             this.chkPrint.EnterMoveNextControl = true;
             this.chkPrint.HighLighted = false;
-            this.chkPrint.Location = new System.Drawing.Point(746, 2);
+            this.chkPrint.Location = new System.Drawing.Point(753, 2);
             this.chkPrint.MenuManager = this.barManager;
             this.chkPrint.Name = "chkPrint";
             this.chkPrint.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -2032,7 +2033,7 @@
             // 
             this.lciPrint.Control = this.chkPrint;
             this.lciPrint.IsRequired = null;
-            this.lciPrint.Location = new System.Drawing.Point(744, 0);
+            this.lciPrint.Location = new System.Drawing.Point(751, 0);
             this.lciPrint.MaxSize = new System.Drawing.Size(48, 23);
             this.lciPrint.MinSize = new System.Drawing.Size(48, 23);
             this.lciPrint.Name = "lciPrint";
@@ -2046,7 +2047,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(608, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(88, 25);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(95, 25);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // bsVoucherType
@@ -2127,7 +2128,7 @@
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(924, 511);
-            this.MinimumSize = new System.Drawing.Size(926, 543);
+            this.MinimumSize = new System.Drawing.Size(926, 540);
             this.Name = "FormTransactions";
             this.Text = "Journal Vouchers";
             ((System.ComponentModel.ISupportInitialize)(this.gcSearch)).EndInit();

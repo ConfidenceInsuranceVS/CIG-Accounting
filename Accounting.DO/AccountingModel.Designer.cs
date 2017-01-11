@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\efCigApps\Accounting\Accounting.DO\AccountingModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\CIG-Accounting\Accounting\Accounting.DO\AccountingModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

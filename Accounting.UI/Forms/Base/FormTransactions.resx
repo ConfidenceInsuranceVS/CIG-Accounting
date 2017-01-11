@@ -203,7 +203,7 @@
 </value>
   </data>
   <metadata name="pmScan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>346, 56</value>
+    <value>442, 56</value>
   </metadata>
   <metadata name="bsMaster.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>135, 17</value>
@@ -215,7 +215,7 @@
     <value>237, 17</value>
   </metadata>
   <metadata name="bsBanks.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1150, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="bsDetails.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>814, 17</value>
@@ -227,7 +227,7 @@
     <value>1029, 17</value>
   </metadata>
   <metadata name="bsCollect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>109, 56</value>
+    <value>205, 56</value>
   </metadata>
   <metadata name="imageCollection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>357, 17</value>
@@ -443,6 +443,9 @@
         BKKJ9wKMATPkirTG/4eickQbgsJBNuSStCZQCFUxNkwhYGAAAK1FPSyhePBYAAAAAElFTkSuQmCCCw==
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>116</value>
+  </metadata>
   <metadata name="ValidationProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>597, 17</value>
   </metadata>
@@ -450,15 +453,15 @@
     <value>749, 17</value>
   </metadata>
   <metadata name="pmGrid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>113, 56</value>
   </metadata>
   <metadata name="bsVoucherType.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>210, 56</value>
+    <value>306, 56</value>
   </metadata>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>441, 56</value>
+    <value>537, 56</value>
   </metadata>
   <metadata name="accBalances.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>574, 56</value>
+    <value>670, 56</value>
   </metadata>
 </root>

@@ -309,31 +309,6 @@ namespace Accounting
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProfitAndLoss>("ProfitAndLoss", yearParameter, levelParameter, fromMonthParameter, toMonthParameter, currencyParameter, beforeClosingParameter);
         }
     
-        public virtual int PostDatedChequesInstant(Nullable<System.DateTime> fdate, Nullable<System.DateTime> tdate, Nullable<System.DateTime> adate, Nullable<int> cur1, Nullable<int> cur2)
-        {
-            var fdateParameter = fdate.HasValue ?
-                new ObjectParameter("fdate", fdate) :
-                new ObjectParameter("fdate", typeof(System.DateTime));
-    
-            var tdateParameter = tdate.HasValue ?
-                new ObjectParameter("tdate", tdate) :
-                new ObjectParameter("tdate", typeof(System.DateTime));
-    
-            var adateParameter = adate.HasValue ?
-                new ObjectParameter("adate", adate) :
-                new ObjectParameter("adate", typeof(System.DateTime));
-    
-            var cur1Parameter = cur1.HasValue ?
-                new ObjectParameter("Cur1", cur1) :
-                new ObjectParameter("Cur1", typeof(int));
-    
-            var cur2Parameter = cur2.HasValue ?
-                new ObjectParameter("Cur2", cur2) :
-                new ObjectParameter("Cur2", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("PostDatedChequesInstant", fdateParameter, tdateParameter, adateParameter, cur1Parameter, cur2Parameter);
-        }
-    
         public virtual ObjectResult<getAccountBalances> getAccountBalances(string accountYearCurrency)
         {
             var accountYearCurrencyParameter = accountYearCurrency != null ?
@@ -635,6 +610,31 @@ namespace Accounting
                 new ObjectParameter("Year", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CheckerEditedHours_Result1>("CheckerEditedHours", accountidParameter, typeidParameter, useridParameter, amountParameter, yearParameter);
+        }
+    
+        public virtual ObjectResult<PostDatedChequesInstant_Result> PostDatedChequesInstant(Nullable<System.DateTime> fdate, Nullable<System.DateTime> tdate, Nullable<System.DateTime> adate, Nullable<int> cur1, Nullable<int> cur2)
+        {
+            var fdateParameter = fdate.HasValue ?
+                new ObjectParameter("fdate", fdate) :
+                new ObjectParameter("fdate", typeof(System.DateTime));
+    
+            var tdateParameter = tdate.HasValue ?
+                new ObjectParameter("tdate", tdate) :
+                new ObjectParameter("tdate", typeof(System.DateTime));
+    
+            var adateParameter = adate.HasValue ?
+                new ObjectParameter("adate", adate) :
+                new ObjectParameter("adate", typeof(System.DateTime));
+    
+            var cur1Parameter = cur1.HasValue ?
+                new ObjectParameter("Cur1", cur1) :
+                new ObjectParameter("Cur1", typeof(int));
+    
+            var cur2Parameter = cur2.HasValue ?
+                new ObjectParameter("Cur2", cur2) :
+                new ObjectParameter("Cur2", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PostDatedChequesInstant_Result>("PostDatedChequesInstant", fdateParameter, tdateParameter, adateParameter, cur1Parameter, cur2Parameter);
         }
     }
 }

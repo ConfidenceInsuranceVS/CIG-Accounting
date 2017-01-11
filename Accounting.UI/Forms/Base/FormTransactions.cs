@@ -177,6 +177,8 @@ namespace Accounting
         }
         private void setAutoFilter()
         {
+            try //added by samir ref UE-10/01/2017-1
+            { 
             string type = string.Empty, sub = string.Empty;
             if (_id > 0)
             {
@@ -184,9 +186,12 @@ namespace Accounting
                 if (rh != GridControl.InvalidRowHandle)
                 {
                     gvSearch.FocusedRowHandle = rh;
-                    var rec = (vJournalParents)gvSearch.GetFocusedRow();
-                    type = dbContext.Set<Vouchertype>().FirstOrDefault(c => c.ID == rec.Vouchertypeid).Code;
-                    if (!string.IsNullOrEmpty(rec.SC)) { sub = rec.SC; }
+                        //   var rec = (vJournalParents)gvSearch.GetFocusedRow(); modified by samir FormJournalChecker.cs ref UE-10/01/2017-1
+                        var rec = (JournalSearchList)gvSearch.GetFocusedRow();//added by samir ref UE-10/01/2017-1
+                                                                              // type = dbContext.Set<Vouchertype>().FirstOrDefault(c => c.ID == rec.Vouchertypeid).Code; // stopped by samir ref UE-10/01/2017-1
+                                                                             
+                        type = rec.JvType;//  added by samir ref UE-10/01/2017-1
+                        if (!string.IsNullOrEmpty(rec.SC)) { sub = rec.SC; }
                 }
             }
             else
@@ -202,6 +207,11 @@ namespace Accounting
                     gvSearch.MoveLast();
                 else
                     bsMaster.Clear();
+            }
+            catch(Exception ex)
+            {
+                Alert.Show(ex.ToString());
+            }
         }
         protected override void onFormExtraBinding()
         {
