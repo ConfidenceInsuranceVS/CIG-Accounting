@@ -153,7 +153,7 @@
             this.gvSearch.OptionsView.EnableAppearanceEvenRow = true;
             this.gvSearch.OptionsView.EnableAppearanceOddRow = true;
             this.gvSearch.OptionsView.ShowAutoFilterRow = true;
-            this.gvSearch.OptionsView.ShowColumnHeaders = true;//samir  BU 7/12/2016-1
+            this.gvSearch.OptionsView.ShowColumnHeaders = false;
             this.gvSearch.OptionsView.ShowDetailButtons = false;
             this.gvSearch.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
             this.gvSearch.OptionsView.ShowGroupPanel = false;

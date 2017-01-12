@@ -59,8 +59,16 @@ namespace efControls
                     updateUserInfo((ITableSome)pRecord, "U");
                 using (var ts = new TransactionScope())
                 {
+                    try
+                    { 
                     db.SaveChanges();
                     ts.Complete();
+                    }
+                    catch (Exception ex)
+                    {
+                        Alert.Show(ex.ToString());
+
+                    }
                 }
             }
             catch (SqlException ex)
@@ -79,8 +87,9 @@ namespace efControls
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Alert.Show(ex.ToString());
                 throw new UpdateException();
             }
         }

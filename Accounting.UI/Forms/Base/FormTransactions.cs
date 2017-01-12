@@ -28,6 +28,7 @@ namespace Accounting
 
         private Journalparent parent;
         private Journalchild child;
+        private Chartofaccount ChartAcc;
         public FormTransactions()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Accounting
             colSC.Visible = App.HasSubCompanies;
 
             gvDetails.OptionsView.EnableAppearanceEvenRow = gvDetails.OptionsView.EnableAppearanceOddRow = false;
+                    
         }
 
 
@@ -138,6 +140,7 @@ namespace Accounting
         }
         public override Exception onFormCanEdit()
         {
+           
             var rec = (Journalparent)bsMaster.Current;
             var posted = rec.Isposted ?? false;
             if ((bool)posted)
@@ -545,11 +548,13 @@ namespace Accounting
         {
             if (e.Column == colDescription)
                 txtDescription.Text = e.Value.ToString();
+
         }
         private void gvDetails_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             if (e.Column == colAccount || e.Column == colAmount || e.Column == colAmount1st || e.Column == colAmount2nd)
                 updateTotals();
+
         }
         private void gvDetails_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
@@ -663,21 +668,32 @@ namespace Accounting
                             result = false;
                         else
                         {
+                            
                             child.Accountid = (int)e.Value;
-                            dbContext.Entry(child).Reference(p => p.Chartofaccount).Load();
+                            var x = dbContext.Set<Chartofaccount>().Select(s => s).Where(w => w.ID == child.Accountid).FirstOrDefault();
+                            if (x != null) child.Chartofaccount = x; 
+                            //dbContext.Entry(child).Reference(p => p.Chartofaccount).Load();
+                            // dbContext.Entry(ChartAcc).Reference(p => child.Accountid).Load();
+
+
+                            //ChartAcc = (Chartofaccount)bsMaster.Current;
+
+
+                            //
 
                             if (child.Chartofaccount.AccountStatu == null)
-                                isAudit = false;
-                            else
-                                isAudit = child.Chartofaccount.AccountStatu.Code == "A" ? true : false;
+                                    isAudit = false;
+                                else
+                                    isAudit = child.Chartofaccount.AccountStatu.Code == "A" ? true : false;
 
-                            if (child.Chartofaccount.Currencyid != null)
-                                child.Currencyid = child.Chartofaccount.Currencyid;
-                            else
-                                child.Currencyid = App.ForeignCurreny;
+                                if (child.Chartofaccount.Currencyid != null)
+                                    child.Currencyid = child.Chartofaccount.Currencyid;
+                                else
+                                    child.Currencyid = App.ForeignCurreny;
 
-                            recalculate(child);
-                            //showAccountBalance(child);
+                                recalculate(child);
+                                //showAccountBalance(child);
+                      
                         }
                         break;
 
@@ -740,7 +756,8 @@ namespace Accounting
             }
         }
         private void gvDetails_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
-        {
+        {       
+
             if (e.RowHandle < 0 || e.RowHandle == efGridControl.AutoFilterRowHandle) { return; }
 
             efGridView gv = sender as efGridView;

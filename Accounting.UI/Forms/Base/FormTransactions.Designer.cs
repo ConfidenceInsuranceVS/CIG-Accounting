@@ -477,6 +477,7 @@
             this.colDocument.Caption = "Document";
             this.colDocument.ColumnEdit = this.ripceCollect;
             this.colDocument.CustomData = "";
+            this.colDocument.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDocument.EditDisabled = false;
             this.colDocument.FieldName = "Document";
             this.colDocument.Name = "colDocument";
@@ -488,6 +489,8 @@
             // ripceCollect
             // 
             this.ripceCollect.AutoHeight = false;
+            this.ripceCollect.Mask.EditMask = "\\w\\w\\w\\w\\w\\w\\w \\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w\\w";
+            this.ripceCollect.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.ripceCollect.MaxLength = 45;
             this.ripceCollect.Name = "ripceCollect";
             this.ripceCollect.NullValuePrompt = "Select Account";
@@ -553,6 +556,7 @@
             this.colDocument1.AppearanceHeader.Options.UseTextOptions = true;
             this.colDocument1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDocument1.CustomData = "";
+            this.colDocument1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDocument1.EditDisabled = false;
             this.colDocument1.FieldName = "Document";
             this.colDocument1.Name = "colDocument1";
@@ -588,7 +592,7 @@
             this.colcur.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colcur.Visible = true;
             this.colcur.VisibleIndex = 2;
-            this.colcur.Width = 30;
+            this.colcur.Width = 71;
             // 
             // colAmount1
             // 
@@ -978,7 +982,7 @@
             this.colLine.AppearanceCell.Options.UseFont = true;
             this.colLine.Caption = " ";
             this.colLine.CustomData = "";
-            this.colLine.DisplayFormat.FormatString = "n0";
+            this.colLine.DisplayFormat.FormatString = "n2";
             this.colLine.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colLine.EditDisabled = false;
             this.colLine.FieldName = "Line";
@@ -1114,8 +1118,6 @@
             this.colAmount.AppearanceCell.Options.UseFont = true;
             this.colAmount.ColumnEdit = this.riAmounts;
             this.colAmount.CustomData = "";
-            this.colAmount.DisplayFormat.FormatString = "n";
-            this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAmount.EditDisabled = false;
             this.colAmount.FieldName = "Amount";
             this.colAmount.Name = "colAmount";
@@ -1890,7 +1892,7 @@
             this.btnScan.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.btnScan.Caption = "Scan";
             this.btnScan.DropDownControl = this.pmScan;
-            this.btnScan.Glyph = global::Accounting.Properties.Resources.scan_off;
+            this.btnScan.Glyph = ((System.Drawing.Image)(resources.GetObject("btnScan.Glyph")));
             this.btnScan.Id = 38;
             this.btnScan.ImageIndex = 20;
             this.btnScan.Name = "btnScan";
@@ -2346,5 +2348,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private DevExpress.XtraBars.Alerter.AlertControl accBalances;
         protected internal System.Windows.Forms.BindingSource bsDetails;
+        private efControls.RepositoryItemefPopupContainerEdit repositoryItemeDocument1;
     }
 }
