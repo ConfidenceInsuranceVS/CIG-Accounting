@@ -28,7 +28,8 @@ namespace Accounting
 
         private Journalparent parent;
         private Journalchild child;
-        private Chartofaccount ChartAcc;
+        // private Chartofaccount ChartAcc;//UE-12/01/2017-1
+        private TrialBalance1 trialBal1; //UE-12/01/2017-1
         public FormTransactions()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Accounting
             colSC.Visible = App.HasSubCompanies;
 
             gvDetails.OptionsView.EnableAppearanceEvenRow = gvDetails.OptionsView.EnableAppearanceOddRow = false;
-                    
+
         }
 
 
@@ -140,7 +141,7 @@ namespace Accounting
         }
         public override Exception onFormCanEdit()
         {
-           
+
             var rec = (Journalparent)bsMaster.Current;
             var posted = rec.Isposted ?? false;
             if ((bool)posted)
@@ -181,37 +182,37 @@ namespace Accounting
         private void setAutoFilter()
         {
             try //added by samir ref UE-10/01/2017-1
-            { 
-            string type = string.Empty, sub = string.Empty;
-            if (_id > 0)
             {
-                int rh = gvSearch.LocateByValue("ID", _id);
-                if (rh != GridControl.InvalidRowHandle)
+                string type = string.Empty, sub = string.Empty;
+                if (_id > 0)
                 {
-                    gvSearch.FocusedRowHandle = rh;
+                    int rh = gvSearch.LocateByValue("ID", _id);
+                    if (rh != GridControl.InvalidRowHandle)
+                    {
+                        gvSearch.FocusedRowHandle = rh;
                         //   var rec = (vJournalParents)gvSearch.GetFocusedRow(); modified by samir FormJournalChecker.cs ref UE-10/01/2017-1
                         var rec = (JournalSearchList)gvSearch.GetFocusedRow();//added by samir ref UE-10/01/2017-1
                                                                               // type = dbContext.Set<Vouchertype>().FirstOrDefault(c => c.ID == rec.Vouchertypeid).Code; // stopped by samir ref UE-10/01/2017-1
-                                                                             
+
                         type = rec.JvType;//  added by samir ref UE-10/01/2017-1
                         if (!string.IsNullOrEmpty(rec.SC)) { sub = rec.SC; }
+                    }
                 }
-            }
-            else
-            {
-                if (cboVoucherTypes.GetSelectedDataRow() != null) { type = ((ucVoucherTypes)cboVoucherTypes.GetSelectedDataRow()).Code; }
-                if (cboSubCompanies.GetSelectedDataRow() != null) { sub = ((SubCompany)cboSubCompanies.GetSelectedDataRow()).Code; }
-            }
-            gvSearch.SetRowCellValue(GridControl.AutoFilterRowHandle, colSearch, type);
-            gvSearch.SetRowCellValue(GridControl.AutoFilterRowHandle, colSC, sub);
-            //
-            if (_id == -1)
-                if (gvSearch.RowCount > 0)
-                    gvSearch.MoveLast();
                 else
-                    bsMaster.Clear();
+                {
+                    if (cboVoucherTypes.GetSelectedDataRow() != null) { type = ((ucVoucherTypes)cboVoucherTypes.GetSelectedDataRow()).Code; }
+                    if (cboSubCompanies.GetSelectedDataRow() != null) { sub = ((SubCompany)cboSubCompanies.GetSelectedDataRow()).Code; }
+                }
+                gvSearch.SetRowCellValue(GridControl.AutoFilterRowHandle, colSearch, type);
+                gvSearch.SetRowCellValue(GridControl.AutoFilterRowHandle, colSC, sub);
+                //
+                if (_id == -1)
+                    if (gvSearch.RowCount > 0)
+                        gvSearch.MoveLast();
+                    else
+                        bsMaster.Clear();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.ToString());
             }
@@ -259,9 +260,12 @@ namespace Accounting
                         if (child.Chartofaccount.AccountStatu.Code == "A") { childs.Remove(child); }
                 }
 
-                if (childs.Count != 0)
-                    throw new AppException("Check For Empty Lines !!");
+                // if (childs.Count != 0) // stopped by samir  UE-12/01/2017-1
+                //   throw new AppException("Check For Empty Lines !!");
             }
+            else
+            { throw new AppException("Check For Empty Lines !!"); }  //  by samir  UE - 12/01/2017 - 1
+
 
             if (!updateTotals())
                 throw new AppException("Unbalanced Voucher");
@@ -428,12 +432,12 @@ namespace Accounting
             parent.Rate2nd = setCurrencyRate(App.ForeignCurreny, DateTime.Now);
             bsMaster.ResetCurrentItem();
             updateTotals();
-            cboVoucherTypes.ReadOnly = true; 
+            cboVoucherTypes.ReadOnly = true;
 
             if (App.HasSubCompanies)
             {
                 cboSubCompanies.Focus();
-              //  cboSubCompanies.Select();
+                //  cboSubCompanies.Select();
             } // added by samir 30/11
             else
                 deDate.Focus();
@@ -458,8 +462,54 @@ namespace Accounting
                         parent.Reference = next;
                         Alert.Show(string.Format("New Reference : {0}", next), "Reference Changed", Enums.AlertType.Information, 10000);
                     }
+
+                    // child.AccountYearCurrency = "20030000901";//child.Ydate.ToString() + child.Accountid.ToString() + child.Currencyid.ToString();
+                    //var newAccountId = child.Accountid.ToString().PadLeft(5, '0'); //UE-12/01/2017-1
+                    //var newCurrency = child.Currencyid.ToString().PadLeft(2, '0');//UE-12/01/2017-1
+                    //child.AccountYearCurrency = child.Ydate.ToString() + newAccountId + newCurrency;//UE-12/01/2017-1
+
                     bsMaster.ResetCurrentItem();
                     dbContext.InsertRecord<Journalparent>(parent);
+                    foreach (var pchild in parent.Journalchilds)
+                    {
+                        //loop in parent.journalchild
+                        var x = dbContext.Set<TrialBalance1>().Select(s => s).Where(w => w.AccountYearCurrency == pchild.AccountYearCurrency).FirstOrDefault();  //UE-12/01/2017-1
+                        if (x != null)
+                        {
+                            //recalculate the balances
+                        }
+                        else
+                        {
+                            //UE-12/01/2017-1 
+                            trialBal1 = new TrialBalance1();
+
+                            //create the new row in trial balance
+                            // TrialBalance1 tb = new TrialBalance1();
+                            //trialBal1.AccountYearCurrency = "";
+
+                            trialBal1.AccountYearCurrency = "";
+                            trialBal1.Year = 0;
+                            trialBal1.Accountid = 0;
+                            trialBal1.CurrencyID = 0;
+                            trialBal1.Credit = 0;
+                            trialBal1.Debit = 0;
+                            trialBal1.Credit1st = 0;
+                            trialBal1.Debit1st = 0;
+                            trialBal1.Credit2nd = 0;
+                            trialBal1.Debit2nd = 0;
+                            trialBal1.Balance = 0;
+                            trialBal1.Balance1st = 0;
+                            trialBal1.Balance2nd = 0;
+                        }
+
+
+                        dbContext.InsertRecord<TrialBalance1>(trialBal1);
+
+                    }
+
+
+
+
                     break;
 
                 case Enums.State.Edit:
@@ -590,7 +640,12 @@ namespace Accounting
                 case "ACCOUNTID":
                     if (child.Accountid != null)
                     {
-                        dbContext.Entry(child).Reference(p => p.Chartofaccount).Load();
+                        //dbContext.Entry(child).Reference(p => p.Chartofaccount).Load();
+
+                        var x = dbContext.Set<Chartofaccount>().Select(s => s).Where(w => w.ID == child.Accountid).FirstOrDefault();
+                        if (x != null) child.Chartofaccount = x;
+
+
                         if (child.Chartofaccount.Accountstatusid != null)
                         {
                             if (Functions.InList(child.Chartofaccount.AccountStatu.Code, "P", "E"))
@@ -668,32 +723,28 @@ namespace Accounting
                             result = false;
                         else
                         {
-                            
+
                             child.Accountid = (int)e.Value;
-                            var x = dbContext.Set<Chartofaccount>().Select(s => s).Where(w => w.ID == child.Accountid).FirstOrDefault();
-                            if (x != null) child.Chartofaccount = x; 
+                            var x = dbContext.Set<Chartofaccount>().Select(s => s).Where(w => w.ID == child.Accountid).FirstOrDefault();//UE-12/01/2017-1
+                            if (x != null) child.Chartofaccount = x;
                             //dbContext.Entry(child).Reference(p => p.Chartofaccount).Load();
                             // dbContext.Entry(ChartAcc).Reference(p => child.Accountid).Load();
-
-
-                            //ChartAcc = (Chartofaccount)bsMaster.Current;
-
 
                             //
 
                             if (child.Chartofaccount.AccountStatu == null)
-                                    isAudit = false;
-                                else
-                                    isAudit = child.Chartofaccount.AccountStatu.Code == "A" ? true : false;
+                                isAudit = false;
+                            else
+                                isAudit = child.Chartofaccount.AccountStatu.Code == "A" ? true : false;
 
-                                if (child.Chartofaccount.Currencyid != null)
-                                    child.Currencyid = child.Chartofaccount.Currencyid;
-                                else
-                                    child.Currencyid = App.ForeignCurreny;
+                            if (child.Chartofaccount.Currencyid != null)
+                                child.Currencyid = child.Chartofaccount.Currencyid;
+                            else
+                                child.Currencyid = App.ForeignCurreny;
 
-                                recalculate(child);
-                                //showAccountBalance(child);
-                      
+                            recalculate(child);
+                            //showAccountBalance(child);
+
                         }
                         break;
 
@@ -756,7 +807,7 @@ namespace Accounting
             }
         }
         private void gvDetails_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
-        {       
+        {
 
             if (e.RowHandle < 0 || e.RowHandle == efGridControl.AutoFilterRowHandle) { return; }
 

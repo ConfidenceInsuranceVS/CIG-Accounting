@@ -26,7 +26,7 @@ namespace efControls
                     ts.Complete();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw new InsertException();
